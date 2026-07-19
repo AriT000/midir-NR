@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bxf4>
+  <compression>None</compression>
+  <root>m19_00_56_00</root>
+  <bhd_filename>h19_00_56_00.hkxbhd</bhd_filename>
+  <bdt_filename>h19_00_56_00.hkxbdt</bdt_filename>
+  <version>07D7R6</version>
+  <format>IDs, Names1, Names2, Compression</format>
+  <bigendian>False</bigendian>
+  <bitbigendian>False</bitbigendian>
+  <unicode>True</unicode>
+  <extended>0x04</extended>
+  <unk04>False</unk04>
+  <unk05>False</unk05>
+  <files>
+    <file>
+      <flags>Flag1</flags>
+      <id>0</id>
+      <path>h19_00_56_00.compendium.dcx</path>
+    </file>
+    <file>
+      <flags>Flag1</flags>
+      <id>1</id>
+      <path>h19_00_56_00_000100.hkx.dcx</path>
+    </file>
+    <file>
+      <flags>Flag1</flags>
+      <id>2</id>
+      <path>h19_00_56_00_000200.hkx.dcx</path>
+    </file>
+    <file>
+      <flags>Flag1</flags>
+      <id>3</id>
+      <path>h19_00_56_00_008000.hkx.dcx</path>
+    </file>
+    <file>
+      <flags>Flag1</flags>
+      <id>4</id>
+      <path>h19_00_56_00_020000.hkx.dcx</path>
+    </file>
+    <file>
+      <flags>Flag1</flags>
+      <id>5</id>
+      <path>h19_00_56_00_902000.hkx.dcx</path>
+    </file>
+  </files>
+</bxf4>
