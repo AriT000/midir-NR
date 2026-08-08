@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bnd4>
+  <filename>c6211.behbnd.dcx</filename>
+  <compression>DCX_DFLT</compression>
+  <dfltUnk04>69632</dfltUnk04>
+  <dfltUnk10>68</dfltUnk10>
+  <dfltUnk14>76</dfltUnk14>
+  <dfltUnk30>9</dfltUnk30>
+  <dfltUnk38>0</dfltUnk38>
+  <root>N:\GR\data\INTERROOT_win64\action\c6211\Export</root>
+  <version>07D7R6</version>
+  <format>IDs, Names1, Names2, Compression</format>
+  <bigendian>False</bigendian>
+  <bitbigendian>False</bitbigendian>
+  <unicode>True</unicode>
+  <extended>0x04</extended>
+  <unk04>False</unk04>
+  <unk05>False</unk05>
+  <files>
+    <file>
+      <flags>Flag1</flags>
+      <id>7000300</id>
+      <path>c6211.hkx</path>
+    </file>
+    <file>
+      <flags>Flag1</flags>
+      <id>7000400</id>
+      <path>Characters\c6211.hkx</path>
+    </file>
+    <file>
+      <flags>Flag1</flags>
+      <id>7000500</id>
+      <path>Behaviors\c6211.hkx</path>
+    </file>
+    <file>
+      <flags>Flag1</flags>
+      <id>7000501</id>
+      <path>Behaviors\c9997.hkx</path>
+    </file>
+  </files>
+</bnd4>

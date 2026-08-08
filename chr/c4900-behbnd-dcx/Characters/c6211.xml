@@ -1,0 +1,3272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hktagfile version="3">
+  <type id="type1">
+    <name value="hkRootLevelContainer" />
+    <format value="7" />
+    <!-- record -->
+    <fields count="1">
+      <field name="namedVariants" typeid="type2" flags="32" />
+      <!-- hkArray< hkRootLevelContainer::NamedVariant, hkContainerHeapAllocator > -->
+    </fields>
+  </type>
+  <type id="type2">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type3" />
+    <!-- hkRootLevelContainer::NamedVariant -->
+    <parameters count="2">
+      <typeparam id="type3" />
+      <!-- hkRootLevelContainer::NamedVariant -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type5" flags="34" />
+      <!-- T*< hkRootLevelContainer::NamedVariant > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type3">
+    <name value="hkRootLevelContainer::NamedVariant" />
+    <format value="7" />
+    <!-- record -->
+    <version value="1" />
+    <fields count="3">
+      <field name="name" typeid="type7" flags="36" />
+      <!-- hkStringPtr -->
+      <field name="className" typeid="type7" flags="36" />
+      <!-- hkStringPtr -->
+      <field name="variant" typeid="type8" flags="36" />
+      <!-- hkRefVariant -->
+    </fields>
+  </type>
+  <type id="type4">
+    <name value="hkContainerHeapAllocator" />
+    <format value="7" />
+    <!-- record -->
+    <flags value="16" />
+    <fields count="0"></fields>
+  </type>
+  <type id="type5">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type3" />
+    <!-- hkRootLevelContainer::NamedVariant -->
+    <parameters count="1">
+      <typeparam id="type3" />
+      <!-- hkRootLevelContainer::NamedVariant -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <type id="type6">
+    <name value="int" />
+    <format value="33284" />
+    <!-- int -->
+  </type>
+  <type id="type7">
+    <name value="hkStringPtr" />
+    <format value="131" />
+    <!-- string -->
+    <fields count="1">
+      <field name="stringAndFlag" typeid="type10" flags="36" />
+      <!-- char* -->
+    </fields>
+  </type>
+  <type id="type8">
+    <name value="hkRefVariant" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type11" />
+    <!-- hkReferencedObject -->
+    <fields count="1">
+      <field name="ptr" typeid="type12" flags="36" />
+      <!-- T*< hkReferencedObject > -->
+    </fields>
+  </type>
+  <type id="type9">
+    <name value="char" />
+    <format value="8196" />
+    <!-- int -->
+  </type>
+  <type id="type10">
+    <name value="char*" />
+    <format value="3" />
+    <!-- string -->
+  </type>
+  <type id="type11">
+    <name value="hkReferencedObject" />
+    <parent id="type13" />
+    <!-- hkBaseObject -->
+    <format value="7" />
+    <!-- record -->
+    <version value="3" />
+    <fields count="1">
+      <field name="propertyBag" typeid="type14" flags="36" />
+      <!-- hkPropertyBag -->
+    </fields>
+  </type>
+  <type id="type12">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type11" />
+    <!-- hkReferencedObject -->
+    <parameters count="1">
+      <typeparam id="type11" />
+      <!-- hkReferencedObject -->
+    </parameters>
+    <flags value="0" />
+  </type>
+  <type id="type13">
+    <name value="hkBaseObject" />
+    <format value="7" />
+    <!-- record -->
+    <flags value="144" />
+    <fields count="0"></fields>
+  </type>
+  <type id="type14">
+    <name value="hkPropertyBag" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type15" />
+    <!-- hkDefaultPropertyBag -->
+    <fields count="0"></fields>
+  </type>
+  <type id="type15">
+    <name value="hkDefaultPropertyBag" />
+    <format value="7" />
+    <!-- record -->
+    <version value="1" />
+    <fields count="1">
+      <field name="propertyMap" typeid="type16" flags="34" />
+      <!-- hkHashMap< hkPropertyId, hkReflect::Any > -->
+    </fields>
+  </type>
+  <type id="type16">
+    <name value="hkHashMap" />
+    <parent id="type17" />
+    <!-- hkHashBase< hkHashMapDetail::MapTuple< hkPropertyId, hkReflect::Any > > -->
+    <format value="7" />
+    <!-- record -->
+    <parameters count="2">
+      <typeparam id="type18" />
+      <!-- hkPropertyId -->
+      <typeparam id="type19" />
+      <!-- hkReflect::Any -->
+    </parameters>
+    <flags value="16" />
+    <fields count="0"></fields>
+  </type>
+  <type id="type17">
+    <name value="hkHashBase" />
+    <format value="7" />
+    <!-- record -->
+    <parameters count="1">
+      <typeparam id="type20" />
+      <!-- hkHashMapDetail::MapTuple< hkPropertyId, hkReflect::Any > -->
+    </parameters>
+    <fields count="1">
+      <field name="items" typeid="type21" flags="34" />
+      <!-- hkArray< hkHashMapDetail::MapTuple< hkPropertyId, hkReflect::Any >, hkContainerHeapAllocator > -->
+    </fields>
+  </type>
+  <type id="type18">
+    <name value="hkPropertyId" />
+    <format value="7" />
+    <!-- record -->
+    <fields count="3">
+      <field name="type" typeid="type22" flags="32" />
+      <!-- T*< hkReflect::Type > -->
+      <field name="name" typeid="type23" flags="32" />
+      <!-- const char* -->
+      <field name="flags" typeid="type24" flags="32" />
+      <!-- hkPropertyFlags::Enum -->
+    </fields>
+  </type>
+  <type id="type19">
+    <name value="hkReflect::Any" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type0" />
+    <!-- null -->
+    <fields count="3">
+      <field name="type" typeid="type25" flags="36" />
+      <!-- hkReflect::QualifiedType< hkReflect::Type > -->
+      <field name="status" typeid="type26" flags="36" />
+      <!-- unsigned char -->
+      <field name="buf" typeid="type27" flags="36" />
+      <!-- T[N]< hkUintReal, 4 > -->
+    </fields>
+  </type>
+  <type id="type20">
+    <name value="hkHashMapDetail::MapTuple" />
+    <parent id="type28" />
+    <!-- hkTuple< hkPropertyId, hkReflect::Any, void, void, void, void, void, void > -->
+    <format value="7" />
+    <!-- record -->
+    <parameters count="2">
+      <typeparam id="type18" />
+      <!-- hkPropertyId -->
+      <typeparam id="type19" />
+      <!-- hkReflect::Any -->
+    </parameters>
+    <flags value="16" />
+    <fields count="0"></fields>
+  </type>
+  <type id="type21">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type20" />
+    <!-- hkHashMapDetail::MapTuple< hkPropertyId, hkReflect::Any > -->
+    <parameters count="2">
+      <typeparam id="type20" />
+      <!-- hkHashMapDetail::MapTuple< hkPropertyId, hkReflect::Any > -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type29" flags="34" />
+      <!-- T*< hkHashMapDetail::MapTuple< hkPropertyId, hkReflect::Any > > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type22">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type30" />
+    <!-- hkReflect::Type -->
+    <parameters count="1">
+      <typeparam id="type30" />
+      <!-- hkReflect::Type -->
+    </parameters>
+    <flags value="0" />
+  </type>
+  <type id="type23">
+    <name value="const char*" />
+    <format value="131" />
+    <!-- string -->
+  </type>
+  <type id="type24">
+    <name value="hkPropertyFlags::Enum" />
+    <format value="33284" />
+    <!-- int -->
+  </type>
+  <type id="type25">
+    <name value="hkReflect::QualifiedType" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type30" />
+    <!-- hkReflect::Type -->
+    <parameters count="1">
+      <typeparam id="type30" />
+      <!-- hkReflect::Type -->
+    </parameters>
+    <fields count="1">
+      <field name="type" typeid="type22" flags="36" />
+      <!-- T*< hkReflect::Type > -->
+    </fields>
+  </type>
+  <type id="type26">
+    <name value="unsigned char" />
+    <format value="8196" />
+    <!-- int -->
+  </type>
+  <type id="type27">
+    <name value="T[N]" />
+    <format value="1064" />
+    <!-- array -->
+    <subtype id="type31" />
+    <!-- hkUintReal -->
+    <parameters count="2">
+      <typeparam id="type31" />
+      <!-- hkUintReal -->
+      <valueparam value="4" />
+    </parameters>
+  </type>
+  <type id="type28">
+    <name value="hkTuple" />
+    <format value="7" />
+    <!-- record -->
+    <parameters count="8">
+      <typeparam id="type18" />
+      <!-- hkPropertyId -->
+      <typeparam id="type19" />
+      <!-- hkReflect::Any -->
+      <typeparam id="type32" />
+      <!-- void -->
+      <typeparam id="type32" />
+      <!-- void -->
+      <typeparam id="type32" />
+      <!-- void -->
+      <typeparam id="type32" />
+      <!-- void -->
+      <typeparam id="type32" />
+      <!-- void -->
+      <typeparam id="type32" />
+      <!-- void -->
+    </parameters>
+    <fields count="2">
+      <field name="0" typeid="type18" flags="32" />
+      <!-- hkPropertyId -->
+      <field name="1" typeid="type19" flags="32" />
+      <!-- hkReflect::Any -->
+    </fields>
+  </type>
+  <type id="type29">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type20" />
+    <!-- hkHashMapDetail::MapTuple< hkPropertyId, hkReflect::Any > -->
+    <parameters count="1">
+      <typeparam id="type20" />
+      <!-- hkHashMapDetail::MapTuple< hkPropertyId, hkReflect::Any > -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <type id="type30">
+    <name value="hkReflect::Type" />
+    <format value="1" />
+    <!-- opaque -->
+  </type>
+  <type id="type31">
+    <name value="hkUintReal" />
+    <parent id="type33" />
+    <!-- unsigned int -->
+  </type>
+  <type id="type32">
+    <name value="void" />
+    <format value="0" />
+    <!-- void -->
+    <flags value="1" />
+  </type>
+  <type id="type33">
+    <name value="unsigned int" />
+    <format value="32772" />
+    <!-- int -->
+  </type>
+  <object id="object1" typeid="type1">
+    <!-- hkRootLevelContainer -->
+    <record>
+      <!-- hkRootLevelContainer -->
+      <field name="namedVariants">
+        <array count="1" elementtypeid="type3">
+          <!-- ArrayOf hkRootLevelContainer::NamedVariant -->
+          <record>
+            <!-- hkRootLevelContainer::NamedVariant -->
+            <field name="name">
+              <string value="hkbCharacterData" />
+            </field>
+            <field name="className">
+              <string value="hkbCharacterData" />
+            </field>
+            <field name="variant">
+              <pointer id="object2" />
+            </field>
+          </record>
+        </array>
+      </field>
+    </record>
+  </object>
+  <type id="type34">
+    <name value="hkbCharacterData" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <version value="11" />
+    <fields count="12">
+      <field name="characterControllerSetup" typeid="type35" flags="32" />
+      <!-- hkbCharacterControllerSetup -->
+      <field name="modelUpMS" typeid="type36" flags="32" />
+      <!-- hkVector4 -->
+      <field name="modelForwardMS" typeid="type36" flags="32" />
+      <!-- hkVector4 -->
+      <field name="modelRightMS" typeid="type36" flags="32" />
+      <!-- hkVector4 -->
+      <field name="characterPropertyInfos" typeid="type37" flags="32" />
+      <!-- hkArray< hkbVariableInfo, hkContainerHeapAllocator > -->
+      <field name="numBonesPerLod" typeid="type38" flags="32" />
+      <!-- hkArray< hkInt32, hkContainerHeapAllocator > -->
+      <field name="characterPropertyValues" typeid="type39" flags="32" />
+      <!-- hkRefPtr< hkbVariableValueSet > -->
+      <field name="stringData" typeid="type40" flags="32" />
+      <!-- hkRefPtr< hkbCharacterStringData > -->
+      <field name="boneAttachmentBoneIndices" typeid="type41" flags="32" />
+      <!-- hkArray< hkInt16, hkContainerHeapAllocator > -->
+      <field name="boneAttachmentTransforms" typeid="type42" flags="32" />
+      <!-- hkArray< hkMatrix4, hkContainerHeapAllocator > -->
+      <field name="scale" typeid="type43" flags="32" />
+      <!-- hkReal -->
+      <field name="propertySheets" typeid="type44" flags="34" />
+      <!-- hkArray< hkRefPtr< hkbCustomPropertySheet >, hkContainerHeapAllocator > -->
+    </fields>
+  </type>
+  <type id="type35">
+    <name value="hkbCharacterControllerSetup" />
+    <format value="7" />
+    <!-- record -->
+    <fields count="2">
+      <field name="rigidBodySetup" typeid="type45" flags="32" />
+      <!-- hkbRigidBodySetup -->
+      <field name="controllerCinfo" typeid="type46" flags="32" />
+      <!-- hkRefPtr< hkReferencedObject > -->
+    </fields>
+  </type>
+  <type id="type36">
+    <name value="hkVector4" />
+    <parent id="type47" />
+    <!-- hkVector4f -->
+  </type>
+  <type id="type37">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type49" />
+    <!-- hkbVariableInfo -->
+    <parameters count="2">
+      <typeparam id="type49" />
+      <!-- hkbVariableInfo -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type50" flags="34" />
+      <!-- T*< hkbVariableInfo > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type38">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type51" />
+    <!-- hkInt32 -->
+    <parameters count="2">
+      <typeparam id="type51" />
+      <!-- hkInt32 -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type52" flags="34" />
+      <!-- T*< hkInt32 > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type39">
+    <name value="hkRefPtr" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type53" />
+    <!-- hkbVariableValueSet -->
+    <parameters count="1">
+      <typeparam id="type53" />
+      <!-- hkbVariableValueSet -->
+    </parameters>
+    <fields count="1">
+      <field name="ptr" typeid="type54" flags="36" />
+      <!-- T*< hkbVariableValueSet > -->
+    </fields>
+  </type>
+  <type id="type40">
+    <name value="hkRefPtr" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type55" />
+    <!-- hkbCharacterStringData -->
+    <parameters count="1">
+      <typeparam id="type55" />
+      <!-- hkbCharacterStringData -->
+    </parameters>
+    <fields count="1">
+      <field name="ptr" typeid="type56" flags="36" />
+      <!-- T*< hkbCharacterStringData > -->
+    </fields>
+  </type>
+  <type id="type41">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type57" />
+    <!-- hkInt16 -->
+    <parameters count="2">
+      <typeparam id="type57" />
+      <!-- hkInt16 -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type58" flags="34" />
+      <!-- T*< hkInt16 > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type42">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type59" />
+    <!-- hkMatrix4 -->
+    <parameters count="2">
+      <typeparam id="type59" />
+      <!-- hkMatrix4 -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type60" flags="34" />
+      <!-- T*< hkMatrix4 > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type43">
+    <name value="hkReal" />
+    <parent id="type48" />
+    <!-- float -->
+  </type>
+  <type id="type44">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type61" />
+    <!-- hkRefPtr< hkbCustomPropertySheet > -->
+    <parameters count="2">
+      <typeparam id="type61" />
+      <!-- hkRefPtr< hkbCustomPropertySheet > -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type62" flags="34" />
+      <!-- T*< hkRefPtr< hkbCustomPropertySheet > > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type45">
+    <name value="hkbRigidBodySetup" />
+    <format value="7" />
+    <!-- record -->
+    <version value="1" />
+    <fields count="3">
+      <field name="collisionFilterInfo" typeid="type63" flags="32" />
+      <!-- hkUint32 -->
+      <field name="type" typeid="type64" flags="32" />
+      <!-- hkEnum< hkbRigidBodySetup::Type, hkInt8 > -->
+      <field name="collisionShapeProfiles" typeid="type65" flags="32" />
+      <!-- hkArray< hkbShapeSetup, hkContainerHeapAllocator > -->
+    </fields>
+  </type>
+  <type id="type46">
+    <name value="hkRefPtr" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type11" />
+    <!-- hkReferencedObject -->
+    <parameters count="1">
+      <typeparam id="type11" />
+      <!-- hkReferencedObject -->
+    </parameters>
+    <fields count="1">
+      <field name="ptr" typeid="type12" flags="36" />
+      <!-- T*< hkReferencedObject > -->
+    </fields>
+  </type>
+  <type id="type47">
+    <name value="hkVector4f" />
+    <format value="1064" />
+    <!-- array -->
+    <subtype id="type48" />
+    <!-- float -->
+  </type>
+  <type id="type48">
+    <name value="float" />
+    <format value="1525253" />
+    <!-- float -->
+  </type>
+  <type id="type49">
+    <name value="hkbVariableInfo" />
+    <format value="7" />
+    <!-- record -->
+    <version value="1" />
+    <fields count="2">
+      <field name="role" typeid="type66" flags="32" />
+      <!-- hkbRoleAttribute -->
+      <field name="type" typeid="type67" flags="32" />
+      <!-- hkEnum< hkbVariableInfo::VariableType, hkInt8 > -->
+    </fields>
+  </type>
+  <type id="type50">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type49" />
+    <!-- hkbVariableInfo -->
+    <parameters count="1">
+      <typeparam id="type49" />
+      <!-- hkbVariableInfo -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <type id="type51">
+    <name value="hkInt32" />
+    <parent id="type6" />
+    <!-- int -->
+  </type>
+  <type id="type52">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type51" />
+    <!-- hkInt32 -->
+    <parameters count="1">
+      <typeparam id="type51" />
+      <!-- hkInt32 -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <type id="type53">
+    <name value="hkbVariableValueSet" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <version value="1" />
+    <fields count="3">
+      <field name="wordVariableValues" typeid="type68" flags="36" />
+      <!-- hkArray< hkbVariableValue, hkContainerHeapAllocator > -->
+      <field name="quadVariableValues" typeid="type69" flags="36" />
+      <!-- hkArray< hkVector4, hkContainerHeapAllocator > -->
+      <field name="variantVariableValues" typeid="type70" flags="36" />
+      <!-- hkArray< hkRefVariant, hkContainerHeapAllocator > -->
+    </fields>
+  </type>
+  <type id="type54">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type53" />
+    <!-- hkbVariableValueSet -->
+    <parameters count="1">
+      <typeparam id="type53" />
+      <!-- hkbVariableValueSet -->
+    </parameters>
+    <flags value="0" />
+  </type>
+  <type id="type55">
+    <name value="hkbCharacterStringData" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <version value="10" />
+    <fields count="16">
+      <field name="skinNames" typeid="type71" flags="32" />
+      <!-- hkArray< hkbCharacterStringData::FileNameMeshNamePair, hkContainerHeapAllocator > -->
+      <field name="boneAttachmentNames" typeid="type71" flags="32" />
+      <!-- hkArray< hkbCharacterStringData::FileNameMeshNamePair, hkContainerHeapAllocator > -->
+      <field name="animationBundleNameData" typeid="type72" flags="32" />
+      <!-- hkArray< hkbAssetBundleStringData, hkContainerHeapAllocator > -->
+      <field name="animationBundleFilenameData" typeid="type72" flags="32" />
+      <!-- hkArray< hkbAssetBundleStringData, hkContainerHeapAllocator > -->
+      <field name="characterPropertyNames" typeid="type73" flags="32" />
+      <!-- hkArray< hkStringPtr, hkContainerHeapAllocator > -->
+      <field name="retargetingSkeletonMapperFilenames" typeid="type73" flags="32" />
+      <!-- hkArray< hkStringPtr, hkContainerHeapAllocator > -->
+      <field name="lodNames" typeid="type73" flags="32" />
+      <!-- hkArray< hkStringPtr, hkContainerHeapAllocator > -->
+      <field name="mirroredSyncPointSubstringsA" typeid="type73" flags="32" />
+      <!-- hkArray< hkStringPtr, hkContainerHeapAllocator > -->
+      <field name="mirroredSyncPointSubstringsB" typeid="type73" flags="32" />
+      <!-- hkArray< hkStringPtr, hkContainerHeapAllocator > -->
+      <field name="name" typeid="type7" flags="32" />
+      <!-- hkStringPtr -->
+      <field name="rigName" typeid="type7" flags="32" />
+      <!-- hkStringPtr -->
+      <field name="ragdollName" typeid="type7" flags="32" />
+      <!-- hkStringPtr -->
+      <field name="behaviorFilename" typeid="type7" flags="32" />
+      <!-- hkStringPtr -->
+      <field name="luaScriptOnCharacterActivated" typeid="type7" flags="32" />
+      <!-- hkStringPtr -->
+      <field name="luaScriptOnCharacterDeactivated" typeid="type7" flags="32" />
+      <!-- hkStringPtr -->
+      <field name="luaFiles" typeid="type73" flags="32" />
+      <!-- hkArray< hkStringPtr, hkContainerHeapAllocator > -->
+    </fields>
+  </type>
+  <type id="type56">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type55" />
+    <!-- hkbCharacterStringData -->
+    <parameters count="1">
+      <typeparam id="type55" />
+      <!-- hkbCharacterStringData -->
+    </parameters>
+    <flags value="0" />
+  </type>
+  <type id="type57">
+    <name value="hkInt16" />
+    <parent id="type74" />
+    <!-- short -->
+  </type>
+  <type id="type58">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type57" />
+    <!-- hkInt16 -->
+    <parameters count="1">
+      <typeparam id="type57" />
+      <!-- hkInt16 -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <type id="type59">
+    <name value="hkMatrix4" />
+    <parent id="type75" />
+    <!-- hkMatrix4f -->
+  </type>
+  <type id="type60">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type59" />
+    <!-- hkMatrix4 -->
+    <parameters count="1">
+      <typeparam id="type59" />
+      <!-- hkMatrix4 -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <type id="type61">
+    <name value="hkRefPtr" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type76" />
+    <!-- hkbCustomPropertySheet -->
+    <parameters count="1">
+      <typeparam id="type76" />
+      <!-- hkbCustomPropertySheet -->
+    </parameters>
+    <fields count="1">
+      <field name="ptr" typeid="type77" flags="36" />
+      <!-- T*< hkbCustomPropertySheet > -->
+    </fields>
+  </type>
+  <type id="type62">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type61" />
+    <!-- hkRefPtr< hkbCustomPropertySheet > -->
+    <parameters count="1">
+      <typeparam id="type61" />
+      <!-- hkRefPtr< hkbCustomPropertySheet > -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <type id="type63">
+    <name value="hkUint32" />
+    <parent id="type33" />
+    <!-- unsigned int -->
+  </type>
+  <type id="type64">
+    <name value="hkEnum" />
+    <format value="8708" />
+    <!-- int -->
+    <parameters count="2">
+      <typeparam id="type78" />
+      <!-- hkbRigidBodySetup::Type -->
+      <typeparam id="type79" />
+      <!-- hkInt8 -->
+    </parameters>
+    <fields count="1">
+      <field name="storage" typeid="type79" flags="36" />
+      <!-- hkInt8 -->
+    </fields>
+  </type>
+  <type id="type65">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type80" />
+    <!-- hkbShapeSetup -->
+    <parameters count="2">
+      <typeparam id="type80" />
+      <!-- hkbShapeSetup -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type81" flags="34" />
+      <!-- T*< hkbShapeSetup > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type66">
+    <name value="hkbRoleAttribute" />
+    <format value="7" />
+    <!-- record -->
+    <flags value="256" />
+    <fields count="2">
+      <field name="role" typeid="type82" flags="32" />
+      <!-- hkEnum< hkbRoleAttribute::Role, hkInt16 > -->
+      <field name="flags" typeid="type83" flags="32" />
+      <!-- hkFlags< hkbRoleAttribute::RoleFlags, hkInt16 > -->
+    </fields>
+  </type>
+  <type id="type67">
+    <name value="hkEnum" />
+    <format value="8708" />
+    <!-- int -->
+    <parameters count="2">
+      <typeparam id="type84" />
+      <!-- hkbVariableInfo::VariableType -->
+      <typeparam id="type79" />
+      <!-- hkInt8 -->
+    </parameters>
+    <fields count="1">
+      <field name="storage" typeid="type79" flags="36" />
+      <!-- hkInt8 -->
+    </fields>
+  </type>
+  <type id="type68">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type85" />
+    <!-- hkbVariableValue -->
+    <parameters count="2">
+      <typeparam id="type85" />
+      <!-- hkbVariableValue -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type86" flags="34" />
+      <!-- T*< hkbVariableValue > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type69">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type36" />
+    <!-- hkVector4 -->
+    <parameters count="2">
+      <typeparam id="type36" />
+      <!-- hkVector4 -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type87" flags="34" />
+      <!-- T*< hkVector4 > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type70">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type8" />
+    <!-- hkRefVariant -->
+    <parameters count="2">
+      <typeparam id="type8" />
+      <!-- hkRefVariant -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type88" flags="34" />
+      <!-- T*< hkRefVariant > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type71">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type89" />
+    <!-- hkbCharacterStringData::FileNameMeshNamePair -->
+    <parameters count="2">
+      <typeparam id="type89" />
+      <!-- hkbCharacterStringData::FileNameMeshNamePair -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type90" flags="34" />
+      <!-- T*< hkbCharacterStringData::FileNameMeshNamePair > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type72">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type91" />
+    <!-- hkbAssetBundleStringData -->
+    <parameters count="2">
+      <typeparam id="type91" />
+      <!-- hkbAssetBundleStringData -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type92" flags="34" />
+      <!-- T*< hkbAssetBundleStringData > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type73">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type7" />
+    <!-- hkStringPtr -->
+    <parameters count="2">
+      <typeparam id="type7" />
+      <!-- hkStringPtr -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type93" flags="34" />
+      <!-- T*< hkStringPtr > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type74">
+    <name value="short" />
+    <format value="16900" />
+    <!-- int -->
+  </type>
+  <type id="type75">
+    <name value="hkMatrix4f" />
+    <parent id="type94" />
+    <!-- hkMatrix4Impl< float > -->
+  </type>
+  <type id="type76">
+    <name value="hkbCustomPropertySheet" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <flags value="3" />
+    <fields count="0"></fields>
+  </type>
+  <type id="type77">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type76" />
+    <!-- hkbCustomPropertySheet -->
+    <parameters count="1">
+      <typeparam id="type76" />
+      <!-- hkbCustomPropertySheet -->
+    </parameters>
+    <flags value="0" />
+  </type>
+  <type id="type78">
+    <name value="hkbRigidBodySetup::Type" />
+    <format value="33284" />
+    <!-- int -->
+  </type>
+  <type id="type79">
+    <name value="hkInt8" />
+    <parent id="type96" />
+    <!-- signed char -->
+  </type>
+  <type id="type80">
+    <name value="hkbShapeSetup" />
+    <format value="7" />
+    <!-- record -->
+    <version value="1" />
+    <fields count="6">
+      <field name="capsuleHeight" typeid="type43" flags="32" />
+      <!-- hkReal -->
+      <field name="capsuleRadius" typeid="type43" flags="32" />
+      <!-- hkReal -->
+      <field name="customPivotEnabled" typeid="type97" flags="32" />
+      <!-- hkBool -->
+      <field name="customPivotIdx" typeid="type51" flags="32" />
+      <!-- hkInt32 -->
+      <field name="fileName" typeid="type7" flags="32" />
+      <!-- hkStringPtr -->
+      <field name="type" typeid="type98" flags="32" />
+      <!-- hkEnum< hkbShapeSetup::Type, hkInt8 > -->
+    </fields>
+  </type>
+  <type id="type81">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type80" />
+    <!-- hkbShapeSetup -->
+    <parameters count="1">
+      <typeparam id="type80" />
+      <!-- hkbShapeSetup -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <type id="type82">
+    <name value="hkEnum" />
+    <format value="16900" />
+    <!-- int -->
+    <parameters count="2">
+      <typeparam id="type99" />
+      <!-- hkbRoleAttribute::Role -->
+      <typeparam id="type57" />
+      <!-- hkInt16 -->
+    </parameters>
+    <fields count="1">
+      <field name="storage" typeid="type57" flags="36" />
+      <!-- hkInt16 -->
+    </fields>
+  </type>
+  <type id="type83">
+    <name value="hkFlags" />
+    <format value="16900" />
+    <!-- int -->
+    <parameters count="2">
+      <typeparam id="type100" />
+      <!-- hkbRoleAttribute::RoleFlags -->
+      <typeparam id="type57" />
+      <!-- hkInt16 -->
+    </parameters>
+    <fields count="1">
+      <field name="storage" typeid="type57" flags="34" />
+      <!-- hkInt16 -->
+    </fields>
+  </type>
+  <type id="type84">
+    <name value="hkbVariableInfo::VariableType" />
+    <format value="33284" />
+    <!-- int -->
+  </type>
+  <type id="type85">
+    <name value="hkbVariableValue" />
+    <format value="7" />
+    <!-- record -->
+    <fields count="1">
+      <field name="value" typeid="type6" flags="36" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type86">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type85" />
+    <!-- hkbVariableValue -->
+    <parameters count="1">
+      <typeparam id="type85" />
+      <!-- hkbVariableValue -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <type id="type87">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type36" />
+    <!-- hkVector4 -->
+    <parameters count="1">
+      <typeparam id="type36" />
+      <!-- hkVector4 -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <type id="type88">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type8" />
+    <!-- hkRefVariant -->
+    <parameters count="1">
+      <typeparam id="type8" />
+      <!-- hkRefVariant -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <type id="type89">
+    <name value="hkbCharacterStringData::FileNameMeshNamePair" />
+    <format value="7" />
+    <!-- record -->
+    <fields count="2">
+      <field name="fileName" typeid="type7" flags="32" />
+      <!-- hkStringPtr -->
+      <field name="meshName" typeid="type7" flags="32" />
+      <!-- hkStringPtr -->
+    </fields>
+  </type>
+  <type id="type90">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type89" />
+    <!-- hkbCharacterStringData::FileNameMeshNamePair -->
+    <parameters count="1">
+      <typeparam id="type89" />
+      <!-- hkbCharacterStringData::FileNameMeshNamePair -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <type id="type91">
+    <name value="hkbAssetBundleStringData" />
+    <format value="7" />
+    <!-- record -->
+    <fields count="2">
+      <field name="bundleName" typeid="type7" flags="32" />
+      <!-- hkStringPtr -->
+      <field name="assetNames" typeid="type73" flags="32" />
+      <!-- hkArray< hkStringPtr, hkContainerHeapAllocator > -->
+    </fields>
+  </type>
+  <type id="type92">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type91" />
+    <!-- hkbAssetBundleStringData -->
+    <parameters count="1">
+      <typeparam id="type91" />
+      <!-- hkbAssetBundleStringData -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <type id="type93">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type7" />
+    <!-- hkStringPtr -->
+    <parameters count="1">
+      <typeparam id="type7" />
+      <!-- hkStringPtr -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <type id="type94">
+    <name value="hkMatrix4Impl" />
+    <format value="4136" />
+    <!-- array -->
+    <subtype id="type48" />
+    <!-- float -->
+    <parameters count="1">
+      <typeparam id="type48" />
+      <!-- float -->
+    </parameters>
+    <fields count="4">
+      <field name="col0" typeid="type47" flags="32" />
+      <!-- hkVector4f -->
+      <field name="col1" typeid="type47" flags="32" />
+      <!-- hkVector4f -->
+      <field name="col2" typeid="type47" flags="32" />
+      <!-- hkVector4f -->
+      <field name="col3" typeid="type47" flags="32" />
+      <!-- hkVector4f -->
+    </fields>
+  </type>
+  <type id="type95">
+    <name value="hkbVerifiable" />
+    <format value="7" />
+    <!-- record -->
+    <flags value="147" />
+    <fields count="0"></fields>
+  </type>
+  <type id="type96">
+    <name value="signed char" />
+    <format value="8708" />
+    <!-- int -->
+  </type>
+  <type id="type97">
+    <name value="hkBool" />
+    <format value="8194" />
+    <!-- bool -->
+    <fields count="1">
+      <field name="bool" typeid="type9" flags="36" />
+      <!-- char -->
+    </fields>
+  </type>
+  <type id="type98">
+    <name value="hkEnum" />
+    <format value="8708" />
+    <!-- int -->
+    <parameters count="2">
+      <typeparam id="type101" />
+      <!-- hkbShapeSetup::Type -->
+      <typeparam id="type79" />
+      <!-- hkInt8 -->
+    </parameters>
+    <fields count="1">
+      <field name="storage" typeid="type79" flags="36" />
+      <!-- hkInt8 -->
+    </fields>
+  </type>
+  <type id="type99">
+    <name value="hkbRoleAttribute::Role" />
+    <format value="33284" />
+    <!-- int -->
+  </type>
+  <type id="type100">
+    <name value="hkbRoleAttribute::RoleFlags" />
+    <format value="33284" />
+    <!-- int -->
+  </type>
+  <type id="type101">
+    <name value="hkbShapeSetup::Type" />
+    <format value="33284" />
+    <!-- int -->
+  </type>
+  <object id="object2" typeid="type34">
+    <!-- hkbCharacterData -->
+    <record>
+      <!-- hkbCharacterData -->
+      <field name="propertyBag">
+        <array count="0" elementtypeid="type15">
+          <!-- ArrayOf hkDefaultPropertyBag -->
+        </array>
+      </field>
+      <field name="characterControllerSetup">
+        <record>
+          <!-- hkbCharacterControllerSetup -->
+          <field name="rigidBodySetup">
+            <record>
+              <!-- hkbRigidBodySetup -->
+              <field name="collisionFilterInfo">
+                <integer value="1" />
+              </field>
+              <field name="type">
+                <integer value="-1" />
+                <!-- INVALID -->
+              </field>
+              <field name="collisionShapeProfiles">
+                <array count="0" elementtypeid="type80">
+                  <!-- ArrayOf hkbShapeSetup -->
+                </array>
+              </field>
+            </record>
+          </field>
+          <field name="controllerCinfo">
+            <pointer id="object0" />
+          </field>
+        </record>
+      </field>
+      <field name="modelUpMS">
+        <array count="4" elementtypeid="type48">
+          <!-- ArrayOf float -->
+          <real dec="0" hex="#0" />
+          <real dec="1" hex="#3ff0000000000000" />
+          <real dec="0" hex="#0" />
+          <real dec="0" hex="#0" />
+        </array>
+      </field>
+      <field name="modelForwardMS">
+        <array count="4" elementtypeid="type48">
+          <!-- ArrayOf float -->
+          <real dec="0" hex="#0" />
+          <real dec="0" hex="#0" />
+          <real dec="1" hex="#3ff0000000000000" />
+          <real dec="0" hex="#0" />
+        </array>
+      </field>
+      <field name="modelRightMS">
+        <array count="4" elementtypeid="type48">
+          <!-- ArrayOf float -->
+          <real dec="1" hex="#3ff0000000000000" />
+          <real dec="0" hex="#0" />
+          <real dec="0" hex="#0" />
+          <real dec="0" hex="#0" />
+        </array>
+      </field>
+      <field name="characterPropertyInfos">
+        <array count="22" elementtypeid="type49">
+          <!-- ArrayOf hkbVariableInfo -->
+          <record>
+            <!-- hkbVariableInfo -->
+            <field name="role">
+              <record>
+                <!-- hkbRoleAttribute -->
+                <field name="role">
+                  <integer value="0" />
+                  <!-- ROLE_DEFAULT -->
+                </field>
+                <field name="flags">
+                  <integer value="0" />
+                  <!-- FLAG_NONE -->
+                </field>
+              </record>
+            </field>
+            <field name="type">
+              <integer value="2" />
+              <!-- VARIABLE_TYPE_INT16 -->
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableInfo -->
+            <field name="role">
+              <record>
+                <!-- hkbRoleAttribute -->
+                <field name="role">
+                  <integer value="0" />
+                  <!-- ROLE_DEFAULT -->
+                </field>
+                <field name="flags">
+                  <integer value="0" />
+                  <!-- FLAG_NONE -->
+                </field>
+              </record>
+            </field>
+            <field name="type">
+              <integer value="2" />
+              <!-- VARIABLE_TYPE_INT16 -->
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableInfo -->
+            <field name="role">
+              <record>
+                <!-- hkbRoleAttribute -->
+                <field name="role">
+                  <integer value="0" />
+                  <!-- ROLE_DEFAULT -->
+                </field>
+                <field name="flags">
+                  <integer value="0" />
+                  <!-- FLAG_NONE -->
+                </field>
+              </record>
+            </field>
+            <field name="type">
+              <integer value="2" />
+              <!-- VARIABLE_TYPE_INT16 -->
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableInfo -->
+            <field name="role">
+              <record>
+                <!-- hkbRoleAttribute -->
+                <field name="role">
+                  <integer value="0" />
+                  <!-- ROLE_DEFAULT -->
+                </field>
+                <field name="flags">
+                  <integer value="0" />
+                  <!-- FLAG_NONE -->
+                </field>
+              </record>
+            </field>
+            <field name="type">
+              <integer value="2" />
+              <!-- VARIABLE_TYPE_INT16 -->
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableInfo -->
+            <field name="role">
+              <record>
+                <!-- hkbRoleAttribute -->
+                <field name="role">
+                  <integer value="0" />
+                  <!-- ROLE_DEFAULT -->
+                </field>
+                <field name="flags">
+                  <integer value="0" />
+                  <!-- FLAG_NONE -->
+                </field>
+              </record>
+            </field>
+            <field name="type">
+              <integer value="0" />
+              <!-- VARIABLE_TYPE_BOOL -->
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableInfo -->
+            <field name="role">
+              <record>
+                <!-- hkbRoleAttribute -->
+                <field name="role">
+                  <integer value="0" />
+                  <!-- ROLE_DEFAULT -->
+                </field>
+                <field name="flags">
+                  <integer value="0" />
+                  <!-- FLAG_NONE -->
+                </field>
+              </record>
+            </field>
+            <field name="type">
+              <integer value="5" />
+              <!-- VARIABLE_TYPE_POINTER -->
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableInfo -->
+            <field name="role">
+              <record>
+                <!-- hkbRoleAttribute -->
+                <field name="role">
+                  <integer value="0" />
+                  <!-- ROLE_DEFAULT -->
+                </field>
+                <field name="flags">
+                  <integer value="0" />
+                  <!-- FLAG_NONE -->
+                </field>
+              </record>
+            </field>
+            <field name="type">
+              <integer value="2" />
+              <!-- VARIABLE_TYPE_INT16 -->
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableInfo -->
+            <field name="role">
+              <record>
+                <!-- hkbRoleAttribute -->
+                <field name="role">
+                  <integer value="0" />
+                  <!-- ROLE_DEFAULT -->
+                </field>
+                <field name="flags">
+                  <integer value="0" />
+                  <!-- FLAG_NONE -->
+                </field>
+              </record>
+            </field>
+            <field name="type">
+              <integer value="4" />
+              <!-- VARIABLE_TYPE_REAL -->
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableInfo -->
+            <field name="role">
+              <record>
+                <!-- hkbRoleAttribute -->
+                <field name="role">
+                  <integer value="0" />
+                  <!-- ROLE_DEFAULT -->
+                </field>
+                <field name="flags">
+                  <integer value="0" />
+                  <!-- FLAG_NONE -->
+                </field>
+              </record>
+            </field>
+            <field name="type">
+              <integer value="4" />
+              <!-- VARIABLE_TYPE_REAL -->
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableInfo -->
+            <field name="role">
+              <record>
+                <!-- hkbRoleAttribute -->
+                <field name="role">
+                  <integer value="0" />
+                  <!-- ROLE_DEFAULT -->
+                </field>
+                <field name="flags">
+                  <integer value="0" />
+                  <!-- FLAG_NONE -->
+                </field>
+              </record>
+            </field>
+            <field name="type">
+              <integer value="4" />
+              <!-- VARIABLE_TYPE_REAL -->
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableInfo -->
+            <field name="role">
+              <record>
+                <!-- hkbRoleAttribute -->
+                <field name="role">
+                  <integer value="0" />
+                  <!-- ROLE_DEFAULT -->
+                </field>
+                <field name="flags">
+                  <integer value="0" />
+                  <!-- FLAG_NONE -->
+                </field>
+              </record>
+            </field>
+            <field name="type">
+              <integer value="4" />
+              <!-- VARIABLE_TYPE_REAL -->
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableInfo -->
+            <field name="role">
+              <record>
+                <!-- hkbRoleAttribute -->
+                <field name="role">
+                  <integer value="0" />
+                  <!-- ROLE_DEFAULT -->
+                </field>
+                <field name="flags">
+                  <integer value="0" />
+                  <!-- FLAG_NONE -->
+                </field>
+              </record>
+            </field>
+            <field name="type">
+              <integer value="4" />
+              <!-- VARIABLE_TYPE_REAL -->
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableInfo -->
+            <field name="role">
+              <record>
+                <!-- hkbRoleAttribute -->
+                <field name="role">
+                  <integer value="0" />
+                  <!-- ROLE_DEFAULT -->
+                </field>
+                <field name="flags">
+                  <integer value="0" />
+                  <!-- FLAG_NONE -->
+                </field>
+              </record>
+            </field>
+            <field name="type">
+              <integer value="4" />
+              <!-- VARIABLE_TYPE_REAL -->
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableInfo -->
+            <field name="role">
+              <record>
+                <!-- hkbRoleAttribute -->
+                <field name="role">
+                  <integer value="0" />
+                  <!-- ROLE_DEFAULT -->
+                </field>
+                <field name="flags">
+                  <integer value="0" />
+                  <!-- FLAG_NONE -->
+                </field>
+              </record>
+            </field>
+            <field name="type">
+              <integer value="4" />
+              <!-- VARIABLE_TYPE_REAL -->
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableInfo -->
+            <field name="role">
+              <record>
+                <!-- hkbRoleAttribute -->
+                <field name="role">
+                  <integer value="0" />
+                  <!-- ROLE_DEFAULT -->
+                </field>
+                <field name="flags">
+                  <integer value="0" />
+                  <!-- FLAG_NONE -->
+                </field>
+              </record>
+            </field>
+            <field name="type">
+              <integer value="0" />
+              <!-- VARIABLE_TYPE_BOOL -->
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableInfo -->
+            <field name="role">
+              <record>
+                <!-- hkbRoleAttribute -->
+                <field name="role">
+                  <integer value="0" />
+                  <!-- ROLE_DEFAULT -->
+                </field>
+                <field name="flags">
+                  <integer value="0" />
+                  <!-- FLAG_NONE -->
+                </field>
+              </record>
+            </field>
+            <field name="type">
+              <integer value="2" />
+              <!-- VARIABLE_TYPE_INT16 -->
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableInfo -->
+            <field name="role">
+              <record>
+                <!-- hkbRoleAttribute -->
+                <field name="role">
+                  <integer value="0" />
+                  <!-- ROLE_DEFAULT -->
+                </field>
+                <field name="flags">
+                  <integer value="0" />
+                  <!-- FLAG_NONE -->
+                </field>
+              </record>
+            </field>
+            <field name="type">
+              <integer value="4" />
+              <!-- VARIABLE_TYPE_REAL -->
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableInfo -->
+            <field name="role">
+              <record>
+                <!-- hkbRoleAttribute -->
+                <field name="role">
+                  <integer value="0" />
+                  <!-- ROLE_DEFAULT -->
+                </field>
+                <field name="flags">
+                  <integer value="0" />
+                  <!-- FLAG_NONE -->
+                </field>
+              </record>
+            </field>
+            <field name="type">
+              <integer value="4" />
+              <!-- VARIABLE_TYPE_REAL -->
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableInfo -->
+            <field name="role">
+              <record>
+                <!-- hkbRoleAttribute -->
+                <field name="role">
+                  <integer value="0" />
+                  <!-- ROLE_DEFAULT -->
+                </field>
+                <field name="flags">
+                  <integer value="0" />
+                  <!-- FLAG_NONE -->
+                </field>
+              </record>
+            </field>
+            <field name="type">
+              <integer value="4" />
+              <!-- VARIABLE_TYPE_REAL -->
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableInfo -->
+            <field name="role">
+              <record>
+                <!-- hkbRoleAttribute -->
+                <field name="role">
+                  <integer value="0" />
+                  <!-- ROLE_DEFAULT -->
+                </field>
+                <field name="flags">
+                  <integer value="0" />
+                  <!-- FLAG_NONE -->
+                </field>
+              </record>
+            </field>
+            <field name="type">
+              <integer value="5" />
+              <!-- VARIABLE_TYPE_POINTER -->
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableInfo -->
+            <field name="role">
+              <record>
+                <!-- hkbRoleAttribute -->
+                <field name="role">
+                  <integer value="0" />
+                  <!-- ROLE_DEFAULT -->
+                </field>
+                <field name="flags">
+                  <integer value="0" />
+                  <!-- FLAG_NONE -->
+                </field>
+              </record>
+            </field>
+            <field name="type">
+              <integer value="4" />
+              <!-- VARIABLE_TYPE_REAL -->
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableInfo -->
+            <field name="role">
+              <record>
+                <!-- hkbRoleAttribute -->
+                <field name="role">
+                  <integer value="0" />
+                  <!-- ROLE_DEFAULT -->
+                </field>
+                <field name="flags">
+                  <integer value="0" />
+                  <!-- FLAG_NONE -->
+                </field>
+              </record>
+            </field>
+            <field name="type">
+              <integer value="2" />
+              <!-- VARIABLE_TYPE_INT16 -->
+            </field>
+          </record>
+        </array>
+      </field>
+      <field name="numBonesPerLod">
+        <array count="0" elementtypeid="type51">
+          <!-- ArrayOf hkInt32 -->
+        </array>
+      </field>
+      <field name="characterPropertyValues">
+        <pointer id="object3" />
+      </field>
+      <field name="stringData">
+        <pointer id="object4" />
+      </field>
+      <field name="boneAttachmentBoneIndices">
+        <array count="0" elementtypeid="type57">
+          <!-- ArrayOf hkInt16 -->
+        </array>
+      </field>
+      <field name="boneAttachmentTransforms">
+        <array count="0" elementtypeid="type59">
+          <!-- ArrayOf hkMatrix4 -->
+        </array>
+      </field>
+      <field name="scale">
+        <real dec="1" hex="#3ff0000000000000" />
+      </field>
+      <field name="propertySheets">
+        <array count="3" elementtypeid="type61">
+          <!-- ArrayOf hkRefPtr< hkbCustomPropertySheet > -->
+          <pointer id="object5" />
+          <pointer id="object6" />
+          <pointer id="object7" />
+        </array>
+      </field>
+    </record>
+  </object>
+  <type id="type102">
+    <name value="hkbFootIkDriverInfo" />
+    <parent id="type76" />
+    <!-- hkbCustomPropertySheet -->
+    <format value="7" />
+    <!-- record -->
+    <version value="4" />
+    <fields count="13">
+      <field name="legs" typeid="type103" flags="32" />
+      <!-- hkArray< hkbFootIkDriverInfo::Leg, hkContainerHeapAllocator > -->
+      <field name="raycastDistanceUp" typeid="type43" flags="32" />
+      <!-- hkReal -->
+      <field name="raycastDistanceDown" typeid="type43" flags="32" />
+      <!-- hkReal -->
+      <field name="originalGroundHeightMS" typeid="type43" flags="32" />
+      <!-- hkReal -->
+      <field name="verticalOffset" typeid="type43" flags="32" />
+      <!-- hkReal -->
+      <field name="collisionFilterInfo" typeid="type63" flags="32" />
+      <!-- hkUint32 -->
+      <field name="forwardAlignFraction" typeid="type43" flags="32" />
+      <!-- hkReal -->
+      <field name="sidewaysAlignFraction" typeid="type43" flags="32" />
+      <!-- hkReal -->
+      <field name="sidewaysSampleWidth" typeid="type43" flags="32" />
+      <!-- hkReal -->
+      <field name="lockFeetWhenPlanted" typeid="type97" flags="32" />
+      <!-- hkBool -->
+      <field name="useCharacterUpVector" typeid="type97" flags="32" />
+      <!-- hkBool -->
+      <field name="isQuadrupedNarrow" typeid="type97" flags="32" />
+      <!-- hkBool -->
+      <field name="keepSourceFootEndAboveGround" typeid="type97" flags="32" />
+      <!-- hkBool -->
+    </fields>
+  </type>
+  <type id="type103">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type104" />
+    <!-- hkbFootIkDriverInfo::Leg -->
+    <parameters count="2">
+      <typeparam id="type104" />
+      <!-- hkbFootIkDriverInfo::Leg -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type105" flags="34" />
+      <!-- T*< hkbFootIkDriverInfo::Leg > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type104">
+    <name value="hkbFootIkDriverInfo::Leg" />
+    <format value="7" />
+    <!-- record -->
+    <version value="4" />
+    <fields count="22">
+      <field name="kneeAxisLS" typeid="type36" flags="32" />
+      <!-- hkVector4 -->
+      <field name="footEndLS" typeid="type36" flags="32" />
+      <!-- hkVector4 -->
+      <field name="useFootEndToOnlyHeelRay" typeid="type97" flags="32" />
+      <!-- hkBool -->
+      <field name="useAlwaysContinuousFlag" typeid="type97" flags="32" />
+      <!-- hkBool -->
+      <field name="footPlantedAnkleHeightMS" typeid="type43" flags="32" />
+      <!-- hkReal -->
+      <field name="footRaisedAnkleHeightMS" typeid="type43" flags="32" />
+      <!-- hkReal -->
+      <field name="maxAnkleHeightMS" typeid="type43" flags="32" />
+      <!-- hkReal -->
+      <field name="minAnkleHeightMS" typeid="type43" flags="32" />
+      <!-- hkReal -->
+      <field name="maxFootPitchDegrees" typeid="type43" flags="32" />
+      <!-- hkReal -->
+      <field name="minFootPitchDegrees" typeid="type43" flags="32" />
+      <!-- hkReal -->
+      <field name="maxFootRollDegrees" typeid="type43" flags="32" />
+      <!-- hkReal -->
+      <field name="minFootRollDegrees" typeid="type43" flags="32" />
+      <!-- hkReal -->
+      <field name="heelOffsetFromAnkle" typeid="type43" flags="32" />
+      <!-- hkReal -->
+      <field name="favorToeInterpenetrationOverSteepSlope" typeid="type97" flags="32" />
+      <!-- hkBool -->
+      <field name="favorHeelInterpenetrationOverSteepSlope" typeid="type97" flags="32" />
+      <!-- hkBool -->
+      <field name="maxKneeAngleDegrees" typeid="type43" flags="32" />
+      <!-- hkReal -->
+      <field name="minKneeAngleDegrees" typeid="type43" flags="32" />
+      <!-- hkReal -->
+      <field name="hipIndex" typeid="type57" flags="32" />
+      <!-- hkInt16 -->
+      <field name="hipSiblingIndex" typeid="type57" flags="32" />
+      <!-- hkInt16 -->
+      <field name="kneeIndex" typeid="type57" flags="32" />
+      <!-- hkInt16 -->
+      <field name="kneeSiblingIndex" typeid="type57" flags="32" />
+      <!-- hkInt16 -->
+      <field name="ankleIndex" typeid="type57" flags="32" />
+      <!-- hkInt16 -->
+    </fields>
+  </type>
+  <type id="type105">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type104" />
+    <!-- hkbFootIkDriverInfo::Leg -->
+    <parameters count="1">
+      <typeparam id="type104" />
+      <!-- hkbFootIkDriverInfo::Leg -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <type id="type106">
+    <name value="hkbHandIkDriverInfo" />
+    <parent id="type76" />
+    <!-- hkbCustomPropertySheet -->
+    <format value="7" />
+    <!-- record -->
+    <version value="1" />
+    <fields count="2">
+      <field name="hands" typeid="type107" flags="32" />
+      <!-- hkArray< hkbHandIkDriverInfo::Hand, hkContainerHeapAllocator > -->
+      <field name="fadeInOutCurve" typeid="type108" flags="32" />
+      <!-- hkEnum< hkbBlendCurveUtils::BlendCurve, hkInt8 > -->
+    </fields>
+  </type>
+  <type id="type107">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type109" />
+    <!-- hkbHandIkDriverInfo::Hand -->
+    <parameters count="2">
+      <typeparam id="type109" />
+      <!-- hkbHandIkDriverInfo::Hand -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type110" flags="34" />
+      <!-- T*< hkbHandIkDriverInfo::Hand > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type108">
+    <name value="hkEnum" />
+    <format value="8708" />
+    <!-- int -->
+    <parameters count="2">
+      <typeparam id="type111" />
+      <!-- hkbBlendCurveUtils::BlendCurve -->
+      <typeparam id="type79" />
+      <!-- hkInt8 -->
+    </parameters>
+    <fields count="1">
+      <field name="storage" typeid="type79" flags="36" />
+      <!-- hkInt8 -->
+    </fields>
+  </type>
+  <type id="type109">
+    <name value="hkbHandIkDriverInfo::Hand" />
+    <format value="7" />
+    <!-- record -->
+    <version value="1" />
+    <fields count="14">
+      <field name="elbowAxisLS" typeid="type36" flags="32" />
+      <!-- hkVector4 -->
+      <field name="backHandNormalLS" typeid="type36" flags="32" />
+      <!-- hkVector4 -->
+      <field name="handOffsetLS" typeid="type36" flags="32" />
+      <!-- hkVector4 -->
+      <field name="handOrienationOffsetLS" typeid="type112" flags="32" />
+      <!-- hkQuaternion -->
+      <field name="maxElbowAngleDegrees" typeid="type43" flags="32" />
+      <!-- hkReal -->
+      <field name="minElbowAngleDegrees" typeid="type43" flags="32" />
+      <!-- hkReal -->
+      <field name="shoulderIndex" typeid="type57" flags="32" />
+      <!-- hkInt16 -->
+      <field name="shoulderSiblingIndex" typeid="type57" flags="32" />
+      <!-- hkInt16 -->
+      <field name="elbowIndex" typeid="type57" flags="32" />
+      <!-- hkInt16 -->
+      <field name="elbowSiblingIndex" typeid="type57" flags="32" />
+      <!-- hkInt16 -->
+      <field name="wristIndex" typeid="type57" flags="32" />
+      <!-- hkInt16 -->
+      <field name="enforceEndPosition" typeid="type97" flags="32" />
+      <!-- hkBool -->
+      <field name="enforceEndRotation" typeid="type97" flags="32" />
+      <!-- hkBool -->
+      <field name="localFrameName" typeid="type7" flags="32" />
+      <!-- hkStringPtr -->
+    </fields>
+  </type>
+  <type id="type110">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type109" />
+    <!-- hkbHandIkDriverInfo::Hand -->
+    <parameters count="1">
+      <typeparam id="type109" />
+      <!-- hkbHandIkDriverInfo::Hand -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <type id="type111">
+    <name value="hkbBlendCurveUtils::BlendCurve" />
+    <format value="33284" />
+    <!-- int -->
+  </type>
+  <type id="type112">
+    <name value="hkQuaternion" />
+    <parent id="type113" />
+    <!-- hkQuaternionf -->
+  </type>
+  <type id="type113">
+    <name value="hkQuaternionf" />
+    <format value="1064" />
+    <!-- array -->
+    <subtype id="type48" />
+    <!-- float -->
+    <fields count="1">
+      <field name="vec" typeid="type47" flags="32" />
+      <!-- hkVector4f -->
+    </fields>
+  </type>
+  <type id="type114">
+    <name value="hkbMirroredSkeletonInfo" />
+    <parent id="type76" />
+    <!-- hkbCustomPropertySheet -->
+    <format value="7" />
+    <!-- record -->
+    <version value="2" />
+    <fields count="3">
+      <field name="mirrorAxis" typeid="type36" flags="32" />
+      <!-- hkVector4 -->
+      <field name="bonePairMap" typeid="type41" flags="32" />
+      <!-- hkArray< hkInt16, hkContainerHeapAllocator > -->
+      <field name="partitionPairMap" typeid="type41" flags="32" />
+      <!-- hkArray< hkInt16, hkContainerHeapAllocator > -->
+    </fields>
+  </type>
+  <object id="object3" typeid="type53">
+    <!-- hkbVariableValueSet -->
+    <record>
+      <!-- hkbVariableValueSet -->
+      <field name="propertyBag">
+        <array count="0" elementtypeid="type15">
+          <!-- ArrayOf hkDefaultPropertyBag -->
+        </array>
+      </field>
+      <field name="wordVariableValues">
+        <array count="22" elementtypeid="type85">
+          <!-- ArrayOf hkbVariableValue -->
+          <record>
+            <!-- hkbVariableValue -->
+            <field name="value">
+              <integer value="-1" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableValue -->
+            <field name="value">
+              <integer value="-1" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableValue -->
+            <field name="value">
+              <integer value="-1" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableValue -->
+            <field name="value">
+              <integer value="-1" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableValue -->
+            <field name="value">
+              <integer value="0" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableValue -->
+            <field name="value">
+              <integer value="0" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableValue -->
+            <field name="value">
+              <integer value="-1" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableValue -->
+            <field name="value">
+              <integer value="1031127695" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableValue -->
+            <field name="value">
+              <integer value="1036831949" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableValue -->
+            <field name="value">
+              <integer value="1036831949" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableValue -->
+            <field name="value">
+              <integer value="1106247680" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableValue -->
+            <field name="value">
+              <integer value="1106247680" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableValue -->
+            <field name="value">
+              <integer value="1110704128" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableValue -->
+            <field name="value">
+              <integer value="1110704128" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableValue -->
+            <field name="value">
+              <integer value="0" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableValue -->
+            <field name="value">
+              <integer value="-1" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableValue -->
+            <field name="value">
+              <integer value="0" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableValue -->
+            <field name="value">
+              <integer value="1065353216" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableValue -->
+            <field name="value">
+              <integer value="-1082130432" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableValue -->
+            <field name="value">
+              <integer value="1" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableValue -->
+            <field name="value">
+              <integer value="1043878380" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbVariableValue -->
+            <field name="value">
+              <integer value="80" />
+            </field>
+          </record>
+        </array>
+      </field>
+      <field name="quadVariableValues">
+        <array count="0" elementtypeid="type36">
+          <!-- ArrayOf hkVector4 -->
+        </array>
+      </field>
+      <field name="variantVariableValues">
+        <array count="2" elementtypeid="type8">
+          <!-- ArrayOf hkRefVariant -->
+          <pointer id="object8" />
+          <pointer id="object9" />
+        </array>
+      </field>
+    </record>
+  </object>
+  <type id="type115">
+    <name value="hkbBoneIndexArray" />
+    <parent id="type116" />
+    <!-- hkbBindable -->
+    <format value="7" />
+    <!-- record -->
+    <fields count="1">
+      <field name="boneIndices" typeid="type41" flags="32" />
+      <!-- hkArray< hkInt16, hkContainerHeapAllocator > -->
+    </fields>
+  </type>
+  <type id="type116">
+    <name value="hkbBindable" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <fields count="1">
+      <field name="variableBindingSet" typeid="type117" flags="36" />
+      <!-- hkRefPtr< hkbVariableBindingSet > -->
+    </fields>
+  </type>
+  <type id="type117">
+    <name value="hkRefPtr" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type118" />
+    <!-- hkbVariableBindingSet -->
+    <parameters count="1">
+      <typeparam id="type118" />
+      <!-- hkbVariableBindingSet -->
+    </parameters>
+    <fields count="1">
+      <field name="ptr" typeid="type119" flags="36" />
+      <!-- T*< hkbVariableBindingSet > -->
+    </fields>
+  </type>
+  <type id="type118">
+    <name value="hkbVariableBindingSet" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <version value="2" />
+    <fields count="2">
+      <field name="bindings" typeid="type120" flags="36" />
+      <!-- hkArray< hkbVariableBindingSet::Binding, hkContainerHeapAllocator > -->
+      <field name="indexOfBindingToEnable" typeid="type51" flags="36" />
+      <!-- hkInt32 -->
+    </fields>
+  </type>
+  <type id="type119">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type118" />
+    <!-- hkbVariableBindingSet -->
+    <parameters count="1">
+      <typeparam id="type118" />
+      <!-- hkbVariableBindingSet -->
+    </parameters>
+    <flags value="0" />
+  </type>
+  <type id="type120">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type121" />
+    <!-- hkbVariableBindingSet::Binding -->
+    <parameters count="2">
+      <typeparam id="type121" />
+      <!-- hkbVariableBindingSet::Binding -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type122" flags="34" />
+      <!-- T*< hkbVariableBindingSet::Binding > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type121">
+    <name value="hkbVariableBindingSet::Binding" />
+    <format value="7" />
+    <!-- record -->
+    <version value="1" />
+    <fields count="4">
+      <field name="memberPath" typeid="type7" flags="32" />
+      <!-- hkStringPtr -->
+      <field name="variableIndex" typeid="type51" flags="32" />
+      <!-- hkInt32 -->
+      <field name="bitIndex" typeid="type79" flags="32" />
+      <!-- hkInt8 -->
+      <field name="bindingType" typeid="type123" flags="32" />
+      <!-- hkEnum< hkbVariableBindingSet::Binding::BindingType, hkInt8 > -->
+    </fields>
+  </type>
+  <type id="type122">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type121" />
+    <!-- hkbVariableBindingSet::Binding -->
+    <parameters count="1">
+      <typeparam id="type121" />
+      <!-- hkbVariableBindingSet::Binding -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <type id="type123">
+    <name value="hkEnum" />
+    <format value="8708" />
+    <!-- int -->
+    <parameters count="2">
+      <typeparam id="type124" />
+      <!-- hkbVariableBindingSet::Binding::BindingType -->
+      <typeparam id="type79" />
+      <!-- hkInt8 -->
+    </parameters>
+    <fields count="1">
+      <field name="storage" typeid="type79" flags="36" />
+      <!-- hkInt8 -->
+    </fields>
+  </type>
+  <type id="type124">
+    <name value="hkbVariableBindingSet::Binding::BindingType" />
+    <format value="33284" />
+    <!-- int -->
+  </type>
+  <type id="type125">
+    <name value="hkbBoneWeightArray" />
+    <parent id="type116" />
+    <!-- hkbBindable -->
+    <format value="7" />
+    <!-- record -->
+    <fields count="1">
+      <field name="boneWeights" typeid="type126" flags="32" />
+      <!-- hkArray< hkReal, hkContainerHeapAllocator > -->
+    </fields>
+  </type>
+  <type id="type126">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type43" />
+    <!-- hkReal -->
+    <parameters count="2">
+      <typeparam id="type43" />
+      <!-- hkReal -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type127" flags="34" />
+      <!-- T*< hkReal > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type127">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type43" />
+    <!-- hkReal -->
+    <parameters count="1">
+      <typeparam id="type43" />
+      <!-- hkReal -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <object id="object4" typeid="type55">
+    <!-- hkbCharacterStringData -->
+    <record>
+      <!-- hkbCharacterStringData -->
+      <field name="propertyBag">
+        <array count="0" elementtypeid="type15">
+          <!-- ArrayOf hkDefaultPropertyBag -->
+        </array>
+      </field>
+      <field name="skinNames">
+        <array count="0" elementtypeid="type89">
+          <!-- ArrayOf hkbCharacterStringData::FileNameMeshNamePair -->
+        </array>
+      </field>
+      <field name="boneAttachmentNames">
+        <array count="0" elementtypeid="type89">
+          <!-- ArrayOf hkbCharacterStringData::FileNameMeshNamePair -->
+        </array>
+      </field>
+      <field name="animationBundleNameData">
+        <array count="1" elementtypeid="type91">
+          <!-- ArrayOf hkbAssetBundleStringData -->
+          <record>
+            <!-- hkbAssetBundleStringData -->
+            <field name="bundleName">
+              <string value="" />
+            </field>
+            <field name="assetNames">
+              <array count="0" elementtypeid="type7">
+                <!-- ArrayOf hkStringPtr -->
+              </array>
+            </field>
+          </record>
+        </array>
+      </field>
+      <field name="animationBundleFilenameData">
+        <array count="1" elementtypeid="type91">
+          <!-- ArrayOf hkbAssetBundleStringData -->
+          <record>
+            <!-- hkbAssetBundleStringData -->
+            <field name="bundleName">
+              <string value="" />
+            </field>
+            <field name="assetNames">
+              <array count="0" elementtypeid="type7">
+                <!-- ArrayOf hkStringPtr -->
+              </array>
+            </field>
+          </record>
+        </array>
+      </field>
+      <field name="characterPropertyNames">
+        <array count="22" elementtypeid="type7">
+          <!-- ArrayOf hkStringPtr -->
+          <string value="RefTwistNeckStart" />
+          <string value="RefTwistNeckEnd" />
+          <string value="RefTwistSpineStart" />
+          <string value="RefTwistSpineEnd" />
+          <string value="RefTwistEnable" />
+          <string value="CultRagdollKeyFrameBoneList" />
+          <string value="CultRagdollBoneIndex" />
+          <string value="RefTwistNewTargetGain" />
+          <string value="RefTwistOnGain" />
+          <string value="RefTwistOffGain" />
+          <string value="RefTwistUpLimitAngle" />
+          <string value="RefTwistDownLimitAngle" />
+          <string value="RefTwistRightLimitAngle" />
+          <string value="RefTwistLeftLimitAngle" />
+          <string value="RefQuadrupedTwistEnable" />
+          <string value="RefQuadrupedTwistRoot" />
+          <string value="RefTwistSpineRate" />
+          <string value="RefTwistNeckRate" />
+          <string value="RefTwistNeckRateReversal" />
+          <string value="ExplessionlessFaceBoneWeightArrayCharProp" />
+          <string value="RefTwistOnGain_Up-Dwon_Talk" />
+          <string value="RefTwistSensingAngle_Up-Dwon_Talk" />
+        </array>
+      </field>
+      <field name="retargetingSkeletonMapperFilenames">
+        <array count="0" elementtypeid="type7">
+          <!-- ArrayOf hkStringPtr -->
+        </array>
+      </field>
+      <field name="lodNames">
+        <array count="0" elementtypeid="type7">
+          <!-- ArrayOf hkStringPtr -->
+        </array>
+      </field>
+      <field name="mirroredSyncPointSubstringsA">
+        <array count="0" elementtypeid="type7">
+          <!-- ArrayOf hkStringPtr -->
+        </array>
+      </field>
+      <field name="mirroredSyncPointSubstringsB">
+        <array count="0" elementtypeid="type7">
+          <!-- ArrayOf hkStringPtr -->
+        </array>
+      </field>
+      <field name="name">
+        <string value="c9020" />
+      </field>
+      <field name="rigName">
+        <string value="..\..\..\..\..\Model\chr\c9020\hkt\skeleton.hkt" />
+      </field>
+      <field name="ragdollName">
+        <string value="" />
+      </field>
+      <field name="behaviorFilename">
+        <string value="Behaviors\c9020.hkt" />
+      </field>
+      <field name="luaScriptOnCharacterActivated">
+        <string value="" />
+      </field>
+      <field name="luaScriptOnCharacterDeactivated">
+        <string value="" />
+      </field>
+      <field name="luaFiles">
+        <array count="4" elementtypeid="type7">
+          <!-- ArrayOf hkStringPtr -->
+          <string value="c9997.hks" />
+          <string value="modifier.hks" />
+          <string value="c9020.hks" />
+          <string value="c9020.hks" />
+        </array>
+      </field>
+    </record>
+  </object>
+  <object id="object5" typeid="type102">
+    <!-- hkbFootIkDriverInfo -->
+    <record>
+      <!-- hkbFootIkDriverInfo -->
+      <field name="propertyBag">
+        <array count="0" elementtypeid="type15">
+          <!-- ArrayOf hkDefaultPropertyBag -->
+        </array>
+      </field>
+      <field name="legs">
+        <array count="4" elementtypeid="type104">
+          <!-- ArrayOf hkbFootIkDriverInfo::Leg -->
+          <record>
+            <!-- hkbFootIkDriverInfo::Leg -->
+            <field name="kneeAxisLS">
+              <array count="4" elementtypeid="type48">
+                <!-- ArrayOf float -->
+                <real dec="0" hex="#0" />
+                <real dec="-1" hex="#bff0000000000000" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+              </array>
+            </field>
+            <field name="footEndLS">
+              <array count="4" elementtypeid="type48">
+                <!-- ArrayOf float -->
+                <real dec="1.1" hex="#3ff19999a0000000" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+              </array>
+            </field>
+            <field name="useFootEndToOnlyHeelRay">
+              <bool value="false" />
+            </field>
+            <field name="useAlwaysContinuousFlag">
+              <bool value="true" />
+            </field>
+            <field name="footPlantedAnkleHeightMS">
+              <real dec="0" hex="#0" />
+            </field>
+            <field name="footRaisedAnkleHeightMS">
+              <real dec="0.5" hex="#3fe0000000000000" />
+            </field>
+            <field name="maxAnkleHeightMS">
+              <real dec="3.5" hex="#400c000000000000" />
+            </field>
+            <field name="minAnkleHeightMS">
+              <real dec="-3.5" hex="#c00c000000000000" />
+            </field>
+            <field name="maxFootPitchDegrees">
+              <real dec="45" hex="#4046800000000000" />
+            </field>
+            <field name="minFootPitchDegrees">
+              <real dec="-45" hex="#c046800000000000" />
+            </field>
+            <field name="maxFootRollDegrees">
+              <real dec="20" hex="#4034000000000000" />
+            </field>
+            <field name="minFootRollDegrees">
+              <real dec="-20" hex="#c034000000000000" />
+            </field>
+            <field name="heelOffsetFromAnkle">
+              <real dec="0" hex="#0" />
+            </field>
+            <field name="favorToeInterpenetrationOverSteepSlope">
+              <bool value="true" />
+            </field>
+            <field name="favorHeelInterpenetrationOverSteepSlope">
+              <bool value="true" />
+            </field>
+            <field name="maxKneeAngleDegrees">
+              <real dec="180" hex="#4066800000000000" />
+            </field>
+            <field name="minKneeAngleDegrees">
+              <real dec="0" hex="#0" />
+            </field>
+            <field name="hipIndex">
+              <integer value="86" />
+            </field>
+            <field name="hipSiblingIndex">
+              <integer value="101" />
+            </field>
+            <field name="kneeIndex">
+              <integer value="87" />
+            </field>
+            <field name="kneeSiblingIndex">
+              <integer value="98" />
+            </field>
+            <field name="ankleIndex">
+              <integer value="88" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbFootIkDriverInfo::Leg -->
+            <field name="kneeAxisLS">
+              <array count="4" elementtypeid="type48">
+                <!-- ArrayOf float -->
+                <real dec="0" hex="#0" />
+                <real dec="-1" hex="#bff0000000000000" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+              </array>
+            </field>
+            <field name="footEndLS">
+              <array count="4" elementtypeid="type48">
+                <!-- ArrayOf float -->
+                <real dec="1.1" hex="#3ff19999a0000000" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+              </array>
+            </field>
+            <field name="useFootEndToOnlyHeelRay">
+              <bool value="false" />
+            </field>
+            <field name="useAlwaysContinuousFlag">
+              <bool value="true" />
+            </field>
+            <field name="footPlantedAnkleHeightMS">
+              <real dec="0" hex="#0" />
+            </field>
+            <field name="footRaisedAnkleHeightMS">
+              <real dec="0.5" hex="#3fe0000000000000" />
+            </field>
+            <field name="maxAnkleHeightMS">
+              <real dec="3.5" hex="#400c000000000000" />
+            </field>
+            <field name="minAnkleHeightMS">
+              <real dec="-3.5" hex="#c00c000000000000" />
+            </field>
+            <field name="maxFootPitchDegrees">
+              <real dec="45" hex="#4046800000000000" />
+            </field>
+            <field name="minFootPitchDegrees">
+              <real dec="-45" hex="#c046800000000000" />
+            </field>
+            <field name="maxFootRollDegrees">
+              <real dec="20" hex="#4034000000000000" />
+            </field>
+            <field name="minFootRollDegrees">
+              <real dec="-20" hex="#c034000000000000" />
+            </field>
+            <field name="heelOffsetFromAnkle">
+              <real dec="0" hex="#0" />
+            </field>
+            <field name="favorToeInterpenetrationOverSteepSlope">
+              <bool value="true" />
+            </field>
+            <field name="favorHeelInterpenetrationOverSteepSlope">
+              <bool value="true" />
+            </field>
+            <field name="maxKneeAngleDegrees">
+              <real dec="180" hex="#4066800000000000" />
+            </field>
+            <field name="minKneeAngleDegrees">
+              <real dec="0" hex="#0" />
+            </field>
+            <field name="hipIndex">
+              <integer value="54" />
+            </field>
+            <field name="hipSiblingIndex">
+              <integer value="69" />
+            </field>
+            <field name="kneeIndex">
+              <integer value="55" />
+            </field>
+            <field name="kneeSiblingIndex">
+              <integer value="66" />
+            </field>
+            <field name="ankleIndex">
+              <integer value="56" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbFootIkDriverInfo::Leg -->
+            <field name="kneeAxisLS">
+              <array count="4" elementtypeid="type48">
+                <!-- ArrayOf float -->
+                <real dec="0" hex="#0" />
+                <real dec="-1" hex="#bff0000000000000" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+              </array>
+            </field>
+            <field name="footEndLS">
+              <array count="4" elementtypeid="type48">
+                <!-- ArrayOf float -->
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="1.2" hex="#3ff3333340000000" />
+                <real dec="0" hex="#0" />
+              </array>
+            </field>
+            <field name="useFootEndToOnlyHeelRay">
+              <bool value="false" />
+            </field>
+            <field name="useAlwaysContinuousFlag">
+              <bool value="true" />
+            </field>
+            <field name="footPlantedAnkleHeightMS">
+              <real dec="0" hex="#0" />
+            </field>
+            <field name="footRaisedAnkleHeightMS">
+              <real dec="0.5" hex="#3fe0000000000000" />
+            </field>
+            <field name="maxAnkleHeightMS">
+              <real dec="3.5" hex="#400c000000000000" />
+            </field>
+            <field name="minAnkleHeightMS">
+              <real dec="-3" hex="#c008000000000000" />
+            </field>
+            <field name="maxFootPitchDegrees">
+              <real dec="45" hex="#4046800000000000" />
+            </field>
+            <field name="minFootPitchDegrees">
+              <real dec="-45" hex="#c046800000000000" />
+            </field>
+            <field name="maxFootRollDegrees">
+              <real dec="20" hex="#4034000000000000" />
+            </field>
+            <field name="minFootRollDegrees">
+              <real dec="-20" hex="#c034000000000000" />
+            </field>
+            <field name="heelOffsetFromAnkle">
+              <real dec="0" hex="#0" />
+            </field>
+            <field name="favorToeInterpenetrationOverSteepSlope">
+              <bool value="true" />
+            </field>
+            <field name="favorHeelInterpenetrationOverSteepSlope">
+              <bool value="true" />
+            </field>
+            <field name="maxKneeAngleDegrees">
+              <real dec="180" hex="#4066800000000000" />
+            </field>
+            <field name="minKneeAngleDegrees">
+              <real dec="0" hex="#0" />
+            </field>
+            <field name="hipIndex">
+              <integer value="25" />
+            </field>
+            <field name="hipSiblingIndex">
+              <integer value="43" />
+            </field>
+            <field name="kneeIndex">
+              <integer value="26" />
+            </field>
+            <field name="kneeSiblingIndex">
+              <integer value="41" />
+            </field>
+            <field name="ankleIndex">
+              <integer value="27" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbFootIkDriverInfo::Leg -->
+            <field name="kneeAxisLS">
+              <array count="4" elementtypeid="type48">
+                <!-- ArrayOf float -->
+                <real dec="0" hex="#0" />
+                <real dec="-1" hex="#bff0000000000000" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+              </array>
+            </field>
+            <field name="footEndLS">
+              <array count="4" elementtypeid="type48">
+                <!-- ArrayOf float -->
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="1.2" hex="#3ff3333340000000" />
+                <real dec="0" hex="#0" />
+              </array>
+            </field>
+            <field name="useFootEndToOnlyHeelRay">
+              <bool value="false" />
+            </field>
+            <field name="useAlwaysContinuousFlag">
+              <bool value="true" />
+            </field>
+            <field name="footPlantedAnkleHeightMS">
+              <real dec="0" hex="#0" />
+            </field>
+            <field name="footRaisedAnkleHeightMS">
+              <real dec="0.5" hex="#3fe0000000000000" />
+            </field>
+            <field name="maxAnkleHeightMS">
+              <real dec="3.5" hex="#400c000000000000" />
+            </field>
+            <field name="minAnkleHeightMS">
+              <real dec="-3.5" hex="#c00c000000000000" />
+            </field>
+            <field name="maxFootPitchDegrees">
+              <real dec="45" hex="#4046800000000000" />
+            </field>
+            <field name="minFootPitchDegrees">
+              <real dec="-45" hex="#c046800000000000" />
+            </field>
+            <field name="maxFootRollDegrees">
+              <real dec="20" hex="#4034000000000000" />
+            </field>
+            <field name="minFootRollDegrees">
+              <real dec="-20" hex="#c034000000000000" />
+            </field>
+            <field name="heelOffsetFromAnkle">
+              <real dec="0" hex="#0" />
+            </field>
+            <field name="favorToeInterpenetrationOverSteepSlope">
+              <bool value="true" />
+            </field>
+            <field name="favorHeelInterpenetrationOverSteepSlope">
+              <bool value="true" />
+            </field>
+            <field name="maxKneeAngleDegrees">
+              <real dec="180" hex="#4066800000000000" />
+            </field>
+            <field name="minKneeAngleDegrees">
+              <real dec="0" hex="#0" />
+            </field>
+            <field name="hipIndex">
+              <integer value="6" />
+            </field>
+            <field name="hipSiblingIndex">
+              <integer value="24" />
+            </field>
+            <field name="kneeIndex">
+              <integer value="7" />
+            </field>
+            <field name="kneeSiblingIndex">
+              <integer value="22" />
+            </field>
+            <field name="ankleIndex">
+              <integer value="8" />
+            </field>
+          </record>
+        </array>
+      </field>
+      <field name="raycastDistanceUp">
+        <real dec="7" hex="#401c000000000000" />
+      </field>
+      <field name="raycastDistanceDown">
+        <real dec="5" hex="#4014000000000000" />
+      </field>
+      <field name="originalGroundHeightMS">
+        <real dec="0" hex="#0" />
+      </field>
+      <field name="verticalOffset">
+        <real dec="0" hex="#0" />
+      </field>
+      <field name="collisionFilterInfo">
+        <integer value="3" />
+      </field>
+      <field name="forwardAlignFraction">
+        <real dec="1" hex="#3ff0000000000000" />
+      </field>
+      <field name="sidewaysAlignFraction">
+        <real dec="0" hex="#0" />
+      </field>
+      <field name="sidewaysSampleWidth">
+        <real dec="0.2" hex="#3fc99999a0000000" />
+      </field>
+      <field name="lockFeetWhenPlanted">
+        <bool value="false" />
+      </field>
+      <field name="useCharacterUpVector">
+        <bool value="true" />
+      </field>
+      <field name="isQuadrupedNarrow">
+        <bool value="false" />
+      </field>
+      <field name="keepSourceFootEndAboveGround">
+        <bool value="true" />
+      </field>
+    </record>
+  </object>
+  <object id="object6" typeid="type106">
+    <!-- hkbHandIkDriverInfo -->
+    <record>
+      <!-- hkbHandIkDriverInfo -->
+      <field name="propertyBag">
+        <array count="0" elementtypeid="type15">
+          <!-- ArrayOf hkDefaultPropertyBag -->
+        </array>
+      </field>
+      <field name="hands">
+        <array count="4" elementtypeid="type109">
+          <!-- ArrayOf hkbHandIkDriverInfo::Hand -->
+          <record>
+            <!-- hkbHandIkDriverInfo::Hand -->
+            <field name="elbowAxisLS">
+              <array count="4" elementtypeid="type48">
+                <!-- ArrayOf float -->
+                <real dec="0" hex="#0" />
+                <real dec="-1" hex="#bff0000000000000" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+              </array>
+            </field>
+            <field name="backHandNormalLS">
+              <array count="4" elementtypeid="type48">
+                <!-- ArrayOf float -->
+                <real dec="0" hex="#0" />
+                <real dec="1" hex="#3ff0000000000000" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+              </array>
+            </field>
+            <field name="handOffsetLS">
+              <array count="4" elementtypeid="type48">
+                <!-- ArrayOf float -->
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+              </array>
+            </field>
+            <field name="handOrienationOffsetLS">
+              <array count="4" elementtypeid="type48">
+                <!-- ArrayOf float -->
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="1" hex="#3ff0000000000000" />
+              </array>
+            </field>
+            <field name="maxElbowAngleDegrees">
+              <real dec="180" hex="#4066800000000000" />
+            </field>
+            <field name="minElbowAngleDegrees">
+              <real dec="0" hex="#0" />
+            </field>
+            <field name="shoulderIndex">
+              <integer value="269" />
+            </field>
+            <field name="shoulderSiblingIndex">
+              <integer value="-1" />
+            </field>
+            <field name="elbowIndex">
+              <integer value="271" />
+            </field>
+            <field name="elbowSiblingIndex">
+              <integer value="-1" />
+            </field>
+            <field name="wristIndex">
+              <integer value="277" />
+            </field>
+            <field name="enforceEndPosition">
+              <bool value="true" />
+            </field>
+            <field name="enforceEndRotation">
+              <bool value="true" />
+            </field>
+            <field name="localFrameName">
+              <string value="" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbHandIkDriverInfo::Hand -->
+            <field name="elbowAxisLS">
+              <array count="4" elementtypeid="type48">
+                <!-- ArrayOf float -->
+                <real dec="0" hex="#0" />
+                <real dec="-1" hex="#bff0000000000000" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+              </array>
+            </field>
+            <field name="backHandNormalLS">
+              <array count="4" elementtypeid="type48">
+                <!-- ArrayOf float -->
+                <real dec="0" hex="#0" />
+                <real dec="1" hex="#3ff0000000000000" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+              </array>
+            </field>
+            <field name="handOffsetLS">
+              <array count="4" elementtypeid="type48">
+                <!-- ArrayOf float -->
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+              </array>
+            </field>
+            <field name="handOrienationOffsetLS">
+              <array count="4" elementtypeid="type48">
+                <!-- ArrayOf float -->
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="1" hex="#3ff0000000000000" />
+              </array>
+            </field>
+            <field name="maxElbowAngleDegrees">
+              <real dec="180" hex="#4066800000000000" />
+            </field>
+            <field name="minElbowAngleDegrees">
+              <real dec="0" hex="#0" />
+            </field>
+            <field name="shoulderIndex">
+              <integer value="170" />
+            </field>
+            <field name="shoulderSiblingIndex">
+              <integer value="-1" />
+            </field>
+            <field name="elbowIndex">
+              <integer value="172" />
+            </field>
+            <field name="elbowSiblingIndex">
+              <integer value="-1" />
+            </field>
+            <field name="wristIndex">
+              <integer value="178" />
+            </field>
+            <field name="enforceEndPosition">
+              <bool value="true" />
+            </field>
+            <field name="enforceEndRotation">
+              <bool value="true" />
+            </field>
+            <field name="localFrameName">
+              <string value="" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbHandIkDriverInfo::Hand -->
+            <field name="elbowAxisLS">
+              <array count="4" elementtypeid="type48">
+                <!-- ArrayOf float -->
+                <real dec="0" hex="#0" />
+                <real dec="-1" hex="#bff0000000000000" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+              </array>
+            </field>
+            <field name="backHandNormalLS">
+              <array count="4" elementtypeid="type48">
+                <!-- ArrayOf float -->
+                <real dec="0" hex="#0" />
+                <real dec="1" hex="#3ff0000000000000" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+              </array>
+            </field>
+            <field name="handOffsetLS">
+              <array count="4" elementtypeid="type48">
+                <!-- ArrayOf float -->
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+              </array>
+            </field>
+            <field name="handOrienationOffsetLS">
+              <array count="4" elementtypeid="type48">
+                <!-- ArrayOf float -->
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="1" hex="#3ff0000000000000" />
+              </array>
+            </field>
+            <field name="maxElbowAngleDegrees">
+              <real dec="180" hex="#4066800000000000" />
+            </field>
+            <field name="minElbowAngleDegrees">
+              <real dec="0" hex="#0" />
+            </field>
+            <field name="shoulderIndex">
+              <integer value="80" />
+            </field>
+            <field name="shoulderSiblingIndex">
+              <integer value="-1" />
+            </field>
+            <field name="elbowIndex">
+              <integer value="81" />
+            </field>
+            <field name="elbowSiblingIndex">
+              <integer value="-1" />
+            </field>
+            <field name="wristIndex">
+              <integer value="86" />
+            </field>
+            <field name="enforceEndPosition">
+              <bool value="true" />
+            </field>
+            <field name="enforceEndRotation">
+              <bool value="true" />
+            </field>
+            <field name="localFrameName">
+              <string value="" />
+            </field>
+          </record>
+          <record>
+            <!-- hkbHandIkDriverInfo::Hand -->
+            <field name="elbowAxisLS">
+              <array count="4" elementtypeid="type48">
+                <!-- ArrayOf float -->
+                <real dec="0" hex="#0" />
+                <real dec="-1" hex="#bff0000000000000" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+              </array>
+            </field>
+            <field name="backHandNormalLS">
+              <array count="4" elementtypeid="type48">
+                <!-- ArrayOf float -->
+                <real dec="0" hex="#0" />
+                <real dec="1" hex="#3ff0000000000000" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+              </array>
+            </field>
+            <field name="handOffsetLS">
+              <array count="4" elementtypeid="type48">
+                <!-- ArrayOf float -->
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+              </array>
+            </field>
+            <field name="handOrienationOffsetLS">
+              <array count="4" elementtypeid="type48">
+                <!-- ArrayOf float -->
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="1" hex="#3ff0000000000000" />
+              </array>
+            </field>
+            <field name="maxElbowAngleDegrees">
+              <real dec="180" hex="#4066800000000000" />
+            </field>
+            <field name="minElbowAngleDegrees">
+              <real dec="0" hex="#0" />
+            </field>
+            <field name="shoulderIndex">
+              <integer value="11" />
+            </field>
+            <field name="shoulderSiblingIndex">
+              <integer value="-1" />
+            </field>
+            <field name="elbowIndex">
+              <integer value="12" />
+            </field>
+            <field name="elbowSiblingIndex">
+              <integer value="-1" />
+            </field>
+            <field name="wristIndex">
+              <integer value="17" />
+            </field>
+            <field name="enforceEndPosition">
+              <bool value="true" />
+            </field>
+            <field name="enforceEndRotation">
+              <bool value="true" />
+            </field>
+            <field name="localFrameName">
+              <string value="" />
+            </field>
+          </record>
+        </array>
+      </field>
+      <field name="fadeInOutCurve">
+        <integer value="0" />
+        <!-- BLEND_CURVE_SMOOTH -->
+      </field>
+    </record>
+  </object>
+  <object id="object7" typeid="type114">
+    <!-- hkbMirroredSkeletonInfo -->
+    <record>
+      <!-- hkbMirroredSkeletonInfo -->
+      <field name="propertyBag">
+        <array count="0" elementtypeid="type15">
+          <!-- ArrayOf hkDefaultPropertyBag -->
+        </array>
+      </field>
+      <field name="mirrorAxis">
+        <array count="4" elementtypeid="type48">
+          <!-- ArrayOf float -->
+          <real dec="1" hex="#3ff0000000000000" />
+          <real dec="0" hex="#0" />
+          <real dec="0" hex="#0" />
+          <real dec="0" hex="#0" />
+        </array>
+      </field>
+      <field name="bonePairMap">
+        <array count="0" elementtypeid="type57">
+          <!-- ArrayOf hkInt16 -->
+        </array>
+      </field>
+      <field name="partitionPairMap">
+        <array count="0" elementtypeid="type57">
+          <!-- ArrayOf hkInt16 -->
+        </array>
+      </field>
+    </record>
+  </object>
+  <object id="object8" typeid="type115">
+    <!-- hkbBoneIndexArray -->
+    <record>
+      <!-- hkbBoneIndexArray -->
+      <field name="propertyBag">
+        <array count="0" elementtypeid="type15">
+          <!-- ArrayOf hkDefaultPropertyBag -->
+        </array>
+      </field>
+      <field name="variableBindingSet">
+        <pointer id="object0" />
+      </field>
+      <field name="boneIndices">
+        <array count="0" elementtypeid="type57">
+          <!-- ArrayOf hkInt16 -->
+        </array>
+      </field>
+    </record>
+  </object>
+  <object id="object9" typeid="type125">
+    <!-- hkbBoneWeightArray -->
+    <record>
+      <!-- hkbBoneWeightArray -->
+      <field name="propertyBag">
+        <array count="0" elementtypeid="type15">
+          <!-- ArrayOf hkDefaultPropertyBag -->
+        </array>
+      </field>
+      <field name="variableBindingSet">
+        <pointer id="object0" />
+      </field>
+      <field name="boneWeights">
+        <array count="0" elementtypeid="type43">
+          <!-- ArrayOf hkReal -->
+        </array>
+      </field>
+    </record>
+  </object>
+</hktagfile>

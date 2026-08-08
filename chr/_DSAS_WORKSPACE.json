@@ -1,6 +1,6 @@
 {
   "GameDirectory": "D:\\everything\\Everything part 3\\Steam\\steamapps\\common\\ELDEN RING NIGHTREIGN\\Game",
-  "ModEngineDirectory": "C:\\midir-NR\\",
+  "ModEngineDirectory": "C:\\Users\\torcz\\AppData\\Local\\garyttierney\\me3\\config\\profiles\\darkeater-of-night",
   "LoadLooseParams": false,
   "LoadUnpackedGameFiles": false,
   "DisableInterrootDCX": false,
@@ -16,12 +16,12 @@
       "LockAspectRatioDuringRemo": true,
       "Name": "Default",
       "CameraLocationInWorld": {
-        "Position": "0, 0, 8",
+        "Position": "32.66027, 4.6870174, 28.923603",
         "Rotation": {
-          "X": 0.0,
-          "Y": 0.0,
-          "Z": 0.0,
-          "W": 1.0
+          "X": -0.041019928,
+          "Y": 0.41008228,
+          "Z": 0.01846617,
+          "W": 0.9109385
         },
         "Scale": "1, 1, 1",
         "OverrideMatrixWorld": {
@@ -44,12 +44,12 @@
         }
       },
       "CameraLocationInWorld_CloserForSound": {
-        "Position": "0, 0, 8",
+        "Position": "32.66027, 4.6870174, 28.923603",
         "Rotation": {
-          "X": 0.0,
-          "Y": 0.0,
-          "Z": 0.0,
-          "W": 1.0
+          "X": -0.041019928,
+          "Y": 0.41008228,
+          "Z": 0.01846617,
+          "W": 0.9109385
         },
         "Scale": "1, 1, 1",
         "OverrideMatrixWorld": {
@@ -71,29 +71,29 @@
           "M44": 1.0
         }
       },
-      "RootMotionFollow_EnableWrap": false,
-      "RootMotionFollow_EnableWrap_Y": false,
+      "RootMotionFollow_EnableWrap": true,
+      "RootMotionFollow_EnableWrap_Y": true,
       "RootMotionFollow_Translation": "0, 0, 0",
-      "RootMotionFollow_Rotation": 0.0,
+      "RootMotionFollow_Rotation": -0.0,
       "CameraOrbitOrigin": "0, 0, 0",
-      "CameraOrbitOriginOffset": "0, 0, 0",
-      "CameraOrbigtDefaultHeightForRootMotion": 0.0,
+      "CameraOrbitOriginOffset": "0, 0.75, 0",
+      "CameraOrbigtDefaultHeightForRootMotion": 2.3047564,
       "CameraLookDirection": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0,
-        "W": 1.0
+        "X": -0.041019928,
+        "Y": 0.41008228,
+        "Z": 0.01846617,
+        "W": 0.9109385
       },
-      "OrbitCamEuler": "0, 0, 0",
+      "OrbitCamEuler": "-0.09, 0.8459999, 0",
       "ScrollSpeedMult_Keyboard": 1.0,
       "ScrollSpeedMult_Mouse": 1.0,
-      "OrbitCamDistanceInput": 8.0,
+      "OrbitCamDistanceInput": 43.803745,
       "ProjectionVerticalFoV": 43.0,
       "ProjectionSkyboxVerticalFov": 70.0,
       "ProjectionNearClipDist": 0.1,
       "ProjectionFarClipDist": 10000.0,
       "Matrix_Projection": {
-        "M11": 0.5990395,
+        "M11": 0.8723876,
         "M12": 0.0,
         "M13": 0.0,
         "M14": 0.0,
@@ -111,7 +111,7 @@
         "M44": 0.0
       },
       "Matrix_Projection_Skybox": {
-        "M11": 0.33699712,
+        "M11": 0.49077252,
         "M12": 0.0,
         "M13": 0.0,
         "M14": 0.0,
@@ -147,35 +147,35 @@
         "M44": 1.0
       },
       "Matrix_View": {
-        "M11": 1.0,
-        "M12": 0.0,
-        "M13": 0.0,
+        "M11": 0.66298306,
+        "M12": -0.06728618,
+        "M13": 0.7456045,
         "M14": 0.0,
-        "M21": 0.0,
-        "M22": 1.0,
-        "M23": 0.0,
+        "M21": 3.7252903E-09,
+        "M22": 0.9959527,
+        "M23": 0.08987857,
         "M24": 0.0,
-        "M31": 0.0,
-        "M32": 0.0,
-        "M33": 1.0,
+        "M31": -0.74863446,
+        "M32": -0.059587967,
+        "M33": 0.6602998,
         "M34": 0.0,
         "M41": 0.0,
-        "M42": 0.0,
-        "M43": -8.0,
+        "M42": -0.74696434,
+        "M43": -43.871155,
         "M44": 1.0
       },
       "Matrix_View_Skybox": {
-        "M11": 1.0,
-        "M12": 0.0,
-        "M13": 0.0,
+        "M11": 0.66298306,
+        "M12": -0.06728618,
+        "M13": 0.7456045,
         "M14": 0.0,
-        "M21": 0.0,
-        "M22": 1.0,
-        "M23": 0.0,
+        "M21": 3.7252903E-09,
+        "M22": 0.9959527,
+        "M23": 0.08987857,
         "M24": 0.0,
-        "M31": 0.0,
-        "M32": 0.0,
-        "M33": 1.0,
+        "M31": -0.74863446,
+        "M32": -0.059587967,
+        "M33": 0.6602998,
         "M34": 0.0,
         "M41": 0.0,
         "M42": 0.0,
@@ -184,13 +184,13 @@
       },
       "DisableAllInput": false,
       "RequestRecenter": false,
-      "FollowingLockon": true,
-      "FollowingLockonDummyPoly": -1,
+      "FollowingLockon": false,
+      "FollowingLockonDummyPoly": 220,
       "AngleSnap": 0.7853982,
       "AngleSnapEnable": false,
       "PivotPrimIsEnabled": false,
-      "OrbitCamCenter_DummyPolyFollowRefPoint": "0, 0, 0",
-      "OrbitCamCenter_DummyPolyFollowRefPoint_Init": "0, 0, 0",
+      "OrbitCamCenter_DummyPolyFollowRefPoint": "0.0017340936, 2.138118, -13.753282",
+      "OrbitCamCenter_DummyPolyFollowRefPoint_Init": "0, 0.75, 0",
       "OverallMouseSpeedMult": 1.0,
       "CameraTurnSpeedMouse": 1.0,
       "CameraMoveSpeed": 1.0,
@@ -231,10 +231,10 @@
         "M43": 0.0,
         "M44": 1.0
       },
-      "OrbitCamDistance": 8.0,
+      "OrbitCamDistance": 43.803745,
       "ProjectionIsOrthographic": false,
       "ProjectionVerticalFovRatio": 1.0,
-      "PivotPrimVisRatio": 0.98000014
+      "PivotPrimVisRatio": 0.0
     }
   ]
 }

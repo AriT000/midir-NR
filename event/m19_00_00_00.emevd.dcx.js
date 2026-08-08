@@ -241,7 +241,25 @@ $Event(0, Default, function() {
         $InitializeCommonEvent(0, 90075901, 19000860, 490000, 907620000);
         $InitializeCommonEvent(0, 90075902, 19000860, 0, 0);
         $InitializeCommonEvent(0, 90075600, 19000860, 19002860);
-        $InitializeCommonEvent(0, 90075601, 19000860);
+        $InitializeCommonEvent(0, 90075601, 19000860); //midir
+        $InitializeCommonEvent(0, 90575603, 19000861); // worm
+        $InitializeCommonEvent(0, 90575604, 19000862); // worm
+        $InitializeCommonEvent(0, 90575605, 19000863); // worm
+        $InitializeCommonEvent(0, 90575606, 19000864); // worm
+        $InitializeCommonEvent(0, 90575607, 19000865); // worm
+        $InitializeCommonEvent(0, 90575608, 19000866); // worm
+        $InitializeCommonEvent(0, 90575609, 19000867); // worm
+        $InitializeCommonEvent(0, 90575611, 19000868); // worm
+        $InitializeCommonEvent(0, 90575612, 19000869); // worm
+        $InitializeCommonEvent(0, 90575613, 19000870); // worm
+        $InitializeCommonEvent(0, 90575614, 19000871); // worm
+        $InitializeCommonEvent(0, 90575615, 19000872); // worm
+        $InitializeCommonEvent(0, 90575616, 19000873); // worm
+        $InitializeCommonEvent(0, 90575617, 19000874); // worm
+        $InitializeCommonEvent(0, 90575618, 19000875); // worm
+        $InitializeCommonEvent(0, 90575619, 19000876); // worm
+        $InitializeCommonEvent(0, 90575620, 19000877); // worm
+        $InitializeCommonEvent(0, 90575621, 19000878); // worm
         $InitializeCommonEvent(0, 90015012, 19000860, 7511);
         $InitializeCommonEvent(0, 90015020, 7511, 7512);
         $InitializeCommonEvent(0, 90075610, 19000860);
@@ -1384,5 +1402,3 @@ $Event(19004500, Restart, function(eventFlagId, chrEntityId) {
     DisplayNetworkconnectedPermanentBuffPopup(131);
     SetSpEffect(20000, 9731);
 });
-
-
