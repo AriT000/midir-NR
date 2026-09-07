@@ -170,7 +170,7 @@ Goal.Activate = function (f2_arg0, f2_arg1, f2_arg2)
     end
     f2_local0[1] = SetCoolTime(f2_arg1, f2_arg2, 3011, 15, f2_local0[1], 0)
     f2_local0[2] = SetCoolTime(f2_arg1, f2_arg2, 3010, 15, f2_local0[2], 0)
-    f2_local0[3] = SetCoolTime(f2_arg1, f2_arg2, 3012, 20, f2_local0[3], 0)
+    f2_local0[3] = SetCoolTime(f2_arg1, f2_arg2, 3012, 60, f2_local0[3], 0)
     f2_local0[4] = SetCoolTime(f2_arg1, f2_arg2, 3000, 30, f2_local0[4], 0)
     f2_local0[5] = SetCoolTime(f2_arg1, f2_arg2, 3014, 50, f2_local0[5], 0)
     f2_local0[6] = SetCoolTime(f2_arg1, f2_arg2, 3008, 10, f2_local0[6], 0)
@@ -391,6 +391,7 @@ function GOAL_621100_DarknessDragon_Act11(f13_arg0, f13_arg1, f13_arg2)
     local f13_local4 = f13_arg0:GetRelativeAngleFromTarget(TARGET_ENE_0)
     if f13_local4 >= 5 then
         f13_arg1:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3033, TARGET_ENE_0, f13_local0, f13_local1, f13_local2)
+        f13_arg1:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 30, 3038, TARGET_ENE_0, f24_local0, f24_local1, f24_local2)
     else
         f13_arg1:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3034, TARGET_ENE_0, f13_local0, f13_local1, f13_local2)
     end
@@ -558,9 +559,9 @@ function GOAL_621100_DarknessDragon_Act24(f26_arg0, f26_arg1, f26_arg2)
     local f26_local2 = 0
     local f26_local3 = f26_arg0:GetRandam_Int(1, 100)
     f26_arg1:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 40, 3002, TARGET_ENE_0, f26_local0, f26_local1, f26_local2)
-    if not f26_arg0:HasSpecialEffectId(TARGET_SELF, 46582) and f26_arg0:HasSpecialEffectId(TARGET_SELF, 46581) then
-        f26_arg1:AddSubGoal(GOAL_COMMON_ComboFinal, 40, 3002, TARGET_ENE_0, f26_local0)
-    end
+    --if not f26_arg0:HasSpecialEffectId(TARGET_SELF, 46582) and f26_arg0:HasSpecialEffectId(TARGET_SELF, 46581) then
+    --    f26_arg1:AddSubGoal(GOAL_COMMON_ComboFinal, 40, 3002, TARGET_ENE_0, f26_local0)
+    --end
     GetWellSpace_Odds = 0
     return GetWellSpace_Odds
     
@@ -592,6 +593,7 @@ Goal.Interrupt = function (f30_arg0, f30_arg1, f30_arg2)
     local f30_local2 = f30_arg1:GetRandam_Int(1, 100)
     local f30_local3 = f30_arg1:GetRandam_Int(1, 100)
     local f30_local4 = f30_arg1:GetRandam_Int(1, 100)
+
     if f30_arg1:IsInterupt(INTERUPT_ActivateSpecialEffect) then
         if f30_arg1:GetSpecialEffectActivateInterruptType(0) == 5025 and f30_local0 >= 5 and f30_local0 <= 24 then
             f30_arg2:ClearSubGoal()

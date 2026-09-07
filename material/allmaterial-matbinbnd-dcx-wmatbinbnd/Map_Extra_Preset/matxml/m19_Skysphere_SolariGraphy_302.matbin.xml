@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MATBIN xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" WitchyVersion="2150000">
+  <filename>m19_Skysphere_SolariGraphy_302.matbin</filename>
+  <compression>None</compression>
+  <ShaderPath>M[SolariGraphy_Base_ExtraBoss].spx</ShaderPath>
+  <SourcePath>m19_Skysphere_SolariGraphy_302.matxml</SourcePath>
+  <Key>2883390698</Key>
+  <Params>
+    <Param>
+      <Name>g_GX_bOverrideCAParam</Name>
+      <Value xsi:type="xsd:boolean">true</Value>
+      <Key>2886469596</Key>
+      <Type>Bool</Type>
+    </Param>
+    <Param>
+      <Name>g_GX_bMeshDecal</Name>
+      <Value xsi:type="xsd:boolean">false</Value>
+      <Key>1463682445</Key>
+      <Type>Bool</Type>
+    </Param>
+    <Param>
+      <Name>g_GX_bEnabledEnvIDWriting</Name>
+      <Value xsi:type="xsd:boolean">false</Value>
+      <Key>4008839532</Key>
+      <Type>Bool</Type>
+    </Param>
+    <Param>
+      <Name>g_GX_PaintDecalSlotNo</Name>
+      <Value xsi:type="xsd:int">0</Value>
+      <Key>2875328505</Key>
+      <Type>Int</Type>
+    </Param>
+    <Param>
+      <Name>g_GX_bDisableShadowCasting</Name>
+      <Value xsi:type="xsd:boolean">false</Value>
+      <Key>123669002</Key>
+      <Type>Bool</Type>
+    </Param>
+    <Param>
+      <Name>g_GX_ShadowCullingMode</Name>
+      <Value xsi:type="xsd:int">0</Value>
+      <Key>3208775806</Key>
+      <Type>Int</Type>
+    </Param>
+    <Param>
+      <Name>g_GX_DisplayableLodLevel</Name>
+      <Value xsi:type="xsd:int">65535</Value>
+      <Key>3818785094</Key>
+      <Type>Int</Type>
+    </Param>
+    <Param>
+      <Name>g_GX_MaterialID</Name>
+      <Value xsi:type="xsd:int">0</Value>
+      <Key>1484653953</Key>
+      <Type>Int</Type>
+    </Param>
+    <Param>
+      <Name>g_GX_bDisableDecal</Name>
+      <Value xsi:type="xsd:boolean">false</Value>
+      <Key>2101085876</Key>
+      <Type>Bool</Type>
+    </Param>
+    <Param>
+      <Name>g_GX_bDisableDepthWrite</Name>
+      <Value xsi:type="xsd:boolean">false</Value>
+      <Key>3455322331</Key>
+      <Type>Bool</Type>
+    </Param>
+    <Param>
+      <Name>g_GX_bEnableSSR</Name>
+      <Value xsi:type="xsd:boolean">false</Value>
+      <Key>1455293798</Key>
+      <Type>Bool</Type>
+    </Param>
+    <Param>
+      <Name>g_BlendMode</Name>
+      <Value xsi:type="xsd:int">2</Value>
+      <Key>833750065</Key>
+      <Type>Int</Type>
+    </Param>
+    <Param>
+      <Name>g_AlphaRef</Name>
+      <Value xsi:type="ArrayOfInt">
+        <int>32</int>
+        <int>255</int>
+      </Value>
+      <Key>694813642</Key>
+      <Type>Int2</Type>
+    </Param>
+    <Param>
+      <Name>g_DiffuseMapColor</Name>
+      <Value xsi:type="ArrayOfFloat">
+        <float>1</float>
+        <float>1</float>
+        <float>1</float>
+      </Value>
+      <Key>1976567466</Key>
+      <Type>Float3</Type>
+    </Param>
+    <Param>
+      <Name>g_GX_ForwardRendering</Name>
+      <Value xsi:type="xsd:boolean">true</Value>
+      <Key>2948204600</Key>
+      <Type>Bool</Type>
+    </Param>
+    <Param>
+      <Name>GXFT_Emissive</Name>
+      <Value xsi:type="xsd:boolean">true</Value>
+      <Key>1060242654</Key>
+      <Type>Bool</Type>
+    </Param>
+    <Param>
+      <Name>GXFT_ForceForward</Name>
+      <Value xsi:type="xsd:boolean">true</Value>
+      <Key>1810630237</Key>
+      <Type>Bool</Type>
+    </Param>
+    <Param>
+      <Name>M_SolariGraphy_Base_ExtraBoss__snp_0_float_0</Name>
+      <Value xsi:type="xsd:float">3</Value>
+      <Key>4291563768</Key>
+      <Type>Float</Type>
+    </Param>
+    <Param>
+      <Name>M_SolariGraphy_Base_ExtraBoss__snp_0_float_2</Name>
+      <Value xsi:type="xsd:float">3</Value>
+      <Key>4291825914</Key>
+      <Type>Float</Type>
+    </Param>
+    <Param>
+      <Name>M_SolariGraphy_Base_ExtraBoss__snp_0_float4_0</Name>
+      <Value xsi:type="ArrayOfFloat">
+        <float>1</float>
+        <float>1</float>
+        <float>1</float>
+        <float>0.2</float>
+      </Value>
+      <Key>568660268</Key>
+      <Type>Float4</Type>
+    </Param>
+    <Param>
+      <Name>M_SolariGraphy_Base_ExtraBoss__snp_0_float_1</Name>
+      <Value xsi:type="xsd:float">1</Value>
+      <Key>4291694841</Key>
+      <Type>Float</Type>
+    </Param>
+    <Param>
+      <Name>group_1_CommonUV-UVParam</Name>
+      <Value xsi:type="ArrayOfFloat">
+        <float>1</float>
+        <float>1</float>
+      </Value>
+      <Key>3841591546</Key>
+      <Type>Float2</Type>
+    </Param>
+    <Param>
+      <Name>g_GX_CameraFadeParamId</Name>
+      <Value xsi:type="xsd:int">0</Value>
+      <Key>3092252700</Key>
+      <Type>Int</Type>
+    </Param>
+  </Params>
+  <Samplers>
+    <Sampler>
+      <Type>M_SolariGraphy_Base_ExtraBoss__snp_Texture2D_0_Mask1Map</Type>
+      <Path>AET596_300_1m.tif</Path>
+      <Key>2847937780</Key>
+      <Unk14>
+        <X>1</X>
+        <Y>1</Y>
+      </Unk14>
+    </Sampler>
+    <Sampler>
+      <Type>M_SolariGraphy_Base_ExtraBoss__snp_Texture2D_4_EmissiveMap_0</Type>
+      <Path>AET596_320_em.tif</Path>
+      <Key>2372867855</Key>
+      <Unk14>
+        <X>0</X>
+        <Y>0</Y>
+      </Unk14>
+    </Sampler>
+  </Samplers>
+</MATBIN>

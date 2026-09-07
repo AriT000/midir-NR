@@ -1,0 +1,3613 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hktagfile version="3">
+  <type id="type1">
+    <name value="hkRootLevelContainer" />
+    <format value="7" />
+    <!-- record -->
+    <fields count="1">
+      <field name="namedVariants" typeid="type2" flags="32" />
+      <!-- hkArray< hkRootLevelContainer::NamedVariant, hkContainerHeapAllocator > -->
+    </fields>
+  </type>
+  <type id="type2">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type3" />
+    <!-- hkRootLevelContainer::NamedVariant -->
+    <parameters count="2">
+      <typeparam id="type3" />
+      <!-- hkRootLevelContainer::NamedVariant -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type5" flags="34" />
+      <!-- T*< hkRootLevelContainer::NamedVariant > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type3">
+    <name value="hkRootLevelContainer::NamedVariant" />
+    <format value="7" />
+    <!-- record -->
+    <version value="1" />
+    <fields count="3">
+      <field name="name" typeid="type7" flags="36" />
+      <!-- hkStringPtr -->
+      <field name="className" typeid="type7" flags="36" />
+      <!-- hkStringPtr -->
+      <field name="variant" typeid="type8" flags="36" />
+      <!-- hkRefVariant -->
+    </fields>
+  </type>
+  <type id="type4">
+    <name value="hkContainerHeapAllocator" />
+    <format value="7" />
+    <!-- record -->
+    <flags value="16" />
+    <fields count="0"></fields>
+  </type>
+  <type id="type5">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type3" />
+    <!-- hkRootLevelContainer::NamedVariant -->
+    <parameters count="1">
+      <typeparam id="type3" />
+      <!-- hkRootLevelContainer::NamedVariant -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <type id="type6">
+    <name value="int" />
+    <format value="33284" />
+    <!-- int -->
+  </type>
+  <type id="type7">
+    <name value="hkStringPtr" />
+    <format value="131" />
+    <!-- string -->
+    <fields count="1">
+      <field name="stringAndFlag" typeid="type10" flags="36" />
+      <!-- char* -->
+    </fields>
+  </type>
+  <type id="type8">
+    <name value="hkRefVariant" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type11" />
+    <!-- hkReferencedObject -->
+    <fields count="1">
+      <field name="ptr" typeid="type12" flags="36" />
+      <!-- T*< hkReferencedObject > -->
+    </fields>
+  </type>
+  <type id="type9">
+    <name value="char" />
+    <format value="8196" />
+    <!-- int -->
+  </type>
+  <type id="type10">
+    <name value="char*" />
+    <format value="3" />
+    <!-- string -->
+  </type>
+  <type id="type11">
+    <name value="hkReferencedObject" />
+    <parent id="type13" />
+    <!-- hkBaseObject -->
+    <format value="7" />
+    <!-- record -->
+    <version value="3" />
+    <fields count="1">
+      <field name="propertyBag" typeid="type14" flags="36" />
+      <!-- hkPropertyBag -->
+    </fields>
+  </type>
+  <type id="type12">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type11" />
+    <!-- hkReferencedObject -->
+    <parameters count="1">
+      <typeparam id="type11" />
+      <!-- hkReferencedObject -->
+    </parameters>
+    <flags value="0" />
+  </type>
+  <type id="type13">
+    <name value="hkBaseObject" />
+    <format value="7" />
+    <!-- record -->
+    <flags value="144" />
+    <fields count="0"></fields>
+  </type>
+  <type id="type14">
+    <name value="hkPropertyBag" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type15" />
+    <!-- hkDefaultPropertyBag -->
+    <fields count="0"></fields>
+  </type>
+  <type id="type15">
+    <name value="hkDefaultPropertyBag" />
+    <format value="7" />
+    <!-- record -->
+    <version value="1" />
+    <fields count="1">
+      <field name="propertyMap" typeid="type16" flags="34" />
+      <!-- hkHashMap< hkPropertyId, hkReflect::Any > -->
+    </fields>
+  </type>
+  <type id="type16">
+    <name value="hkHashMap" />
+    <parent id="type17" />
+    <!-- hkHashBase< hkHashMapDetail::MapTuple< hkPropertyId, hkReflect::Any > > -->
+    <format value="7" />
+    <!-- record -->
+    <parameters count="2">
+      <typeparam id="type18" />
+      <!-- hkPropertyId -->
+      <typeparam id="type19" />
+      <!-- hkReflect::Any -->
+    </parameters>
+    <flags value="16" />
+    <fields count="0"></fields>
+  </type>
+  <type id="type17">
+    <name value="hkHashBase" />
+    <format value="7" />
+    <!-- record -->
+    <parameters count="1">
+      <typeparam id="type20" />
+      <!-- hkHashMapDetail::MapTuple< hkPropertyId, hkReflect::Any > -->
+    </parameters>
+    <fields count="1">
+      <field name="items" typeid="type21" flags="34" />
+      <!-- hkArray< hkHashMapDetail::MapTuple< hkPropertyId, hkReflect::Any >, hkContainerHeapAllocator > -->
+    </fields>
+  </type>
+  <type id="type18">
+    <name value="hkPropertyId" />
+    <format value="7" />
+    <!-- record -->
+    <fields count="3">
+      <field name="type" typeid="type22" flags="32" />
+      <!-- T*< hkReflect::Type > -->
+      <field name="name" typeid="type23" flags="32" />
+      <!-- const char* -->
+      <field name="flags" typeid="type24" flags="32" />
+      <!-- hkPropertyFlags::Enum -->
+    </fields>
+  </type>
+  <type id="type19">
+    <name value="hkReflect::Any" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type0" />
+    <!-- null -->
+    <fields count="3">
+      <field name="type" typeid="type25" flags="36" />
+      <!-- hkReflect::QualifiedType< hkReflect::Type > -->
+      <field name="status" typeid="type26" flags="36" />
+      <!-- unsigned char -->
+      <field name="buf" typeid="type27" flags="36" />
+      <!-- T[N]< hkUintReal, 4 > -->
+    </fields>
+  </type>
+  <type id="type20">
+    <name value="hkHashMapDetail::MapTuple" />
+    <parent id="type28" />
+    <!-- hkTuple< hkPropertyId, hkReflect::Any, void, void, void, void, void, void > -->
+    <format value="7" />
+    <!-- record -->
+    <parameters count="2">
+      <typeparam id="type18" />
+      <!-- hkPropertyId -->
+      <typeparam id="type19" />
+      <!-- hkReflect::Any -->
+    </parameters>
+    <flags value="16" />
+    <fields count="0"></fields>
+  </type>
+  <type id="type21">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type20" />
+    <!-- hkHashMapDetail::MapTuple< hkPropertyId, hkReflect::Any > -->
+    <parameters count="2">
+      <typeparam id="type20" />
+      <!-- hkHashMapDetail::MapTuple< hkPropertyId, hkReflect::Any > -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type29" flags="34" />
+      <!-- T*< hkHashMapDetail::MapTuple< hkPropertyId, hkReflect::Any > > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type22">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type30" />
+    <!-- hkReflect::Type -->
+    <parameters count="1">
+      <typeparam id="type30" />
+      <!-- hkReflect::Type -->
+    </parameters>
+    <flags value="0" />
+  </type>
+  <type id="type23">
+    <name value="const char*" />
+    <format value="131" />
+    <!-- string -->
+  </type>
+  <type id="type24">
+    <name value="hkPropertyFlags::Enum" />
+    <format value="33284" />
+    <!-- int -->
+  </type>
+  <type id="type25">
+    <name value="hkReflect::QualifiedType" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type30" />
+    <!-- hkReflect::Type -->
+    <parameters count="1">
+      <typeparam id="type30" />
+      <!-- hkReflect::Type -->
+    </parameters>
+    <fields count="1">
+      <field name="type" typeid="type22" flags="36" />
+      <!-- T*< hkReflect::Type > -->
+    </fields>
+  </type>
+  <type id="type26">
+    <name value="unsigned char" />
+    <format value="8196" />
+    <!-- int -->
+  </type>
+  <type id="type27">
+    <name value="T[N]" />
+    <format value="1064" />
+    <!-- array -->
+    <subtype id="type31" />
+    <!-- hkUintReal -->
+    <parameters count="2">
+      <typeparam id="type31" />
+      <!-- hkUintReal -->
+      <valueparam value="4" />
+    </parameters>
+  </type>
+  <type id="type28">
+    <name value="hkTuple" />
+    <format value="7" />
+    <!-- record -->
+    <parameters count="8">
+      <typeparam id="type18" />
+      <!-- hkPropertyId -->
+      <typeparam id="type19" />
+      <!-- hkReflect::Any -->
+      <typeparam id="type32" />
+      <!-- void -->
+      <typeparam id="type32" />
+      <!-- void -->
+      <typeparam id="type32" />
+      <!-- void -->
+      <typeparam id="type32" />
+      <!-- void -->
+      <typeparam id="type32" />
+      <!-- void -->
+      <typeparam id="type32" />
+      <!-- void -->
+    </parameters>
+    <fields count="2">
+      <field name="0" typeid="type18" flags="32" />
+      <!-- hkPropertyId -->
+      <field name="1" typeid="type19" flags="32" />
+      <!-- hkReflect::Any -->
+    </fields>
+  </type>
+  <type id="type29">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type20" />
+    <!-- hkHashMapDetail::MapTuple< hkPropertyId, hkReflect::Any > -->
+    <parameters count="1">
+      <typeparam id="type20" />
+      <!-- hkHashMapDetail::MapTuple< hkPropertyId, hkReflect::Any > -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <type id="type30">
+    <name value="hkReflect::Type" />
+    <format value="1" />
+    <!-- opaque -->
+  </type>
+  <type id="type31">
+    <name value="hkUintReal" />
+    <parent id="type33" />
+    <!-- unsigned int -->
+  </type>
+  <type id="type32">
+    <name value="void" />
+    <format value="0" />
+    <!-- void -->
+    <flags value="1" />
+  </type>
+  <type id="type33">
+    <name value="unsigned int" />
+    <format value="32772" />
+    <!-- int -->
+  </type>
+  <object id="object1" typeid="type1">
+    <!-- hkRootLevelContainer -->
+    <record>
+      <!-- hkRootLevelContainer -->
+      <field name="namedVariants">
+        <array count="1" elementtypeid="type3">
+          <!-- ArrayOf hkRootLevelContainer::NamedVariant -->
+          <record>
+            <!-- hkRootLevelContainer::NamedVariant -->
+            <field name="name">
+              <string value="Physics Scene Data" />
+            </field>
+            <field name="className">
+              <string value="hknpPhysicsSceneData" />
+            </field>
+            <field name="variant">
+              <pointer id="object2" />
+            </field>
+          </record>
+        </array>
+      </field>
+    </record>
+  </object>
+  <type id="type34">
+    <name value="hknpPhysicsSceneData" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <version value="1" />
+    <fields count="2">
+      <field name="systemDatas" typeid="type35" flags="32" />
+      <!-- hkArray< hkRefPtr< hknpPhysicsSystemData >, hkContainerHeapAllocator > -->
+      <field name="worldCinfo" typeid="type36" flags="34" />
+      <!-- T*< hknpRefWorldCinfo > -->
+    </fields>
+  </type>
+  <type id="type35">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type37" />
+    <!-- hkRefPtr< hknpPhysicsSystemData > -->
+    <parameters count="2">
+      <typeparam id="type37" />
+      <!-- hkRefPtr< hknpPhysicsSystemData > -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type38" flags="34" />
+      <!-- T*< hkRefPtr< hknpPhysicsSystemData > > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type36">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type39" />
+    <!-- hknpRefWorldCinfo -->
+    <parameters count="1">
+      <typeparam id="type39" />
+      <!-- hknpRefWorldCinfo -->
+    </parameters>
+    <flags value="0" />
+  </type>
+  <type id="type37">
+    <name value="hkRefPtr" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type40" />
+    <!-- hknpPhysicsSystemData -->
+    <parameters count="1">
+      <typeparam id="type40" />
+      <!-- hknpPhysicsSystemData -->
+    </parameters>
+    <fields count="1">
+      <field name="ptr" typeid="type41" flags="36" />
+      <!-- T*< hknpPhysicsSystemData > -->
+    </fields>
+  </type>
+  <type id="type38">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type37" />
+    <!-- hkRefPtr< hknpPhysicsSystemData > -->
+    <parameters count="1">
+      <typeparam id="type37" />
+      <!-- hkRefPtr< hknpPhysicsSystemData > -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <type id="type39">
+    <name value="hknpRefWorldCinfo" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <fields count="1">
+      <field name="info" typeid="type42" flags="32" />
+      <!-- hknpWorldCinfo -->
+    </fields>
+  </type>
+  <type id="type40">
+    <name value="hknpPhysicsSystemData" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <version value="3" />
+    <fields count="6">
+      <field name="materials" typeid="type43" flags="32" />
+      <!-- hkArray< hknpMaterial, hkContainerHeapAllocator > -->
+      <field name="motionProperties" typeid="type44" flags="32" />
+      <!-- hkArray< hknpMotionProperties, hkContainerHeapAllocator > -->
+      <field name="bodyCinfos" typeid="type45" flags="32" />
+      <!-- hkArray< hknpPhysicsSystemData::bodyCinfoWithAttachment, hkContainerHeapAllocator > -->
+      <field name="constraintCinfos" typeid="type46" flags="32" />
+      <!-- hkArray< hknpConstraintCinfo, hkContainerHeapAllocator > -->
+      <field name="name" typeid="type7" flags="32" />
+      <!-- hkStringPtr -->
+      <field name="microStepMultiplier" typeid="type47" flags="32" />
+      <!-- hkUint8 -->
+    </fields>
+  </type>
+  <type id="type41">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type40" />
+    <!-- hknpPhysicsSystemData -->
+    <parameters count="1">
+      <typeparam id="type40" />
+      <!-- hknpPhysicsSystemData -->
+    </parameters>
+    <flags value="0" />
+  </type>
+  <type id="type42">
+    <name value="hknpWorldCinfo" />
+    <format value="7" />
+    <!-- record -->
+    <version value="13" />
+    <fields count="41">
+      <field name="bodyBufferCapacity" typeid="type48" flags="32" />
+      <!-- hkInt32 -->
+      <field name="motionBufferCapacity" typeid="type48" flags="32" />
+      <!-- hkInt32 -->
+      <field name="constraintBufferCapacity" typeid="type48" flags="32" />
+      <!-- hkInt32 -->
+      <field name="constraintGroupBufferCapacity" typeid="type48" flags="32" />
+      <!-- hkInt32 -->
+      <field name="useBodyBacklinkBuffer" typeid="type49" flags="32" />
+      <!-- hkBool -->
+      <field name="materialLibrary" typeid="type50" flags="32" />
+      <!-- hkRefPtr< hknpMaterialLibrary > -->
+      <field name="motionPropertiesLibrary" typeid="type51" flags="32" />
+      <!-- hkRefPtr< hknpMotionPropertiesLibrary > -->
+      <field name="qualityLibrary" typeid="type52" flags="32" />
+      <!-- hkRefPtr< hknpBodyQualityLibrary > -->
+      <field name="simulationType" typeid="type26" flags="32" />
+      <!-- unsigned char -->
+      <field name="numSplitterCells" typeid="type48" flags="32" />
+      <!-- hkInt32 -->
+      <field name="gravity" typeid="type53" flags="32" />
+      <!-- hkVector4 -->
+      <field name="airDensity" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="enableContactCaching" typeid="type49" flags="32" />
+      <!-- hkBool -->
+      <field name="mergeEventsBeforeDispatch" typeid="type49" flags="32" />
+      <!-- hkBool -->
+      <field name="broadPhaseType" typeid="type26" flags="32" />
+      <!-- unsigned char -->
+      <field name="broadPhaseAabb" typeid="type55" flags="32" />
+      <!-- hkAabb -->
+      <field name="broadPhaseConfig" typeid="type56" flags="32" />
+      <!-- hkRefPtr< hknpBroadPhaseConfig > -->
+      <field name="collisionFilter" typeid="type57" flags="32" />
+      <!-- hkRefPtr< hknpCollisionFilter > -->
+      <field name="shapeTagCodec" typeid="type58" flags="32" />
+      <!-- hkRefPtr< hknpShapeTagCodec > -->
+      <field name="collisionTolerance" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="relativeCollisionAccuracy" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="aabbMargin" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="enableWeldingForDefaultObjects" typeid="type49" flags="32" />
+      <!-- hkBool -->
+      <field name="enableWeldingForCriticalObjects" typeid="type49" flags="32" />
+      <!-- hkBool -->
+      <field name="weldingConfig" typeid="type59" flags="32" />
+      <!-- hknpWeldingConfig -->
+      <field name="lodManagerCinfo" typeid="type60" flags="32" />
+      <!-- hknpLodManagerCinfo -->
+      <field name="enableSdfEdgeCollisions" typeid="type49" flags="32" />
+      <!-- hkBool -->
+      <field name="enableCollideWorkStealing" typeid="type49" flags="32" />
+      <!-- hkBool -->
+      <field name="particlesLandscapeQuadCacheSize" typeid="type48" flags="32" />
+      <!-- hkInt32 -->
+      <field name="solverTau" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="solverDamp" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="solverIterations" typeid="type48" flags="32" />
+      <!-- hkInt32 -->
+      <field name="solverMicrosteps" typeid="type48" flags="32" />
+      <!-- hkInt32 -->
+      <field name="enableDeactivation" typeid="type49" flags="32" />
+      <!-- hkBool -->
+      <field name="enablePenetrationRecovery" typeid="type49" flags="32" />
+      <!-- hkBool -->
+      <field name="maxApproachSpeedForHighQualitySolver" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="bodyIntegrator" typeid="type61" flags="32" />
+      <!-- hkRefPtr< hknpBodyIntegrator > -->
+      <field name="adjustSolverSettingsBasedOnTimestep" typeid="type49" flags="32" />
+      <!-- hkBool -->
+      <field name="expectedDeltaTime" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="minSolverIterations" typeid="type48" flags="32" />
+      <!-- hkInt32 -->
+      <field name="maxSolverIterations" typeid="type48" flags="32" />
+      <!-- hkInt32 -->
+    </fields>
+  </type>
+  <type id="type43">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type62" />
+    <!-- hknpMaterial -->
+    <parameters count="2">
+      <typeparam id="type62" />
+      <!-- hknpMaterial -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type63" flags="34" />
+      <!-- T*< hknpMaterial > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type44">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type64" />
+    <!-- hknpMotionProperties -->
+    <parameters count="2">
+      <typeparam id="type64" />
+      <!-- hknpMotionProperties -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type65" flags="34" />
+      <!-- T*< hknpMotionProperties > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type45">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type66" />
+    <!-- hknpPhysicsSystemData::bodyCinfoWithAttachment -->
+    <parameters count="2">
+      <typeparam id="type66" />
+      <!-- hknpPhysicsSystemData::bodyCinfoWithAttachment -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type67" flags="34" />
+      <!-- T*< hknpPhysicsSystemData::bodyCinfoWithAttachment > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type46">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type68" />
+    <!-- hknpConstraintCinfo -->
+    <parameters count="2">
+      <typeparam id="type68" />
+      <!-- hknpConstraintCinfo -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type69" flags="34" />
+      <!-- T*< hknpConstraintCinfo > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type47">
+    <name value="hkUint8" />
+    <parent id="type26" />
+    <!-- unsigned char -->
+  </type>
+  <type id="type48">
+    <name value="hkInt32" />
+    <parent id="type6" />
+    <!-- int -->
+  </type>
+  <type id="type49">
+    <name value="hkBool" />
+    <format value="8194" />
+    <!-- bool -->
+    <fields count="1">
+      <field name="bool" typeid="type9" flags="36" />
+      <!-- char -->
+    </fields>
+  </type>
+  <type id="type50">
+    <name value="hkRefPtr" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type70" />
+    <!-- hknpMaterialLibrary -->
+    <parameters count="1">
+      <typeparam id="type70" />
+      <!-- hknpMaterialLibrary -->
+    </parameters>
+    <fields count="1">
+      <field name="ptr" typeid="type71" flags="36" />
+      <!-- T*< hknpMaterialLibrary > -->
+    </fields>
+  </type>
+  <type id="type51">
+    <name value="hkRefPtr" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type72" />
+    <!-- hknpMotionPropertiesLibrary -->
+    <parameters count="1">
+      <typeparam id="type72" />
+      <!-- hknpMotionPropertiesLibrary -->
+    </parameters>
+    <fields count="1">
+      <field name="ptr" typeid="type73" flags="36" />
+      <!-- T*< hknpMotionPropertiesLibrary > -->
+    </fields>
+  </type>
+  <type id="type52">
+    <name value="hkRefPtr" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type74" />
+    <!-- hknpBodyQualityLibrary -->
+    <parameters count="1">
+      <typeparam id="type74" />
+      <!-- hknpBodyQualityLibrary -->
+    </parameters>
+    <fields count="1">
+      <field name="ptr" typeid="type75" flags="36" />
+      <!-- T*< hknpBodyQualityLibrary > -->
+    </fields>
+  </type>
+  <type id="type53">
+    <name value="hkVector4" />
+    <parent id="type76" />
+    <!-- hkVector4f -->
+  </type>
+  <type id="type54">
+    <name value="hkReal" />
+    <parent id="type77" />
+    <!-- float -->
+  </type>
+  <type id="type55">
+    <name value="hkAabb" />
+    <format value="7" />
+    <!-- record -->
+    <fields count="2">
+      <field name="min" typeid="type53" flags="32" />
+      <!-- hkVector4 -->
+      <field name="max" typeid="type53" flags="32" />
+      <!-- hkVector4 -->
+    </fields>
+  </type>
+  <type id="type56">
+    <name value="hkRefPtr" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type78" />
+    <!-- hknpBroadPhaseConfig -->
+    <parameters count="1">
+      <typeparam id="type78" />
+      <!-- hknpBroadPhaseConfig -->
+    </parameters>
+    <fields count="1">
+      <field name="ptr" typeid="type79" flags="36" />
+      <!-- T*< hknpBroadPhaseConfig > -->
+    </fields>
+  </type>
+  <type id="type57">
+    <name value="hkRefPtr" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type80" />
+    <!-- hknpCollisionFilter -->
+    <parameters count="1">
+      <typeparam id="type80" />
+      <!-- hknpCollisionFilter -->
+    </parameters>
+    <fields count="1">
+      <field name="ptr" typeid="type81" flags="36" />
+      <!-- T*< hknpCollisionFilter > -->
+    </fields>
+  </type>
+  <type id="type58">
+    <name value="hkRefPtr" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type82" />
+    <!-- hknpShapeTagCodec -->
+    <parameters count="1">
+      <typeparam id="type82" />
+      <!-- hknpShapeTagCodec -->
+    </parameters>
+    <fields count="1">
+      <field name="ptr" typeid="type83" flags="36" />
+      <!-- T*< hknpShapeTagCodec > -->
+    </fields>
+  </type>
+  <type id="type59">
+    <name value="hknpWeldingConfig" />
+    <format value="7" />
+    <!-- record -->
+    <fields count="1">
+      <field name="relativeGhostPlaneThreshold" typeid="type54" flags="32" />
+      <!-- hkReal -->
+    </fields>
+  </type>
+  <type id="type60">
+    <name value="hknpLodManagerCinfo" />
+    <format value="7" />
+    <!-- record -->
+    <version value="1" />
+    <fields count="8">
+      <field name="registerDefaultConfig" typeid="type49" flags="32" />
+      <!-- hkBool -->
+      <field name="autoBuildLodOnDynamicBodyAdded" typeid="type49" flags="32" />
+      <!-- hkBool -->
+      <field name="autoBuildLodOnMeshBodyAdded" typeid="type49" flags="32" />
+      <!-- hkBool -->
+      <field name="lodAccuray" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="slowToFastThreshold" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="fastToSlowThreshold" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="bodyIsBigThreshold" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="avgVelocityGain" typeid="type54" flags="32" />
+      <!-- hkReal -->
+    </fields>
+  </type>
+  <type id="type61">
+    <name value="hkRefPtr" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type84" />
+    <!-- hknpBodyIntegrator -->
+    <parameters count="1">
+      <typeparam id="type84" />
+      <!-- hknpBodyIntegrator -->
+    </parameters>
+    <fields count="1">
+      <field name="ptr" typeid="type85" flags="36" />
+      <!-- T*< hknpBodyIntegrator > -->
+    </fields>
+  </type>
+  <type id="type62">
+    <name value="hknpMaterial" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <version value="5" />
+    <fields count="21">
+      <field name="name" typeid="type7" flags="32" />
+      <!-- hkStringPtr -->
+      <field name="isExclusive" typeid="type86" flags="32" />
+      <!-- hkUint32 -->
+      <field name="flags" typeid="type6" flags="32" />
+      <!-- int -->
+      <field name="triggerType" typeid="type87" flags="32" />
+      <!-- hkEnum< hknpMaterial::TriggerType, hkUint8 > -->
+      <field name="triggerManifoldTolerance" typeid="type88" flags="32" />
+      <!-- hkUFloat8 -->
+      <field name="dynamicFriction" typeid="type89" flags="32" />
+      <!-- hkHalf16 -->
+      <field name="staticFriction" typeid="type89" flags="32" />
+      <!-- hkHalf16 -->
+      <field name="restitution" typeid="type89" flags="32" />
+      <!-- hkHalf16 -->
+      <field name="frictionCombinePolicy" typeid="type90" flags="32" />
+      <!-- hkEnum< hknpMaterial::CombinePolicy, hkUint8 > -->
+      <field name="restitutionCombinePolicy" typeid="type90" flags="32" />
+      <!-- hkEnum< hknpMaterial::CombinePolicy, hkUint8 > -->
+      <field name="weldingTolerance" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="maxContactImpulse" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="fractionOfClippedImpulseToApply" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="massChangerCategory" typeid="type91" flags="32" />
+      <!-- hkEnum< hknpMaterial::MassChangerCategory, hkUint8 > -->
+      <field name="massChangerHeavyObjectFactor" typeid="type89" flags="32" />
+      <!-- hkHalf16 -->
+      <field name="softContactForceFactor" typeid="type89" flags="32" />
+      <!-- hkHalf16 -->
+      <field name="softContactDampFactor" typeid="type89" flags="32" />
+      <!-- hkHalf16 -->
+      <field name="softContactSeparationVelocity" typeid="type88" flags="32" />
+      <!-- hkUFloat8 -->
+      <field name="surfaceVelocity" typeid="type92" flags="32" />
+      <!-- T*< hknpSurfaceVelocity > -->
+      <field name="disablingCollisionsBetweenCvxCvxDynamicObjectsDistance" typeid="type89" flags="32" />
+      <!-- hkHalf16 -->
+      <field name="userData" typeid="type93" flags="32" />
+      <!-- hkUint64 -->
+    </fields>
+  </type>
+  <type id="type63">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type62" />
+    <!-- hknpMaterial -->
+    <parameters count="1">
+      <typeparam id="type62" />
+      <!-- hknpMaterial -->
+    </parameters>
+    <flags value="0" />
+  </type>
+  <type id="type64">
+    <name value="hknpMotionProperties" />
+    <format value="7" />
+    <!-- record -->
+    <version value="5" />
+    <fields count="12">
+      <field name="isExclusive" typeid="type86" flags="32" />
+      <!-- hkUint32 -->
+      <field name="flags" typeid="type33" flags="32" />
+      <!-- unsigned int -->
+      <field name="gravityFactor" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="timeFactor" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="maxLinearSpeed" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="maxAngularSpeed" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="linearDamping" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="angularDamping" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="solverStabilizationSpeedThreshold" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="solverStabilizationSpeedReduction" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="deactivationSettings" typeid="type94" flags="32" />
+      <!-- hknpMotionProperties::DeactivationSettings -->
+      <field name="fullCastSettings" typeid="type95" flags="32" />
+      <!-- hknpMotionProperties::FullCastSettings -->
+    </fields>
+  </type>
+  <type id="type65">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type64" />
+    <!-- hknpMotionProperties -->
+    <parameters count="1">
+      <typeparam id="type64" />
+      <!-- hknpMotionProperties -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <type id="type66">
+    <name value="hknpPhysicsSystemData::bodyCinfoWithAttachment" />
+    <parent id="type96" />
+    <!-- hknpBodyCinfo -->
+    <format value="7" />
+    <!-- record -->
+    <fields count="1">
+      <field name="attachedBody" typeid="type6" flags="32" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type67">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type66" />
+    <!-- hknpPhysicsSystemData::bodyCinfoWithAttachment -->
+    <parameters count="1">
+      <typeparam id="type66" />
+      <!-- hknpPhysicsSystemData::bodyCinfoWithAttachment -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <type id="type68">
+    <name value="hknpConstraintCinfo" />
+    <format value="7" />
+    <!-- record -->
+    <version value="5" />
+    <fields count="7">
+      <field name="constraintData" typeid="type97" flags="32" />
+      <!-- hkRefPtr< hkpConstraintData > -->
+      <field name="bodyA" typeid="type98" flags="32" />
+      <!-- hknpBodyId -->
+      <field name="bodyB" typeid="type98" flags="32" />
+      <!-- hknpBodyId -->
+      <field name="flags" typeid="type99" flags="32" />
+      <!-- hkFlags< hknpConstraint::FlagsEnum, hkUint16 > -->
+      <field name="name" typeid="type7" flags="32" />
+      <!-- hkStringPtr -->
+      <field name="desiredConstraintId" typeid="type100" flags="32" />
+      <!-- hknpConstraintId -->
+      <field name="constraintGroupId" typeid="type101" flags="32" />
+      <!-- hknpConstraintGroupId -->
+    </fields>
+  </type>
+  <type id="type69">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type68" />
+    <!-- hknpConstraintCinfo -->
+    <parameters count="1">
+      <typeparam id="type68" />
+      <!-- hknpConstraintCinfo -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <type id="type70">
+    <name value="hknpMaterialLibrary" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <fields count="1">
+      <field name="entries" typeid="type102" flags="34" />
+      <!-- hkFreeListArray< hknpMaterial, 8 > -->
+    </fields>
+  </type>
+  <type id="type71">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type70" />
+    <!-- hknpMaterialLibrary -->
+    <parameters count="1">
+      <typeparam id="type70" />
+      <!-- hknpMaterialLibrary -->
+    </parameters>
+    <flags value="0" />
+  </type>
+  <type id="type72">
+    <name value="hknpMotionPropertiesLibrary" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <fields count="1">
+      <field name="entries" typeid="type103" flags="34" />
+      <!-- hkFreeListArray< hknpMotionProperties, 8 > -->
+    </fields>
+  </type>
+  <type id="type73">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type72" />
+    <!-- hknpMotionPropertiesLibrary -->
+    <parameters count="1">
+      <typeparam id="type72" />
+      <!-- hknpMotionPropertiesLibrary -->
+    </parameters>
+    <flags value="0" />
+  </type>
+  <type id="type74">
+    <name value="hknpBodyQualityLibrary" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <version value="1" />
+    <fields count="1">
+      <field name="qualities" typeid="type104" flags="34" />
+      <!-- T[N]< hknpBodyQuality, 32 > -->
+    </fields>
+  </type>
+  <type id="type75">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type74" />
+    <!-- hknpBodyQualityLibrary -->
+    <parameters count="1">
+      <typeparam id="type74" />
+      <!-- hknpBodyQualityLibrary -->
+    </parameters>
+    <flags value="0" />
+  </type>
+  <type id="type76">
+    <name value="hkVector4f" />
+    <format value="1064" />
+    <!-- array -->
+    <subtype id="type77" />
+    <!-- float -->
+  </type>
+  <type id="type77">
+    <name value="float" />
+    <format value="1525253" />
+    <!-- float -->
+  </type>
+  <type id="type78">
+    <name value="hknpBroadPhaseConfig" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <flags value="3" />
+    <fields count="0"></fields>
+  </type>
+  <type id="type79">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type78" />
+    <!-- hknpBroadPhaseConfig -->
+    <parameters count="1">
+      <typeparam id="type78" />
+      <!-- hknpBroadPhaseConfig -->
+    </parameters>
+    <flags value="0" />
+  </type>
+  <type id="type80">
+    <name value="hknpCollisionFilter" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <flags value="3" />
+    <fields count="1">
+      <field name="type" typeid="type105" flags="32" />
+      <!-- hkEnum< hknpCollisionFilter::Type, hkUint8 > -->
+    </fields>
+  </type>
+  <type id="type81">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type80" />
+    <!-- hknpCollisionFilter -->
+    <parameters count="1">
+      <typeparam id="type80" />
+      <!-- hknpCollisionFilter -->
+    </parameters>
+    <flags value="0" />
+  </type>
+  <type id="type82">
+    <name value="hknpShapeTagCodec" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <version value="2" />
+    <flags value="3" />
+    <fields count="2">
+      <field name="hints" typeid="type106" flags="32" />
+      <!-- hkFlags< hknpShapeTagCodec::Hints, hkUint32 > -->
+      <field name="type" typeid="type107" flags="32" />
+      <!-- hkEnum< hknpShapeTagCodec::Type, hkUint8 > -->
+    </fields>
+  </type>
+  <type id="type83">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type82" />
+    <!-- hknpShapeTagCodec -->
+    <parameters count="1">
+      <typeparam id="type82" />
+      <!-- hknpShapeTagCodec -->
+    </parameters>
+    <flags value="0" />
+  </type>
+  <type id="type84">
+    <name value="hknpBodyIntegrator" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <fields count="3">
+      <field name="bodyFlagsForcingNormalCollisions" typeid="type33" flags="32" />
+      <!-- unsigned int -->
+      <field name="typeForDynamicBodies" typeid="type108" flags="32" />
+      <!-- hknpManifoldType::Enum -->
+      <field name="typeForTriggers" typeid="type108" flags="32" />
+      <!-- hknpManifoldType::Enum -->
+    </fields>
+  </type>
+  <type id="type85">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type84" />
+    <!-- hknpBodyIntegrator -->
+    <parameters count="1">
+      <typeparam id="type84" />
+      <!-- hknpBodyIntegrator -->
+    </parameters>
+    <flags value="0" />
+  </type>
+  <type id="type86">
+    <name value="hkUint32" />
+    <parent id="type33" />
+    <!-- unsigned int -->
+  </type>
+  <type id="type87">
+    <name value="hkEnum" />
+    <format value="8196" />
+    <!-- int -->
+    <parameters count="2">
+      <typeparam id="type109" />
+      <!-- hknpMaterial::TriggerType -->
+      <typeparam id="type47" />
+      <!-- hkUint8 -->
+    </parameters>
+    <fields count="1">
+      <field name="storage" typeid="type47" flags="36" />
+      <!-- hkUint8 -->
+    </fields>
+  </type>
+  <type id="type88">
+    <name value="hkUFloat8" />
+    <format value="7" />
+    <!-- record -->
+    <fields count="1">
+      <field name="value" typeid="type47" flags="32" />
+      <!-- hkUint8 -->
+    </fields>
+  </type>
+  <type id="type89">
+    <name value="hkHalf16" />
+    <format value="476677" />
+    <!-- float -->
+    <fields count="1">
+      <field name="value" typeid="type110" flags="36" />
+      <!-- hkInt16 -->
+    </fields>
+  </type>
+  <type id="type90">
+    <name value="hkEnum" />
+    <format value="8196" />
+    <!-- int -->
+    <parameters count="2">
+      <typeparam id="type111" />
+      <!-- hknpMaterial::CombinePolicy -->
+      <typeparam id="type47" />
+      <!-- hkUint8 -->
+    </parameters>
+    <fields count="1">
+      <field name="storage" typeid="type47" flags="36" />
+      <!-- hkUint8 -->
+    </fields>
+  </type>
+  <type id="type91">
+    <name value="hkEnum" />
+    <format value="8196" />
+    <!-- int -->
+    <parameters count="2">
+      <typeparam id="type112" />
+      <!-- hknpMaterial::MassChangerCategory -->
+      <typeparam id="type47" />
+      <!-- hkUint8 -->
+    </parameters>
+    <fields count="1">
+      <field name="storage" typeid="type47" flags="36" />
+      <!-- hkUint8 -->
+    </fields>
+  </type>
+  <type id="type92">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type113" />
+    <!-- hknpSurfaceVelocity -->
+    <parameters count="1">
+      <typeparam id="type113" />
+      <!-- hknpSurfaceVelocity -->
+    </parameters>
+    <flags value="0" />
+  </type>
+  <type id="type93">
+    <name value="hkUint64" />
+    <parent id="type114" />
+    <!-- unsigned long long -->
+  </type>
+  <type id="type94">
+    <name value="hknpMotionProperties::DeactivationSettings" />
+    <format value="7" />
+    <!-- record -->
+    <fields count="10">
+      <field name="maxDistSqrd" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="maxRotSqrd" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="invBlockSize" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="pathingUpperThreshold" typeid="type110" flags="32" />
+      <!-- hkInt16 -->
+      <field name="pathingLowerThreshold" typeid="type110" flags="32" />
+      <!-- hkInt16 -->
+      <field name="numDeactivationFrequencyPasses" typeid="type47" flags="32" />
+      <!-- hkUint8 -->
+      <field name="deactivationVelocityScaleSquare" typeid="type47" flags="32" />
+      <!-- hkUint8 -->
+      <field name="minimumPathingVelocityScaleSquare" typeid="type47" flags="32" />
+      <!-- hkUint8 -->
+      <field name="spikingVelocityScaleThresholdSquared" typeid="type47" flags="32" />
+      <!-- hkUint8 -->
+      <field name="minimumSpikingVelocityScaleSquared" typeid="type47" flags="32" />
+      <!-- hkUint8 -->
+    </fields>
+  </type>
+  <type id="type95">
+    <name value="hknpMotionProperties::FullCastSettings" />
+    <format value="7" />
+    <!-- record -->
+    <fields count="10">
+      <field name="minSeparation" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="minExtraSeparation" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="toiSeparation" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="toiExtraSeparation" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="toiAccuracy" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="relativeSafeDeltaTime" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="absoluteSafeDeltaTime" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="keepTime" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="keepDistance" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="maxIterations" typeid="type6" flags="32" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type96">
+    <name value="hknpBodyCinfo" />
+    <format value="7" />
+    <!-- record -->
+    <version value="8" />
+    <fields count="22">
+      <field name="shape" typeid="type115" flags="32" />
+      <!-- hkRefPtr< hknpShape > -->
+      <field name="flags" typeid="type6" flags="32" />
+      <!-- int -->
+      <field name="collisionCntrl" typeid="type116" flags="32" />
+      <!-- short -->
+      <field name="collisionFilterInfo" typeid="type86" flags="32" />
+      <!-- hkUint32 -->
+      <field name="materialId" typeid="type117" flags="32" />
+      <!-- unsigned short -->
+      <field name="qualityId" typeid="type26" flags="32" />
+      <!-- unsigned char -->
+      <field name="name" typeid="type7" flags="32" />
+      <!-- hkStringPtr -->
+      <field name="userData" typeid="type93" flags="32" />
+      <!-- hkUint64 -->
+      <field name="motionType" typeid="type26" flags="32" />
+      <!-- unsigned char -->
+      <field name="position" typeid="type53" flags="32" />
+      <!-- hkVector4 -->
+      <field name="orientation" typeid="type118" flags="32" />
+      <!-- hkQuaternion -->
+      <field name="linearVelocity" typeid="type53" flags="32" />
+      <!-- hkVector4 -->
+      <field name="angularVelocity" typeid="type53" flags="32" />
+      <!-- hkVector4 -->
+      <field name="mass" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="massDistribution" typeid="type119" flags="32" />
+      <!-- hkRefPtr< hknpRefMassDistribution > -->
+      <field name="dragProperties" typeid="type120" flags="32" />
+      <!-- hkRefPtr< hknpRefDragProperties > -->
+      <field name="motionPropertiesId" typeid="type117" flags="32" />
+      <!-- unsigned short -->
+      <field name="desiredBodyId" typeid="type98" flags="32" />
+      <!-- hknpBodyId -->
+      <field name="motionId" typeid="type33" flags="32" />
+      <!-- unsigned int -->
+      <field name="collisionLookAheadDistance" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="localFrame" typeid="type121" flags="32" />
+      <!-- hkRefPtr< hkLocalFrame > -->
+      <field name="activationPriority" typeid="type122" flags="32" />
+      <!-- hkInt8 -->
+    </fields>
+  </type>
+  <type id="type97">
+    <name value="hkRefPtr" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type123" />
+    <!-- hkpConstraintData -->
+    <parameters count="1">
+      <typeparam id="type123" />
+      <!-- hkpConstraintData -->
+    </parameters>
+    <fields count="1">
+      <field name="ptr" typeid="type124" flags="36" />
+      <!-- T*< hkpConstraintData > -->
+    </fields>
+  </type>
+  <type id="type98">
+    <name value="hknpBodyId" />
+    <format value="7" />
+    <!-- record -->
+    <fields count="1">
+      <field name="serialAndIndex" typeid="type86" flags="34" />
+      <!-- hkUint32 -->
+    </fields>
+  </type>
+  <type id="type99">
+    <name value="hkFlags" />
+    <format value="16388" />
+    <!-- int -->
+    <parameters count="2">
+      <typeparam id="type125" />
+      <!-- hknpConstraint::FlagsEnum -->
+      <typeparam id="type126" />
+      <!-- hkUint16 -->
+    </parameters>
+    <fields count="1">
+      <field name="storage" typeid="type126" flags="34" />
+      <!-- hkUint16 -->
+    </fields>
+  </type>
+  <type id="type100">
+    <name value="hknpConstraintId" />
+    <parent id="type127" />
+    <!-- hkHandle< hkUint32, 2147483647 > -->
+    <version value="1" />
+  </type>
+  <type id="type101">
+    <name value="hknpConstraintGroupId" />
+    <parent id="type127" />
+    <!-- hkHandle< hkUint32, 2147483647 > -->
+    <version value="1" />
+  </type>
+  <type id="type102">
+    <name value="hkFreeListArray" />
+    <format value="7" />
+    <!-- record -->
+    <version value="1" />
+    <parameters count="2">
+      <typeparam id="type62" />
+      <!-- hknpMaterial -->
+      <valueparam value="8" />
+    </parameters>
+    <fields count="2">
+      <field name="elements" typeid="type128" flags="34" />
+      <!-- hkArray< hkFreeListArrayElement< hknpMaterial >, hkContainerHeapAllocator > -->
+      <field name="firstFree" typeid="type48" flags="34" />
+      <!-- hkInt32 -->
+    </fields>
+  </type>
+  <type id="type103">
+    <name value="hkFreeListArray" />
+    <format value="7" />
+    <!-- record -->
+    <version value="1" />
+    <parameters count="2">
+      <typeparam id="type64" />
+      <!-- hknpMotionProperties -->
+      <valueparam value="8" />
+    </parameters>
+    <fields count="2">
+      <field name="elements" typeid="type129" flags="34" />
+      <!-- hkArray< hkFreeListArrayElement< hknpMotionProperties >, hkContainerHeapAllocator > -->
+      <field name="firstFree" typeid="type48" flags="34" />
+      <!-- hkInt32 -->
+    </fields>
+  </type>
+  <type id="type104">
+    <name value="T[N]" />
+    <format value="8232" />
+    <!-- array -->
+    <subtype id="type130" />
+    <!-- hknpBodyQuality -->
+    <parameters count="2">
+      <typeparam id="type130" />
+      <!-- hknpBodyQuality -->
+      <valueparam value="32" />
+    </parameters>
+  </type>
+  <type id="type105">
+    <name value="hkEnum" />
+    <format value="8196" />
+    <!-- int -->
+    <parameters count="2">
+      <typeparam id="type131" />
+      <!-- hknpCollisionFilter::Type -->
+      <typeparam id="type47" />
+      <!-- hkUint8 -->
+    </parameters>
+    <fields count="1">
+      <field name="storage" typeid="type47" flags="36" />
+      <!-- hkUint8 -->
+    </fields>
+  </type>
+  <type id="type106">
+    <name value="hkFlags" />
+    <format value="32772" />
+    <!-- int -->
+    <parameters count="2">
+      <typeparam id="type132" />
+      <!-- hknpShapeTagCodec::Hints -->
+      <typeparam id="type86" />
+      <!-- hkUint32 -->
+    </parameters>
+    <fields count="1">
+      <field name="storage" typeid="type86" flags="34" />
+      <!-- hkUint32 -->
+    </fields>
+  </type>
+  <type id="type107">
+    <name value="hkEnum" />
+    <format value="8196" />
+    <!-- int -->
+    <parameters count="2">
+      <typeparam id="type133" />
+      <!-- hknpShapeTagCodec::Type -->
+      <typeparam id="type47" />
+      <!-- hkUint8 -->
+    </parameters>
+    <fields count="1">
+      <field name="storage" typeid="type47" flags="36" />
+      <!-- hkUint8 -->
+    </fields>
+  </type>
+  <type id="type108">
+    <name value="hknpManifoldType::Enum" />
+    <format value="33284" />
+    <!-- int -->
+  </type>
+  <type id="type109">
+    <name value="hknpMaterial::TriggerType" />
+    <format value="33284" />
+    <!-- int -->
+  </type>
+  <type id="type110">
+    <name value="hkInt16" />
+    <parent id="type116" />
+    <!-- short -->
+  </type>
+  <type id="type111">
+    <name value="hknpMaterial::CombinePolicy" />
+    <format value="33284" />
+    <!-- int -->
+  </type>
+  <type id="type112">
+    <name value="hknpMaterial::MassChangerCategory" />
+    <format value="33284" />
+    <!-- int -->
+  </type>
+  <type id="type113">
+    <name value="hknpSurfaceVelocity" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <flags value="3" />
+    <fields count="0"></fields>
+  </type>
+  <type id="type114">
+    <name value="unsigned long long" />
+    <format value="65540" />
+    <!-- int -->
+  </type>
+  <type id="type115">
+    <name value="hkRefPtr" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type134" />
+    <!-- hknpShape -->
+    <parameters count="1">
+      <typeparam id="type134" />
+      <!-- hknpShape -->
+    </parameters>
+    <fields count="1">
+      <field name="ptr" typeid="type135" flags="36" />
+      <!-- T*< hknpShape > -->
+    </fields>
+  </type>
+  <type id="type116">
+    <name value="short" />
+    <format value="16900" />
+    <!-- int -->
+  </type>
+  <type id="type117">
+    <name value="unsigned short" />
+    <format value="16388" />
+    <!-- int -->
+  </type>
+  <type id="type118">
+    <name value="hkQuaternion" />
+    <parent id="type136" />
+    <!-- hkQuaternionf -->
+  </type>
+  <type id="type119">
+    <name value="hkRefPtr" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type137" />
+    <!-- hknpRefMassDistribution -->
+    <parameters count="1">
+      <typeparam id="type137" />
+      <!-- hknpRefMassDistribution -->
+    </parameters>
+    <fields count="1">
+      <field name="ptr" typeid="type138" flags="36" />
+      <!-- T*< hknpRefMassDistribution > -->
+    </fields>
+  </type>
+  <type id="type120">
+    <name value="hkRefPtr" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type139" />
+    <!-- hknpRefDragProperties -->
+    <parameters count="1">
+      <typeparam id="type139" />
+      <!-- hknpRefDragProperties -->
+    </parameters>
+    <fields count="1">
+      <field name="ptr" typeid="type140" flags="36" />
+      <!-- T*< hknpRefDragProperties > -->
+    </fields>
+  </type>
+  <type id="type121">
+    <name value="hkRefPtr" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type141" />
+    <!-- hkLocalFrame -->
+    <parameters count="1">
+      <typeparam id="type141" />
+      <!-- hkLocalFrame -->
+    </parameters>
+    <fields count="1">
+      <field name="ptr" typeid="type142" flags="36" />
+      <!-- T*< hkLocalFrame > -->
+    </fields>
+  </type>
+  <type id="type122">
+    <name value="hkInt8" />
+    <parent id="type143" />
+    <!-- signed char -->
+  </type>
+  <type id="type123">
+    <name value="hkpConstraintData" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <flags value="3" />
+    <fields count="1">
+      <field name="userData" typeid="type144" flags="32" />
+      <!-- hkUlong -->
+    </fields>
+  </type>
+  <type id="type124">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type123" />
+    <!-- hkpConstraintData -->
+    <parameters count="1">
+      <typeparam id="type123" />
+      <!-- hkpConstraintData -->
+    </parameters>
+    <flags value="0" />
+  </type>
+  <type id="type125">
+    <name value="hknpConstraint::FlagsEnum" />
+    <format value="33284" />
+    <!-- int -->
+  </type>
+  <type id="type126">
+    <name value="hkUint16" />
+    <parent id="type117" />
+    <!-- unsigned short -->
+  </type>
+  <type id="type127">
+    <name value="hkHandle" />
+    <format value="7" />
+    <!-- record -->
+    <parameters count="2">
+      <typeparam id="type86" />
+      <!-- hkUint32 -->
+      <valueparam value="2147483647" />
+    </parameters>
+    <fields count="1">
+      <field name="value" typeid="type86" flags="34" />
+      <!-- hkUint32 -->
+    </fields>
+  </type>
+  <type id="type128">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type145" />
+    <!-- hkFreeListArrayElement< hknpMaterial > -->
+    <parameters count="2">
+      <typeparam id="type145" />
+      <!-- hkFreeListArrayElement< hknpMaterial > -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type146" flags="34" />
+      <!-- T*< hkFreeListArrayElement< hknpMaterial > > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type129">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type147" />
+    <!-- hkFreeListArrayElement< hknpMotionProperties > -->
+    <parameters count="2">
+      <typeparam id="type147" />
+      <!-- hkFreeListArrayElement< hknpMotionProperties > -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type148" flags="34" />
+      <!-- T*< hkFreeListArrayElement< hknpMotionProperties > > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type130">
+    <name value="hknpBodyQuality" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <version value="4" />
+    <fields count="6">
+      <field name="priority" typeid="type6" flags="32" />
+      <!-- int -->
+      <field name="supportedFlags" typeid="type149" flags="32" />
+      <!-- hkFlags< hknpBodyQuality::FlagsEnum, hkUint32 > -->
+      <field name="requestedFlags" typeid="type149" flags="32" />
+      <!-- hkFlags< hknpBodyQuality::FlagsEnum, hkUint32 > -->
+      <field name="contactCachingRelativeMovementThreshold" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="motionRangeBreachPolicy" typeid="type150" flags="32" />
+      <!-- hknpMotionRangeBreachPolicy::Enum -->
+      <field name="motionWeldBreachPolicy" typeid="type150" flags="32" />
+      <!-- hknpMotionRangeBreachPolicy::Enum -->
+    </fields>
+  </type>
+  <type id="type131">
+    <name value="hknpCollisionFilter::Type" />
+    <format value="33284" />
+    <!-- int -->
+  </type>
+  <type id="type132">
+    <name value="hknpShapeTagCodec::Hints" />
+    <format value="33284" />
+    <!-- int -->
+  </type>
+  <type id="type133">
+    <name value="hknpShapeTagCodec::Type" />
+    <format value="33284" />
+    <!-- int -->
+  </type>
+  <type id="type134">
+    <name value="hknpShape" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <version value="4" />
+    <fields count="7">
+      <field name="flags" typeid="type151" flags="34" />
+      <!-- hkFlags< hknpShape::FlagsEnum, hkUint16 > -->
+      <field name="type" typeid="type152" flags="34" />
+      <!-- hkEnum< hknpShapeType::Enum, hkUint8 > -->
+      <field name="numShapeKeyBits" typeid="type47" flags="34" />
+      <!-- hkUint8 -->
+      <field name="dispatchType" typeid="type153" flags="32" />
+      <!-- hkEnum< hknpCollisionDispatchType::Enum, hkUint8 > -->
+      <field name="convexRadius" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="userData" typeid="type93" flags="32" />
+      <!-- hkUint64 -->
+      <field name="properties" typeid="type154" flags="34" />
+      <!-- hkRefPtr< hkRefCountedProperties > -->
+    </fields>
+  </type>
+  <type id="type135">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type134" />
+    <!-- hknpShape -->
+    <parameters count="1">
+      <typeparam id="type134" />
+      <!-- hknpShape -->
+    </parameters>
+    <flags value="0" />
+  </type>
+  <type id="type136">
+    <name value="hkQuaternionf" />
+    <format value="1064" />
+    <!-- array -->
+    <subtype id="type77" />
+    <!-- float -->
+    <fields count="1">
+      <field name="vec" typeid="type76" flags="32" />
+      <!-- hkVector4f -->
+    </fields>
+  </type>
+  <type id="type137">
+    <name value="hknpRefMassDistribution" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <fields count="1">
+      <field name="massDistribution" typeid="type155" flags="32" />
+      <!-- hknpMassDistribution -->
+    </fields>
+  </type>
+  <type id="type138">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type137" />
+    <!-- hknpRefMassDistribution -->
+    <parameters count="1">
+      <typeparam id="type137" />
+      <!-- hknpRefMassDistribution -->
+    </parameters>
+    <flags value="0" />
+  </type>
+  <type id="type139">
+    <name value="hknpRefDragProperties" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <fields count="1">
+      <field name="dragProperties" typeid="type156" flags="32" />
+      <!-- hknpDragProperties -->
+    </fields>
+  </type>
+  <type id="type140">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type139" />
+    <!-- hknpRefDragProperties -->
+    <parameters count="1">
+      <typeparam id="type139" />
+      <!-- hknpRefDragProperties -->
+    </parameters>
+    <flags value="0" />
+  </type>
+  <type id="type141">
+    <name value="hkLocalFrame" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <flags value="3" />
+    <fields count="0"></fields>
+  </type>
+  <type id="type142">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type141" />
+    <!-- hkLocalFrame -->
+    <parameters count="1">
+      <typeparam id="type141" />
+      <!-- hkLocalFrame -->
+    </parameters>
+    <flags value="0" />
+  </type>
+  <type id="type143">
+    <name value="signed char" />
+    <format value="8708" />
+    <!-- int -->
+  </type>
+  <type id="type144">
+    <name value="hkUlong" />
+    <parent id="type114" />
+    <!-- unsigned long long -->
+  </type>
+  <type id="type145">
+    <name value="hkFreeListArrayElement" />
+    <parent id="type62" />
+    <!-- hknpMaterial -->
+    <parameters count="1">
+      <typeparam id="type62" />
+      <!-- hknpMaterial -->
+    </parameters>
+  </type>
+  <type id="type146">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type145" />
+    <!-- hkFreeListArrayElement< hknpMaterial > -->
+    <parameters count="1">
+      <typeparam id="type145" />
+      <!-- hkFreeListArrayElement< hknpMaterial > -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <type id="type147">
+    <name value="hkFreeListArrayElement" />
+    <parent id="type64" />
+    <!-- hknpMotionProperties -->
+    <parameters count="1">
+      <typeparam id="type64" />
+      <!-- hknpMotionProperties -->
+    </parameters>
+  </type>
+  <type id="type148">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type147" />
+    <!-- hkFreeListArrayElement< hknpMotionProperties > -->
+    <parameters count="1">
+      <typeparam id="type147" />
+      <!-- hkFreeListArrayElement< hknpMotionProperties > -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <type id="type149">
+    <name value="hkFlags" />
+    <format value="32772" />
+    <!-- int -->
+    <parameters count="2">
+      <typeparam id="type157" />
+      <!-- hknpBodyQuality::FlagsEnum -->
+      <typeparam id="type86" />
+      <!-- hkUint32 -->
+    </parameters>
+    <fields count="1">
+      <field name="storage" typeid="type86" flags="34" />
+      <!-- hkUint32 -->
+    </fields>
+  </type>
+  <type id="type150">
+    <name value="hknpMotionRangeBreachPolicy::Enum" />
+    <format value="33284" />
+    <!-- int -->
+  </type>
+  <type id="type151">
+    <name value="hkFlags" />
+    <format value="16388" />
+    <!-- int -->
+    <parameters count="2">
+      <typeparam id="type158" />
+      <!-- hknpShape::FlagsEnum -->
+      <typeparam id="type126" />
+      <!-- hkUint16 -->
+    </parameters>
+    <fields count="1">
+      <field name="storage" typeid="type126" flags="34" />
+      <!-- hkUint16 -->
+    </fields>
+  </type>
+  <type id="type152">
+    <name value="hkEnum" />
+    <format value="8196" />
+    <!-- int -->
+    <parameters count="2">
+      <typeparam id="type159" />
+      <!-- hknpShapeType::Enum -->
+      <typeparam id="type47" />
+      <!-- hkUint8 -->
+    </parameters>
+    <fields count="1">
+      <field name="storage" typeid="type47" flags="36" />
+      <!-- hkUint8 -->
+    </fields>
+  </type>
+  <type id="type153">
+    <name value="hkEnum" />
+    <format value="8196" />
+    <!-- int -->
+    <parameters count="2">
+      <typeparam id="type160" />
+      <!-- hknpCollisionDispatchType::Enum -->
+      <typeparam id="type47" />
+      <!-- hkUint8 -->
+    </parameters>
+    <fields count="1">
+      <field name="storage" typeid="type47" flags="36" />
+      <!-- hkUint8 -->
+    </fields>
+  </type>
+  <type id="type154">
+    <name value="hkRefPtr" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type161" />
+    <!-- hkRefCountedProperties -->
+    <parameters count="1">
+      <typeparam id="type161" />
+      <!-- hkRefCountedProperties -->
+    </parameters>
+    <fields count="1">
+      <field name="ptr" typeid="type162" flags="36" />
+      <!-- T*< hkRefCountedProperties > -->
+    </fields>
+  </type>
+  <type id="type155">
+    <name value="hknpMassDistribution" />
+    <format value="7" />
+    <!-- record -->
+    <fields count="3">
+      <field name="centerOfMassAndVolume" typeid="type53" flags="32" />
+      <!-- hkVector4 -->
+      <field name="majorAxisSpace" typeid="type118" flags="32" />
+      <!-- hkQuaternion -->
+      <field name="inertiaTensor" typeid="type53" flags="32" />
+      <!-- hkVector4 -->
+    </fields>
+  </type>
+  <type id="type156">
+    <name value="hknpDragProperties" />
+    <format value="7" />
+    <!-- record -->
+    <fields count="3">
+      <field name="centerAndOffset" typeid="type163" flags="32" />
+      <!-- T[N]< hkVector4, 3 > -->
+      <field name="angularEffectsAndArea" typeid="type164" flags="32" />
+      <!-- T[N]< hkVector4, 6 > -->
+      <field name="armUVs" typeid="type165" flags="32" />
+      <!-- T[N]< hkReal, 12 > -->
+    </fields>
+  </type>
+  <type id="type157">
+    <name value="hknpBodyQuality::FlagsEnum" />
+    <format value="33284" />
+    <!-- int -->
+  </type>
+  <type id="type158">
+    <name value="hknpShape::FlagsEnum" />
+    <format value="33284" />
+    <!-- int -->
+  </type>
+  <type id="type159">
+    <name value="hknpShapeType::Enum" />
+    <format value="33284" />
+    <!-- int -->
+  </type>
+  <type id="type160">
+    <name value="hknpCollisionDispatchType::Enum" />
+    <format value="33284" />
+    <!-- int -->
+  </type>
+  <type id="type161">
+    <name value="hkRefCountedProperties" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <version value="2" />
+    <fields count="1">
+      <field name="entries" typeid="type166" flags="34" />
+      <!-- hkArray< hkRefCountedProperties::Entry, hkContainerHeapAllocator > -->
+    </fields>
+  </type>
+  <type id="type162">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type161" />
+    <!-- hkRefCountedProperties -->
+    <parameters count="1">
+      <typeparam id="type161" />
+      <!-- hkRefCountedProperties -->
+    </parameters>
+    <flags value="0" />
+  </type>
+  <type id="type163">
+    <name value="T[N]" />
+    <format value="808" />
+    <!-- array -->
+    <subtype id="type53" />
+    <!-- hkVector4 -->
+    <parameters count="2">
+      <typeparam id="type53" />
+      <!-- hkVector4 -->
+      <valueparam value="3" />
+    </parameters>
+  </type>
+  <type id="type164">
+    <name value="T[N]" />
+    <format value="1576" />
+    <!-- array -->
+    <subtype id="type53" />
+    <!-- hkVector4 -->
+    <parameters count="2">
+      <typeparam id="type53" />
+      <!-- hkVector4 -->
+      <valueparam value="6" />
+    </parameters>
+  </type>
+  <type id="type165">
+    <name value="T[N]" />
+    <format value="3112" />
+    <!-- array -->
+    <subtype id="type54" />
+    <!-- hkReal -->
+    <parameters count="2">
+      <typeparam id="type54" />
+      <!-- hkReal -->
+      <valueparam value="12" />
+    </parameters>
+  </type>
+  <type id="type166">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type167" />
+    <!-- hkRefCountedProperties::Entry -->
+    <parameters count="2">
+      <typeparam id="type167" />
+      <!-- hkRefCountedProperties::Entry -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type168" flags="34" />
+      <!-- T*< hkRefCountedProperties::Entry > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type167">
+    <name value="hkRefCountedProperties::Entry" />
+    <format value="7" />
+    <!-- record -->
+    <fields count="3">
+      <field name="object" typeid="type169" flags="32" />
+      <!-- hkRefPtr< hkReferencedObject > -->
+      <field name="key" typeid="type126" flags="32" />
+      <!-- hkUint16 -->
+      <field name="flags" typeid="type126" flags="32" />
+      <!-- hkUint16 -->
+    </fields>
+  </type>
+  <type id="type168">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type167" />
+    <!-- hkRefCountedProperties::Entry -->
+    <parameters count="1">
+      <typeparam id="type167" />
+      <!-- hkRefCountedProperties::Entry -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <type id="type169">
+    <name value="hkRefPtr" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type11" />
+    <!-- hkReferencedObject -->
+    <parameters count="1">
+      <typeparam id="type11" />
+      <!-- hkReferencedObject -->
+    </parameters>
+    <fields count="1">
+      <field name="ptr" typeid="type12" flags="36" />
+      <!-- T*< hkReferencedObject > -->
+    </fields>
+  </type>
+  <object id="object2" typeid="type34">
+    <!-- hknpPhysicsSceneData -->
+    <record>
+      <!-- hknpPhysicsSceneData -->
+      <field name="propertyBag">
+        <array count="0" elementtypeid="type15">
+          <!-- ArrayOf hkDefaultPropertyBag -->
+        </array>
+      </field>
+      <field name="systemDatas">
+        <array count="1" elementtypeid="type37">
+          <!-- ArrayOf hkRefPtr< hknpPhysicsSystemData > -->
+          <pointer id="object3" />
+        </array>
+      </field>
+      <field name="worldCinfo">
+        <pointer id="object0" />
+      </field>
+    </record>
+  </object>
+  <object id="object3" typeid="type40">
+    <!-- hknpPhysicsSystemData -->
+    <record>
+      <!-- hknpPhysicsSystemData -->
+      <field name="propertyBag">
+        <array count="0" elementtypeid="type15">
+          <!-- ArrayOf hkDefaultPropertyBag -->
+        </array>
+      </field>
+      <field name="materials">
+        <array count="1" elementtypeid="type62">
+          <!-- ArrayOf hknpMaterial -->
+          <record>
+            <!-- hknpMaterial -->
+            <field name="propertyBag">
+              <array count="0" elementtypeid="type15">
+                <!-- ArrayOf hkDefaultPropertyBag -->
+              </array>
+            </field>
+            <field name="name">
+              <string value="" />
+            </field>
+            <field name="isExclusive">
+              <integer value="0" />
+            </field>
+            <field name="flags">
+              <integer value="0" />
+            </field>
+            <field name="triggerType">
+              <integer value="0" />
+              <!-- TRIGGER_TYPE_NONE -->
+            </field>
+            <field name="triggerManifoldTolerance">
+              <record>
+                <!-- hkUFloat8 -->
+                <field name="value">
+                  <integer value="0" />
+                </field>
+              </record>
+            </field>
+            <field name="dynamicFriction">
+              <real dec="0.5" hex="#3fe0000000000000" />
+            </field>
+            <field name="staticFriction">
+              <real dec="0.5" hex="#3fe0000000000000" />
+            </field>
+            <field name="restitution">
+              <real dec="0.398438" hex="#3fd9800000000000" />
+            </field>
+            <field name="frictionCombinePolicy">
+              <integer value="1" />
+              <!-- COMBINE_MIN -->
+            </field>
+            <field name="restitutionCombinePolicy">
+              <integer value="2" />
+              <!-- COMBINE_MAX -->
+            </field>
+            <field name="weldingTolerance">
+              <real dec="0.05" hex="#3fa99999a0000000" />
+            </field>
+            <field name="maxContactImpulse">
+              <real dec="3.40282e+38" hex="#47effffdc0000000" />
+            </field>
+            <field name="fractionOfClippedImpulseToApply">
+              <real dec="1" hex="#3ff0000000000000" />
+            </field>
+            <field name="massChangerCategory">
+              <integer value="0" />
+              <!-- MASS_CHANGER_IGNORE -->
+            </field>
+            <field name="massChangerHeavyObjectFactor">
+              <real dec="1" hex="#3ff0000000000000" />
+            </field>
+            <field name="softContactForceFactor">
+              <real dec="0" hex="#0" />
+            </field>
+            <field name="softContactDampFactor">
+              <real dec="0" hex="#0" />
+            </field>
+            <field name="softContactSeparationVelocity">
+              <record>
+                <!-- hkUFloat8 -->
+                <field name="value">
+                  <integer value="0" />
+                </field>
+              </record>
+            </field>
+            <field name="surfaceVelocity">
+              <pointer id="object0" />
+            </field>
+            <field name="disablingCollisionsBetweenCvxCvxDynamicObjectsDistance">
+              <real dec="5" hex="#4014000000000000" />
+            </field>
+            <field name="userData">
+              <integer value="0" />
+            </field>
+          </record>
+        </array>
+      </field>
+      <field name="motionProperties">
+        <array count="1" elementtypeid="type64">
+          <!-- ArrayOf hknpMotionProperties -->
+          <record>
+            <!-- hknpMotionProperties -->
+            <field name="isExclusive">
+              <integer value="0" />
+            </field>
+            <field name="flags">
+              <integer value="0" />
+            </field>
+            <field name="gravityFactor">
+              <real dec="1" hex="#3ff0000000000000" />
+            </field>
+            <field name="timeFactor">
+              <real dec="1" hex="#3ff0000000000000" />
+            </field>
+            <field name="maxLinearSpeed">
+              <real dec="200" hex="#4069000000000000" />
+            </field>
+            <field name="maxAngularSpeed">
+              <real dec="100" hex="#4059000000000000" />
+            </field>
+            <field name="linearDamping">
+              <real dec="0" hex="#0" />
+            </field>
+            <field name="angularDamping">
+              <real dec="0" hex="#0" />
+            </field>
+            <field name="solverStabilizationSpeedThreshold">
+              <real dec="0" hex="#0" />
+            </field>
+            <field name="solverStabilizationSpeedReduction">
+              <real dec="0" hex="#0" />
+            </field>
+            <field name="deactivationSettings">
+              <record>
+                <!-- hknpMotionProperties::DeactivationSettings -->
+                <field name="maxDistSqrd">
+                  <real dec="0.0025" hex="#3f647ae160000000" />
+                </field>
+                <field name="maxRotSqrd">
+                  <real dec="0.0025" hex="#3f647ae160000000" />
+                </field>
+                <field name="invBlockSize">
+                  <real dec="1" hex="#3ff0000000000000" />
+                </field>
+                <field name="pathingUpperThreshold">
+                  <integer value="26623" />
+                </field>
+                <field name="pathingLowerThreshold">
+                  <integer value="-26213" />
+                </field>
+                <field name="numDeactivationFrequencyPasses">
+                  <integer value="4" />
+                </field>
+                <field name="deactivationVelocityScaleSquare">
+                  <integer value="115" />
+                </field>
+                <field name="minimumPathingVelocityScaleSquare">
+                  <integer value="117" />
+                </field>
+                <field name="spikingVelocityScaleThresholdSquared">
+                  <integer value="6" />
+                </field>
+                <field name="minimumSpikingVelocityScaleSquared">
+                  <integer value="115" />
+                </field>
+              </record>
+            </field>
+            <field name="fullCastSettings">
+              <record>
+                <!-- hknpMotionProperties::FullCastSettings -->
+                <field name="minSeparation">
+                  <real dec="-0.5" hex="#bfe0000000000000" />
+                </field>
+                <field name="minExtraSeparation">
+                  <real dec="-0.125" hex="#bfc0000000000000" />
+                </field>
+                <field name="toiSeparation">
+                  <real dec="-0.25" hex="#bfd0000000000000" />
+                </field>
+                <field name="toiExtraSeparation">
+                  <real dec="-0.0875" hex="#bfb6666660000000" />
+                </field>
+                <field name="toiAccuracy">
+                  <real dec="0.01" hex="#3f847ae140000000" />
+                </field>
+                <field name="relativeSafeDeltaTime">
+                  <real dec="0.025" hex="#3f999999a0000000" />
+                </field>
+                <field name="absoluteSafeDeltaTime">
+                  <real dec="2.5e-05" hex="#3efa36e2e0000000" />
+                </field>
+                <field name="keepTime">
+                  <real dec="0.05" hex="#3fa99999a0000000" />
+                </field>
+                <field name="keepDistance">
+                  <real dec="0.05" hex="#3fa99999a0000000" />
+                </field>
+                <field name="maxIterations">
+                  <integer value="5" />
+                </field>
+              </record>
+            </field>
+          </record>
+        </array>
+      </field>
+      <field name="bodyCinfos">
+        <array count="1" elementtypeid="type66">
+          <!-- ArrayOf hknpPhysicsSystemData::bodyCinfoWithAttachment -->
+          <record>
+            <!-- hknpPhysicsSystemData::bodyCinfoWithAttachment -->
+            <field name="shape">
+              <pointer id="object4" />
+            </field>
+            <field name="flags">
+              <integer value="0" />
+            </field>
+            <field name="collisionCntrl">
+              <integer value="0" />
+            </field>
+            <field name="collisionFilterInfo">
+              <integer value="0" />
+            </field>
+            <field name="materialId">
+              <integer value="0" />
+            </field>
+            <field name="qualityId">
+              <integer value="255" />
+            </field>
+            <field name="name">
+              <string value="h002700" />
+            </field>
+            <field name="userData">
+              <integer value="0" />
+            </field>
+            <field name="motionType">
+              <integer value="0" />
+            </field>
+            <field name="position">
+              <array count="4" elementtypeid="type77">
+                <!-- ArrayOf float -->
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="1" hex="#3ff0000000000000" />
+              </array>
+            </field>
+            <field name="orientation">
+              <array count="4" elementtypeid="type77">
+                <!-- ArrayOf float -->
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="1" hex="#3fefffffe0000000" />
+              </array>
+            </field>
+            <field name="linearVelocity">
+              <array count="4" elementtypeid="type77">
+                <!-- ArrayOf float -->
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+              </array>
+            </field>
+            <field name="angularVelocity">
+              <array count="4" elementtypeid="type77">
+                <!-- ArrayOf float -->
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+                <real dec="0" hex="#0" />
+              </array>
+            </field>
+            <field name="mass">
+              <real dec="0" hex="#0" />
+            </field>
+            <field name="massDistribution">
+              <pointer id="object0" />
+            </field>
+            <field name="dragProperties">
+              <pointer id="object5" />
+            </field>
+            <field name="motionPropertiesId">
+              <integer value="0" />
+            </field>
+            <field name="desiredBodyId">
+              <record>
+                <!-- hknpBodyId -->
+                <field name="serialAndIndex">
+                  <integer value="16777215" />
+                </field>
+              </record>
+            </field>
+            <field name="motionId">
+              <integer value="2147483647" />
+            </field>
+            <field name="collisionLookAheadDistance">
+              <real dec="0" hex="#0" />
+            </field>
+            <field name="localFrame">
+              <pointer id="object0" />
+            </field>
+            <field name="activationPriority">
+              <integer value="0" />
+            </field>
+            <field name="attachedBody">
+              <integer value="-1" />
+            </field>
+          </record>
+        </array>
+      </field>
+      <field name="constraintCinfos">
+        <array count="0" elementtypeid="type68">
+          <!-- ArrayOf hknpConstraintCinfo -->
+        </array>
+      </field>
+      <field name="name">
+        <string value="Default Physics System Data" />
+      </field>
+      <field name="microStepMultiplier">
+        <integer value="1" />
+      </field>
+    </record>
+  </object>
+  <type id="type170">
+    <name value="hknpBoxShape" />
+    <parent id="type171" />
+    <!-- hknpConvexPolytopeShape -->
+    <format value="7" />
+    <!-- record -->
+    <fields count="1">
+      <field name="obb" typeid="type172" flags="34" />
+      <!-- hkTransformf -->
+    </fields>
+  </type>
+  <type id="type171">
+    <name value="hknpConvexPolytopeShape" />
+    <parent id="type173" />
+    <!-- hknpConvexShape -->
+    <format value="7" />
+    <!-- record -->
+    <version value="4" />
+    <fields count="4">
+      <field name="planes" typeid="type174" flags="34" />
+      <!-- hkRelArray< hkVector4 > -->
+      <field name="faces" typeid="type175" flags="34" />
+      <!-- hkRelArray< hknpConvexPolytopeShape::Face > -->
+      <field name="indices" typeid="type176" flags="34" />
+      <!-- hkRelArray< hkUint8 > -->
+      <field name="connectivity" typeid="type177" flags="34" />
+      <!-- hkRefPtr< hknpConvexPolytopeShape::Connectivity > -->
+    </fields>
+  </type>
+  <type id="type172">
+    <name value="hkTransformf" />
+    <format value="4136" />
+    <!-- array -->
+    <subtype id="type77" />
+    <!-- float -->
+    <fields count="2">
+      <field name="rotation" typeid="type178" flags="34" />
+      <!-- hkRotationf -->
+      <field name="translation" typeid="type76" flags="34" />
+      <!-- hkVector4f -->
+    </fields>
+  </type>
+  <type id="type173">
+    <name value="hknpConvexShape" />
+    <parent id="type134" />
+    <!-- hknpShape -->
+    <format value="7" />
+    <!-- record -->
+    <version value="2" />
+    <fields count="2">
+      <field name="maxAllowedPenetration" typeid="type89" flags="34" />
+      <!-- hkHalf16 -->
+      <field name="vertices" typeid="type179" flags="34" />
+      <!-- hkRelArray< hkVector4f > -->
+    </fields>
+  </type>
+  <type id="type174">
+    <name value="hkRelArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type53" />
+    <!-- hkVector4 -->
+    <parameters count="1">
+      <typeparam id="type53" />
+      <!-- hkVector4 -->
+    </parameters>
+    <fields count="2">
+      <field name="size" typeid="type126" flags="34" />
+      <!-- hkUint16 -->
+      <field name="offset" typeid="type126" flags="34" />
+      <!-- hkUint16 -->
+    </fields>
+  </type>
+  <type id="type175">
+    <name value="hkRelArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type180" />
+    <!-- hknpConvexPolytopeShape::Face -->
+    <parameters count="1">
+      <typeparam id="type180" />
+      <!-- hknpConvexPolytopeShape::Face -->
+    </parameters>
+    <fields count="2">
+      <field name="size" typeid="type126" flags="34" />
+      <!-- hkUint16 -->
+      <field name="offset" typeid="type126" flags="34" />
+      <!-- hkUint16 -->
+    </fields>
+  </type>
+  <type id="type176">
+    <name value="hkRelArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type47" />
+    <!-- hkUint8 -->
+    <parameters count="1">
+      <typeparam id="type47" />
+      <!-- hkUint8 -->
+    </parameters>
+    <fields count="2">
+      <field name="size" typeid="type126" flags="34" />
+      <!-- hkUint16 -->
+      <field name="offset" typeid="type126" flags="34" />
+      <!-- hkUint16 -->
+    </fields>
+  </type>
+  <type id="type177">
+    <name value="hkRefPtr" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type181" />
+    <!-- hknpConvexPolytopeShape::Connectivity -->
+    <parameters count="1">
+      <typeparam id="type181" />
+      <!-- hknpConvexPolytopeShape::Connectivity -->
+    </parameters>
+    <fields count="1">
+      <field name="ptr" typeid="type182" flags="36" />
+      <!-- T*< hknpConvexPolytopeShape::Connectivity > -->
+    </fields>
+  </type>
+  <type id="type178">
+    <name value="hkRotationf" />
+    <parent id="type183" />
+    <!-- hkRotationImpl< float > -->
+  </type>
+  <type id="type179">
+    <name value="hkRelArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type76" />
+    <!-- hkVector4f -->
+    <parameters count="1">
+      <typeparam id="type76" />
+      <!-- hkVector4f -->
+    </parameters>
+    <fields count="2">
+      <field name="size" typeid="type126" flags="34" />
+      <!-- hkUint16 -->
+      <field name="offset" typeid="type126" flags="34" />
+      <!-- hkUint16 -->
+    </fields>
+  </type>
+  <type id="type180">
+    <name value="hknpConvexPolytopeShape::Face" />
+    <format value="7" />
+    <!-- record -->
+    <fields count="3">
+      <field name="firstIndex" typeid="type126" flags="32" />
+      <!-- hkUint16 -->
+      <field name="numIndices" typeid="type47" flags="32" />
+      <!-- hkUint8 -->
+      <field name="minHalfAngle" typeid="type47" flags="32" />
+      <!-- hkUint8 -->
+    </fields>
+  </type>
+  <type id="type181">
+    <name value="hknpConvexPolytopeShape::Connectivity" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <fields count="2">
+      <field name="vertexEdges" typeid="type184" flags="32" />
+      <!-- hkArray< hknpConvexPolytopeShape::Connectivity::Edge, hkContainerHeapAllocator > -->
+      <field name="faceLinks" typeid="type184" flags="32" />
+      <!-- hkArray< hknpConvexPolytopeShape::Connectivity::Edge, hkContainerHeapAllocator > -->
+    </fields>
+  </type>
+  <type id="type182">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type181" />
+    <!-- hknpConvexPolytopeShape::Connectivity -->
+    <parameters count="1">
+      <typeparam id="type181" />
+      <!-- hknpConvexPolytopeShape::Connectivity -->
+    </parameters>
+    <flags value="0" />
+  </type>
+  <type id="type183">
+    <name value="hkRotationImpl" />
+    <format value="3112" />
+    <!-- array -->
+    <subtype id="type77" />
+    <!-- float -->
+    <parameters count="1">
+      <typeparam id="type77" />
+      <!-- float -->
+    </parameters>
+  </type>
+  <type id="type184">
+    <name value="hkArray" />
+    <format value="8" />
+    <!-- array -->
+    <subtype id="type185" />
+    <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+    <parameters count="2">
+      <typeparam id="type185" />
+      <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+      <typeparam id="type4" />
+      <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type186" flags="34" />
+      <!-- T*< hknpConvexPolytopeShape::Connectivity::Edge > -->
+      <field name="m_size" typeid="type6" flags="34" />
+      <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type6" flags="34" />
+      <!-- int -->
+    </fields>
+  </type>
+  <type id="type185">
+    <name value="hknpConvexPolytopeShape::Connectivity::Edge" />
+    <format value="7" />
+    <!-- record -->
+    <fields count="2">
+      <field name="faceIndex" typeid="type126" flags="32" />
+      <!-- hkUint16 -->
+      <field name="edgeIndex" typeid="type47" flags="32" />
+      <!-- hkUint8 -->
+    </fields>
+  </type>
+  <type id="type186">
+    <name value="T*" />
+    <format value="6" />
+    <!-- pointer -->
+    <subtype id="type185" />
+    <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+    <parameters count="1">
+      <typeparam id="type185" />
+      <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+    </parameters>
+    <flags value="64" />
+  </type>
+  <object id="object4" typeid="type170">
+    <!-- hknpBoxShape -->
+    <record>
+      <!-- hknpBoxShape -->
+      <field name="propertyBag">
+        <array count="0" elementtypeid="type15">
+          <!-- ArrayOf hkDefaultPropertyBag -->
+        </array>
+      </field>
+      <field name="flags">
+        <integer value="2499" />
+        <!-- IS_CONVEX_SHAPE, IS_CONVEX_POLYTOPE_SHAPE, SUPPORTS_COLLISIONS_WITH_INTERIOR_TRIANGLES, USE_NORMAL_TO_FIND_SUPPORT_PLANE, USE_SMALL_FACE_INDICES, IS_SDF_EDGE_COLLISION_ENABLED -->
+      </field>
+      <field name="type">
+        <integer value="6" />
+        <!-- BOX -->
+      </field>
+      <field name="numShapeKeyBits">
+        <integer value="0" />
+      </field>
+      <field name="dispatchType">
+        <integer value="2" />
+        <!-- CONVEX -->
+      </field>
+      <field name="convexRadius">
+        <real dec="0" hex="#0" />
+      </field>
+      <field name="userData">
+        <integer value="0" />
+      </field>
+      <field name="properties">
+        <pointer id="object6" />
+      </field>
+      <field name="maxAllowedPenetration">
+        <real dec="3.93484e-08" hex="#3e65200000000000" />
+      </field>
+      <field name="vertices">
+        <array count="8" elementtypeid="type76">
+          <!-- ArrayOf hkVector4f -->
+          <array count="4" elementtypeid="type77">
+            <!-- ArrayOf float -->
+            <real dec="0.5" hex="#3fdfffffc0000000" />
+            <real dec="-100.5" hex="#c0591fffc0000000" />
+            <real dec="50.5" hex="#40493fffc0000000" />
+            <real dec="0.5" hex="#3fe0000000000000" />
+          </array>
+          <array count="4" elementtypeid="type77">
+            <!-- ArrayOf float -->
+            <real dec="-0.5" hex="#bfdfffffc0000000" />
+            <real dec="-100.5" hex="#c0591fffc0000000" />
+            <real dec="50.5" hex="#40493fffc0000000" />
+            <real dec="0.5" hex="#3fe0000020000000" />
+          </array>
+          <array count="4" elementtypeid="type77">
+            <!-- ArrayOf float -->
+            <real dec="0.5" hex="#3fdfffffc0000000" />
+            <real dec="-100.5" hex="#c0591fffc0000000" />
+            <real dec="50.5" hex="#40493fffc0000000" />
+            <real dec="0.5" hex="#3fe0000040000000" />
+          </array>
+          <array count="4" elementtypeid="type77">
+            <!-- ArrayOf float -->
+            <real dec="-0.5" hex="#bfdfffffc0000000" />
+            <real dec="-100.5" hex="#c0591fffc0000000" />
+            <real dec="50.5" hex="#40493fffc0000000" />
+            <real dec="0.5" hex="#3fe0000060000000" />
+          </array>
+          <array count="4" elementtypeid="type77">
+            <!-- ArrayOf float -->
+            <real dec="0.5" hex="#3fdfffffc0000000" />
+            <real dec="-100.5" hex="#c0591fffc0000000" />
+            <real dec="49.5" hex="#4048bfffc0000000" />
+            <real dec="0.5" hex="#3fe0000080000000" />
+          </array>
+          <array count="4" elementtypeid="type77">
+            <!-- ArrayOf float -->
+            <real dec="-0.5" hex="#bfdfffffc0000000" />
+            <real dec="-100.5" hex="#c0591fffc0000000" />
+            <real dec="49.5" hex="#4048bfffc0000000" />
+            <real dec="0.5" hex="#3fe00000a0000000" />
+          </array>
+          <array count="4" elementtypeid="type77">
+            <!-- ArrayOf float -->
+            <real dec="0.5" hex="#3fdfffffc0000000" />
+            <real dec="-100.5" hex="#c0591fffc0000000" />
+            <real dec="49.5" hex="#4048bfffc0000000" />
+            <real dec="0.5" hex="#3fe00000c0000000" />
+          </array>
+          <array count="4" elementtypeid="type77">
+            <!-- ArrayOf float -->
+            <real dec="-0.5" hex="#bfdfffffc0000000" />
+            <real dec="-100.5" hex="#c0591fffc0000000" />
+            <real dec="49.5" hex="#4048bfffc0000000" />
+            <real dec="0.5" hex="#3fe00000e0000000" />
+          </array>
+        </array>
+      </field>
+      <field name="planes">
+        <array count="6" elementtypeid="type53">
+          <!-- ArrayOf hkVector4 -->
+          <array count="4" elementtypeid="type77">
+            <!-- ArrayOf float -->
+            <real dec="1" hex="#3ff0000000000000" />
+            <real dec="0" hex="#0" />
+            <real dec="0" hex="#0" />
+            <real dec="-0.5" hex="#bfdfffffc0000000" />
+          </array>
+          <array count="4" elementtypeid="type77">
+            <!-- ArrayOf float -->
+            <real dec="-1" hex="#bff0000000000000" />
+            <real dec="0" hex="#0" />
+            <real dec="0" hex="#0" />
+            <real dec="-0.5" hex="#bfdfffffc0000000" />
+          </array>
+          <array count="4" elementtypeid="type77">
+            <!-- ArrayOf float -->
+            <real dec="0" hex="#0" />
+            <real dec="1" hex="#3ff0000000000000" />
+            <real dec="0" hex="#0" />
+            <real dec="100.5" hex="#40591fffc0000000" />
+          </array>
+          <array count="4" elementtypeid="type77">
+            <!-- ArrayOf float -->
+            <real dec="0" hex="#0" />
+            <real dec="-1" hex="#bff0000000000000" />
+            <real dec="0" hex="#0" />
+            <real dec="-100.5" hex="#c0591fffc0000000" />
+          </array>
+          <array count="4" elementtypeid="type77">
+            <!-- ArrayOf float -->
+            <real dec="0" hex="#0" />
+            <real dec="0" hex="#0" />
+            <real dec="1" hex="#3ff0000000000000" />
+            <real dec="-50.5" hex="#c0493fffc0000000" />
+          </array>
+          <array count="4" elementtypeid="type77">
+            <!-- ArrayOf float -->
+            <real dec="0" hex="#0" />
+            <real dec="0" hex="#0" />
+            <real dec="-1" hex="#bff0000000000000" />
+            <real dec="49.5" hex="#4048bfffc0000000" />
+          </array>
+        </array>
+      </field>
+      <field name="faces">
+        <array count="6" elementtypeid="type180">
+          <!-- ArrayOf hknpConvexPolytopeShape::Face -->
+          <record>
+            <!-- hknpConvexPolytopeShape::Face -->
+            <field name="firstIndex">
+              <integer value="0" />
+            </field>
+            <field name="numIndices">
+              <integer value="4" />
+            </field>
+            <field name="minHalfAngle">
+              <integer value="128" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Face -->
+            <field name="firstIndex">
+              <integer value="4" />
+            </field>
+            <field name="numIndices">
+              <integer value="4" />
+            </field>
+            <field name="minHalfAngle">
+              <integer value="128" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Face -->
+            <field name="firstIndex">
+              <integer value="8" />
+            </field>
+            <field name="numIndices">
+              <integer value="4" />
+            </field>
+            <field name="minHalfAngle">
+              <integer value="128" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Face -->
+            <field name="firstIndex">
+              <integer value="12" />
+            </field>
+            <field name="numIndices">
+              <integer value="4" />
+            </field>
+            <field name="minHalfAngle">
+              <integer value="128" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Face -->
+            <field name="firstIndex">
+              <integer value="16" />
+            </field>
+            <field name="numIndices">
+              <integer value="4" />
+            </field>
+            <field name="minHalfAngle">
+              <integer value="128" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Face -->
+            <field name="firstIndex">
+              <integer value="20" />
+            </field>
+            <field name="numIndices">
+              <integer value="4" />
+            </field>
+            <field name="minHalfAngle">
+              <integer value="128" />
+            </field>
+          </record>
+        </array>
+      </field>
+      <field name="indices">
+        <array count="24" elementtypeid="type47">
+          <!-- ArrayOf hkUint8 -->
+          <integer value="2" />
+          <integer value="6" />
+          <integer value="4" />
+          <integer value="0" />
+          <integer value="1" />
+          <integer value="5" />
+          <integer value="7" />
+          <integer value="3" />
+          <integer value="1" />
+          <integer value="0" />
+          <integer value="4" />
+          <integer value="5" />
+          <integer value="7" />
+          <integer value="6" />
+          <integer value="2" />
+          <integer value="3" />
+          <integer value="3" />
+          <integer value="2" />
+          <integer value="0" />
+          <integer value="1" />
+          <integer value="7" />
+          <integer value="5" />
+          <integer value="4" />
+          <integer value="6" />
+        </array>
+      </field>
+      <field name="connectivity">
+        <pointer id="object7" />
+      </field>
+      <field name="obb">
+        <array count="16" elementtypeid="type77">
+          <!-- ArrayOf float -->
+          <real dec="1" hex="#3ff0000000000000" />
+          <real dec="0" hex="#0" />
+          <real dec="0" hex="#0" />
+          <real dec="0.5" hex="#3fdfffffc0000000" />
+          <real dec="0" hex="#0" />
+          <real dec="1" hex="#3ff0000000000000" />
+          <real dec="0" hex="#0" />
+          <real dec="1.19209e-07" hex="#3e80000000000000" />
+          <real dec="0" hex="#0" />
+          <real dec="0" hex="#0" />
+          <real dec="1" hex="#3ff0000000000000" />
+          <real dec="0.5" hex="#3fe0000000000000" />
+          <real dec="0" hex="#0" />
+          <real dec="-100.5" hex="#c0591fffc0000000" />
+          <real dec="50" hex="#4048ffffc0000000" />
+          <real dec="0.500001" hex="#3fe0000140000000" />
+        </array>
+      </field>
+    </record>
+  </object>
+  <object id="object5" typeid="type139">
+    <!-- hknpRefDragProperties -->
+    <record>
+      <!-- hknpRefDragProperties -->
+      <field name="propertyBag">
+        <array count="0" elementtypeid="type15">
+          <!-- ArrayOf hkDefaultPropertyBag -->
+        </array>
+      </field>
+      <field name="dragProperties">
+        <record>
+          <!-- hknpDragProperties -->
+          <field name="centerAndOffset">
+            <array count="3" elementtypeid="type53">
+              <!-- ArrayOf hkVector4 -->
+              <array count="4" elementtypeid="type77">
+                <!-- ArrayOf float -->
+                <real dec="-1.16396e-09" hex="#be13ff2940000000" />
+                <real dec="-7.51705e-06" hex="#bedf875f60000000" />
+                <real dec="3.81407e-06" hex="#3ecffea820000000" />
+                <real dec="4.54747e-13" hex="#3d5fffffe0000000" />
+              </array>
+              <array count="4" elementtypeid="type77">
+                <!-- ArrayOf float -->
+                <real dec="-4.88944e-09" hex="#be34ffffe0000000" />
+                <real dec="-7.51828e-06" hex="#bedf88b200000000" />
+                <real dec="3.8147e-06" hex="#3ed0000000000000" />
+                <real dec="3.72529e-09" hex="#3e2fffffe0000000" />
+              </array>
+              <array count="4" elementtypeid="type77">
+                <!-- ArrayOf float -->
+                <real dec="-8.79305e-10" hex="#be0e3673a0000000" />
+                <real dec="-1.17175e-06" hex="#beb3a89b60000000" />
+                <real dec="5.94529e-07" hex="#3ea3f2f800000000" />
+                <real dec="3.83874e-05" hex="#3f04204420000000" />
+              </array>
+            </array>
+          </field>
+          <field name="angularEffectsAndArea">
+            <array count="6" elementtypeid="type53">
+              <!-- ArrayOf hkVector4 -->
+              <array count="4" elementtypeid="type77">
+                <!-- ArrayOf float -->
+                <real dec="-3.81407e-06" hex="#becffea860000000" />
+                <real dec="-2.54271e-10" hex="#bdf17930a0000000" />
+                <real dec="-1.6651e-09" hex="#be1c9b2f00000000" />
+                <real dec="6.10452e-05" hex="#3f1000abc0000000" />
+              </array>
+              <array count="4" elementtypeid="type77">
+                <!-- ArrayOf float -->
+                <real dec="3.81407e-06" hex="#3ecffea860000000" />
+                <real dec="2.54271e-10" hex="#3df17930a0000000" />
+                <real dec="1.6651e-09" hex="#3e1c9b2f00000000" />
+                <real dec="6.10452e-05" hex="#3f1000abc0000000" />
+              </array>
+              <array count="4" elementtypeid="type77">
+                <!-- ArrayOf float -->
+                <real dec="3.8147e-06" hex="#3ed0000000000000" />
+                <real dec="2.54313e-10" hex="#3df179ec60000000" />
+                <real dec="1.66537e-09" hex="#3e1c9c6240000000" />
+                <real dec="1" hex="#3fefffffc0000000" />
+              </array>
+              <array count="4" elementtypeid="type77">
+                <!-- ArrayOf float -->
+                <real dec="-3.8147e-06" hex="#bed0000000000000" />
+                <real dec="-2.54241e-10" hex="#bdf178a960000000" />
+                <real dec="-1.6653e-09" hex="#be1c9c1360000000" />
+                <real dec="1" hex="#3fefffffc0000000" />
+              </array>
+              <array count="4" elementtypeid="type77">
+                <!-- ArrayOf float -->
+                <real dec="5.94815e-07" hex="#3ea3f56cc0000000" />
+                <real dec="3.95106e-11" hex="#3dc5b89f60000000" />
+                <real dec="2.594e-10" hex="#3df1d367e0000000" />
+                <real dec="1.18463e-08" hex="#3e49708ee0000000" />
+              </array>
+              <array count="4" elementtypeid="type77">
+                <!-- ArrayOf float -->
+                <real dec="-5.94815e-07" hex="#bea3f56cc0000000" />
+                <real dec="-3.94988e-11" hex="#bdc5b6f7a0000000" />
+                <real dec="-2.59386e-10" hex="#bdf1d32cc0000000" />
+                <real dec="1.18463e-08" hex="#3e49708ee0000000" />
+              </array>
+            </array>
+          </field>
+          <field name="armUVs">
+            <array count="12" elementtypeid="type54">
+              <!-- ArrayOf hkReal -->
+              <real dec="0.125036" hex="#3fc0012fc0000000" />
+              <real dec="7.63135e-06" hex="#3ee0010c60000000" />
+              <real dec="1.86276e-09" hex="#3e200040c0000000" />
+              <real dec="0.125033" hex="#3fc0011520000000" />
+              <real dec="7.63167e-06" hex="#3ee00138a0000000" />
+              <real dec="1.86279e-09" hex="#3e20005380000000" />
+              <real dec="1.86277e-09" hex="#3e20004900000000" />
+              <real dec="9.97497e-10" hex="#3e11230980000000" />
+              <real dec="0.125033" hex="#3fc0011700000000" />
+              <real dec="1.86277e-09" hex="#3e200048e0000000" />
+              <real dec="1.49977e-09" hex="#3e19c40980000000" />
+              <real dec="0.125033" hex="#3fc0011720000000" />
+            </array>
+          </field>
+        </record>
+      </field>
+    </record>
+  </object>
+  <object id="object6" typeid="type161">
+    <!-- hkRefCountedProperties -->
+    <record>
+      <!-- hkRefCountedProperties -->
+      <field name="propertyBag">
+        <array count="0" elementtypeid="type15">
+          <!-- ArrayOf hkDefaultPropertyBag -->
+        </array>
+      </field>
+      <field name="entries">
+        <array count="1" elementtypeid="type167">
+          <!-- ArrayOf hkRefCountedProperties::Entry -->
+          <record>
+            <!-- hkRefCountedProperties::Entry -->
+            <field name="object">
+              <pointer id="object8" />
+            </field>
+            <field name="key">
+              <integer value="61696" />
+            </field>
+            <field name="flags">
+              <integer value="0" />
+            </field>
+          </record>
+        </array>
+      </field>
+    </record>
+  </object>
+  <type id="type187">
+    <name value="hknpShapeMassProperties" />
+    <parent id="type11" />
+    <!-- hkReferencedObject -->
+    <format value="7" />
+    <!-- record -->
+    <fields count="1">
+      <field name="compressedMassProperties" typeid="type188" flags="32" />
+      <!-- hkCompressedMassProperties -->
+    </fields>
+  </type>
+  <type id="type188">
+    <name value="hkCompressedMassProperties" />
+    <format value="7" />
+    <!-- record -->
+    <version value="1" />
+    <fields count="5">
+      <field name="centerOfMass" typeid="type189" flags="32" />
+      <!-- hkPackedVector3 -->
+      <field name="inertia" typeid="type189" flags="32" />
+      <!-- hkPackedVector3 -->
+      <field name="majorAxisSpace" typeid="type190" flags="32" />
+      <!-- T[N]< short, 4 > -->
+      <field name="mass" typeid="type54" flags="32" />
+      <!-- hkReal -->
+      <field name="volume" typeid="type54" flags="32" />
+      <!-- hkReal -->
+    </fields>
+  </type>
+  <type id="type189">
+    <name value="hkPackedVector3" />
+    <format value="7" />
+    <!-- record -->
+    <fields count="1">
+      <field name="values" typeid="type191" flags="32" />
+      <!-- T[N]< hkInt16, 4 > -->
+    </fields>
+  </type>
+  <type id="type190">
+    <name value="T[N]" />
+    <format value="1064" />
+    <!-- array -->
+    <subtype id="type116" />
+    <!-- short -->
+    <parameters count="2">
+      <typeparam id="type116" />
+      <!-- short -->
+      <valueparam value="4" />
+    </parameters>
+  </type>
+  <type id="type191">
+    <name value="T[N]" />
+    <format value="1064" />
+    <!-- array -->
+    <subtype id="type110" />
+    <!-- hkInt16 -->
+    <parameters count="2">
+      <typeparam id="type110" />
+      <!-- hkInt16 -->
+      <valueparam value="4" />
+    </parameters>
+  </type>
+  <object id="object7" typeid="type181">
+    <!-- hknpConvexPolytopeShape::Connectivity -->
+    <record>
+      <!-- hknpConvexPolytopeShape::Connectivity -->
+      <field name="propertyBag">
+        <array count="0" elementtypeid="type15">
+          <!-- ArrayOf hkDefaultPropertyBag -->
+        </array>
+      </field>
+      <field name="vertexEdges">
+        <array count="8" elementtypeid="type185">
+          <!-- ArrayOf hknpConvexPolytopeShape::Connectivity::Edge -->
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="4" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="2" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="2" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="0" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="4" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="1" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="4" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="0" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="5" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="2" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="5" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="1" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="0" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="1" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="5" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="0" />
+            </field>
+          </record>
+        </array>
+      </field>
+      <field name="faceLinks">
+        <array count="24" elementtypeid="type185">
+          <!-- ArrayOf hknpConvexPolytopeShape::Connectivity::Edge -->
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="3" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="1" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="5" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="2" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="2" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="1" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="4" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="1" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="2" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="3" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="5" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="0" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="3" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="3" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="4" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="3" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="4" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="2" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="0" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="2" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="5" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="1" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="1" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="0" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="5" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="3" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="0" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="0" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="4" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="0" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="1" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="2" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="3" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="2" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="0" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="3" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="2" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="0" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="1" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="3" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="1" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="1" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="2" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="2" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="0" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="1" />
+            </field>
+          </record>
+          <record>
+            <!-- hknpConvexPolytopeShape::Connectivity::Edge -->
+            <field name="faceIndex">
+              <integer value="3" />
+            </field>
+            <field name="edgeIndex">
+              <integer value="0" />
+            </field>
+          </record>
+        </array>
+      </field>
+    </record>
+  </object>
+  <object id="object8" typeid="type187">
+    <!-- hknpShapeMassProperties -->
+    <record>
+      <!-- hknpShapeMassProperties -->
+      <field name="propertyBag">
+        <array count="0" elementtypeid="type15">
+          <!-- ArrayOf hkDefaultPropertyBag -->
+        </array>
+      </field>
+      <field name="compressedMassProperties">
+        <record>
+          <!-- hkCompressedMassProperties -->
+          <field name="centerOfMass">
+            <record>
+              <!-- hkPackedVector3 -->
+              <field name="values">
+                <array count="4" elementtypeid="type110">
+                  <!-- ArrayOf hkInt16 -->
+                  <integer value="0" />
+                  <integer value="-25728" />
+                  <integer value="12800" />
+                  <integer value="13184" />
+                </array>
+              </field>
+            </record>
+          </field>
+          <field name="inertia">
+            <record>
+              <!-- hkPackedVector3 -->
+              <field name="values">
+                <array count="4" elementtypeid="type110">
+                  <!-- ArrayOf hkInt16 -->
+                  <integer value="20753" />
+                  <integer value="30584" />
+                  <integer value="9830" />
+                  <integer value="11648" />
+                </array>
+              </field>
+            </record>
+          </field>
+          <field name="majorAxisSpace">
+            <array count="4" elementtypeid="type116">
+              <!-- ArrayOf short -->
+              <integer value="-32768" />
+              <integer value="32767" />
+              <integer value="32767" />
+              <integer value="-2769" />
+            </array>
+          </field>
+          <field name="mass">
+            <real dec="0.150001" hex="#3fc3333ca0000000" />
+          </field>
+          <field name="volume">
+            <real dec="0.000150001" hex="#3f23a933e0000000" />
+          </field>
+        </record>
+      </field>
+    </record>
+  </object>
+</hktagfile>

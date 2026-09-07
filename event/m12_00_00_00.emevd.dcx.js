@@ -29,7 +29,7 @@ $Event(12002000, Default, function() {
     EndIf(EventFlag(7523));
     DisableNetworkSync();
     WaitFor(PlayerInMap(12, 0, 0, 0));
-    ChangeWeather(Weather.Type82, -1, true);
+    //ChangeWeather(Weather.Type82, -1, true);
     SetEventFlagID(9052, ON);
     BonfirelikeRecovery();
     RefillEstus();
@@ -155,7 +155,7 @@ S5:
 $Event(12002050, Default, function() {
     EndIf(HasMultiplayerState(MultiplayerState.Multiplayer));
     WaitFor(PlayerInMap(12, 0, 0, 0) && CharacterDead(20000));
-    ChangeWeather(Weather.Type82, -1, true);
+    //ChangeWeather(Weather.Type82, -1, true);
     WaitFor(!CharacterDead(20000));
     MoveBloodstainAndDroppedItems(12002510, 12002511);
 });
@@ -184,5 +184,3 @@ L3:
     WarpPlayerWithPlayerNo(19, 0, 0, 0, 19002200);
     EndEvent();
 });
-
-

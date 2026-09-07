@@ -15397,6 +15397,7 @@ $Event(90075600, Restart, function(chrEntityId, entityId) {
 });
 
 $Event(90075601, Restart, function(chrEntityId) {
+    DisableCharacter(chrEntityId);
     DeleteMapSFX(19903127, false); //placeholder
     DeleteMapSFX(19903128, false);
     if (EventFlag(7512)) {
@@ -15412,14 +15413,50 @@ $Event(90075601, Restart, function(chrEntityId) {
         SetBossBGM(490000, BossBGMState.Start);
         EndEvent();
     }
+    WaitFor(EventFlag(7510) || EventFlag(7511) || PlayerInMap(19, 0, 0, 0));
+    FadeToBlack(1, 0, true, 0);
     EnableCharacter(chrEntityId);
     DisableCharacterAI(chrEntityId);
-    WaitFor(EventFlag(7510) || EventFlag(7511) || PlayerInMap(19, 0, 0, 0));
-    WaitFixedTimeSeconds(8);
-    ChangeWeather(Weather.Type82, -1, true);
-    //SpawnMapSFX(19903127);
+    ChangeWeather(Weather.Type00, -1, true);
+    IssueShortWarpRequest(20000, TargetEntityType.Area, 190034128, -1);
+    WaitFixedTimeSeconds(1);
+    DisableAsset(190034129);
+    WaitFixedTimeSeconds(1);
+    FadeToBlack(0, 2, false, 0);
+    //ChangeWeather(Weather.Type20, -1, true); maris
+    //WaitFixedTimeSeconds(5);
+    //ChangeWeather(Weather.Type50, -1, true); caligo
+    //WaitFixedTimeSeconds(5);
+    //ChangeWeather(Weather.Type01, -1, true); gray
+    //WaitFixedTimeSeconds(5);
+    //ChangeWeather(Weather.Type51, -1, true); gray foggy
+    //WaitFixedTimeSeconds(5);
+    //ChangeWeather(Weather.Type60, -1, true); baron
+    //WaitFixedTimeSeconds(5);
+    //ChangeWeather(Weather.Type52, -1, true); super light gray rainy
+    //WaitFixedTimeSeconds(5);
+    //ChangeWeather(Weather.Type30, -1, true); fulghor
+    //WaitFixedTimeSeconds(5);
+    //ChangeWeather(Weather.Type31, -1, true); brown gray
+    //WaitFixedTimeSeconds(5);
+    ChangeWeather(Weather.Type21, -1, true); //dark gray rain
+    WaitFixedTimeSeconds(5);
+    //ChangeWeather(Weather.Type11, -1, true); gray
+    //WaitFixedTimeSeconds(5);
+    //ChangeWeather(Weather.Type41, -1, true); blue with snow
+    //WaitFixedTimeSeconds(5);
+    //ChangeWeather(Weather.Type40, -1, true); libra
+    //WaitFixedTimeSeconds(5);
+    //ChangeWeather(Weather.Type81, -1, true); snow
+    //WaitFixedTimeSeconds(5);
+    //ChangeWeather(Weather.Type31, -1, true); brown gray
+    //WaitFixedTimeSeconds(5);
+    //ChangeWeather(Weather.Type21, -1, true); dark with rain
+    //WaitFixedTimeSeconds(5);
     //ActivateGparamOverride(4, 0);
-    WaitFor(EventFlag(7511));
+    //SpawnMapSFX(19994128);
+    //WaitFor(EventFlag(7511));
+    SetEventFlagID(7511, ON);
     EnableCharacterAI(chrEntityId);
     ForceAnimationPlayback(19000860, 20029, false, false, false);
     WaitFixedTimeSeconds(5);
@@ -15434,14 +15471,21 @@ $Event(90075601, Restart, function(chrEntityId) {
     DisplayBossHealthBar(Enabled, chrEntityId, 0, 907620000);
     WaitFor(CharacterHasSpEffect(19000860, 46580));
     ChangeCamera(6211);
-    WaitFixedTimeSeconds(2);
-    FadeToBlack(1, 5, false, 4);
-    WaitFixedTimeSeconds(7);
-    FadeToBlack(0, 1, false, 0);
-    //DeactivateGparamOverride(5);
+    WaitFixedTimeSeconds(5);
+    FadeToBlack(1, 2, false, 4);
+    WaitFixedTimeSeconds(1);
+    SetBossBGM(490000, BossBGMState.Stop1);
+    WaitFixedTimeSeconds(1);
+    //DeactivateGparamOverride(0); // fog
+    //SpawnMapSFX(19994128);
+    EnableAsset(19903130);
     WaitFor(CharacterHasSpEffect(19000860, 5105));
-    ChangeWeather(Weather.Type82, -1, true);
+    FadeToBlack(0, 20, false, 0);
+    WaitFixedTimeSeconds(3);
+    FadeToBlack(0, 1, false, 0);
     SetBossBGM(490000, BossBGMState.HeatUp);
+    WaitFixedTimeSeconds(10);
+    ChangeWeather(Weather.Type31, -1, true);
 });
 
 // --------------------worms

@@ -1281,6 +1281,7 @@ $Event(19002871, Restart, function(chrEntityId, nameId) {
     
     EnableCharacterAI(chrEntityId);
     ForceAnimationPlayback(19000860, 20029, false, false, false);
+    ChangeCamera(7549);
     WaitFixedTimeSeconds(5);
     ChangeWeather(Weather.Type82, -1, true)
     DeleteMapSFX(19903127, false);

@@ -1,25 +1,28 @@
 ================================================================================
   StormControl v1.0.5
-  Started: Aug 07, 2026 | 04:46:57 PM
+  Started: Sep 06, 2026 | 03:02:11 PM
 ================================================================================
-[Aug 07, 2026 | 04:46:57 PM] INFO  | Initializing...
-[Aug 07, 2026 | 04:46:57 PM] INFO  | Config file loaded successfully
+[Sep 06, 2026 | 03:02:11 PM] INFO  | Initializing...
+[Sep 06, 2026 | 03:02:11 PM] INFO  | Config file loaded successfully
 --- Profile Changed ---
-[Aug 07, 2026 | 04:46:57 PM] INFO  | Profile enabled: Example
-[Aug 07, 2026 | 04:46:58 PM] INFO  | Unique signature found at 00007ff75b635783
-[Aug 07, 2026 | 04:46:58 PM] INFO  | Event hook installed at 140700366886787
-[Aug 07, 2026 | 04:46:58 PM] INFO  | StormControl version 1.0.5 configured. Log level=info
-[Aug 07, 2026 | 04:46:58 PM] INFO  | Initial Time Multiplier (Raw): 1000
-[Aug 07, 2026 | 04:47:00 PM] INFO  | Unique signature found at 00007ff75b518430
-[Aug 07, 2026 | 04:47:00 PM] INFO  | Found pattern at: 140700365718576
-[Aug 07, 2026 | 04:47:00 PM] INFO  | Time multiplier patch applied successfully!
-[Aug 07, 2026 | 04:47:00 PM] INFO  | Time multiplier: x1
-[Aug 07, 2026 | 04:47:01 PM] INFO  | Unique signature found at 00007ff75cfd995d
-[Aug 07, 2026 | 04:47:01 PM] INFO  | Menu title hook installed at 140700393773405
-[Aug 07, 2026 | 04:47:01 PM] INFO  | Mod initialized successfully!
-[Aug 07, 2026 | 04:47:01 PM] INFO  | RenderHookThread started. Waiting for game to initialize...
-[Aug 07, 2026 | 04:47:01 PM] INFO  | Finding application window...
-[Aug 07, 2026 | 04:47:01 PM] INFO  | Found application window: ELDEN RING NIGHTREIGN (hwnd=0x0000000000aa0972, method=enumeration, attempts=1, elapsed_ms=0)
-[Aug 07, 2026 | 04:47:03 PM] INFO  | Kiero initialized with DX12. Bound Present + ExecuteCommandLists.
-[Aug 07, 2026 | 04:47:03 PM] INFO  | ImGui (DX12) initialized successfully.
-[Aug 07, 2026 | 04:48:13 PM] INFO  | Auto-Calibration: Captured vanilla speed baseline = 72.9
+[Sep 06, 2026 | 03:02:11 PM] INFO  | Profile enabled: Example
+[Sep 06, 2026 | 03:02:12 PM] INFO  | Unique signature found at 00007ff6a6605783
+[Sep 06, 2026 | 03:02:12 PM] INFO  | Event hook installed at 140697330014083
+[Sep 06, 2026 | 03:02:12 PM] INFO  | StormControl version 1.0.5 configured. Log level=info
+[Sep 06, 2026 | 03:02:12 PM] INFO  | Initial Time Multiplier (Raw): 1000
+[Sep 06, 2026 | 03:02:14 PM] INFO  | Unique signature found at 00007ff6a64e8430
+[Sep 06, 2026 | 03:02:14 PM] INFO  | Found pattern at: 140697328845872
+[Sep 06, 2026 | 03:02:14 PM] INFO  | Time multiplier patch applied successfully!
+[Sep 06, 2026 | 03:02:14 PM] INFO  | Time multiplier: x1
+[Sep 06, 2026 | 03:02:15 PM] INFO  | Unique signature found at 00007ff6a7fa995d
+[Sep 06, 2026 | 03:02:15 PM] INFO  | Menu title hook installed at 140697356900701
+[Sep 06, 2026 | 03:02:15 PM] INFO  | Mod initialized successfully!
+[Sep 06, 2026 | 03:02:15 PM] INFO  | RenderHookThread started. Waiting for game to initialize...
+[Sep 06, 2026 | 03:02:15 PM] INFO  | Finding application window...
+[Sep 06, 2026 | 03:02:15 PM] INFO  | Found application window: ELDEN RING NIGHTREIGN (hwnd=0x00000000000200c2, method=enumeration, attempts=1, elapsed_ms=0)
+[Sep 06, 2026 | 03:02:17 PM] INFO  | Kiero initialized with DX12. Bound Present + ExecuteCommandLists.
+[Sep 06, 2026 | 03:02:17 PM] INFO  | ImGui (DX12) initialized successfully.
+[Sep 06, 2026 | 03:02:46 PM] INFO  | Auto-Calibration: Captured vanilla speed baseline = 72.9
+[Sep 06, 2026 | 03:04:09 PM] INFO  | Profile: day=1, phase=0, mul=1
+[Sep 06, 2026 | 03:04:18 PM] INFO  | Event ID: 4099, mapped day=1
+[Sep 06, 2026 | 03:04:19 PM] INFO  | Event ID: 4101, mapped day=3
